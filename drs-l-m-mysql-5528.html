@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -624,19 +626,19 @@
 
 
 <p><a id="refheading39797804107930"></a></p>
-<h1 id="4-mysql-5528">4. <span style="color: #365f91">دراسة حالة مع MySQL 5.5.28</span></h1>
+<h1 id="4-mysql-5528">4. <span style="color: #365f91">دراسة حالة مع <bdi dir="ltr" class="odt-ltr-term">MySQL 5.5.28</bdi></span></h1>
 <p><a id="refheading39799804107930"></a></p>
 <h2 id="41">4.1. <span style="color: #4f81bd">تثبيت الأدوات</span></h2>
 <p><span style="color: #000000">الأدوات التي سيتم تثبيتها هي كما يلي:</span></p>
 <ul>
-<li>نظام إدارة قواعد البيانات (DBMS): [http://dev.mysql.com/downloads/]؛</li>
-<li>أداة إدارة: EMS SQL Manager for MySQL Freeware [http://www.sqlmanager.net/fr/products/mysql/manager/download].</li>
+<li>نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>): [<bdi dir="ltr" class="odt-ltr-term">http://dev.mysql.com/downloads/</bdi>]؛</li>
+<li>أداة إدارة: <bdi dir="ltr" class="odt-ltr-term">EMS SQL Manager for MySQL Freeware</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://www.sqlmanager.net/fr/products/mysql/manager/download</bdi>].</li>
 </ul>
-<p><span style="color: #000000">في الأمثلة التالية، كلمة مرور المستخدم </span><strong><span style="color: #000000">«root» </span></strong><span style="color: #000000">هي </span><strong><span style="color: #000000">«root</span></strong><span style="color: #000000">».</span></p>
-<p><span style="color: #000000">لنبدأ تشغيل MySQL5. هنا، نقوم بذلك من نافذة خدمات Windows [1]. في [2]، نظام إدارة قواعد البيانات قيد التشغيل.</span></p>
+<p><span style="color: #000000">في الأمثلة التالية، كلمة مرور المستخدم </span><strong><span style="color: #000000">«<bdi dir="ltr" class="odt-ltr-term">root</bdi>» </span></strong><span style="color: #000000">هي </span><strong><span style="color: #000000">«<bdi dir="ltr" class="odt-ltr-term">root</bdi></span></strong><span style="color: #000000">».</span></p>
+<p><span style="color: #000000">لنبدأ تشغيل <bdi dir="ltr" class="odt-ltr-term">MySQL5.</bdi> هنا، نقوم بذلك من نافذة خدمات <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> [1]. في [2]، نظام إدارة قواعد البيانات قيد التشغيل.</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000063F000002B39BDA5A46.png" width="680" height="294" style="display:inline-block; margin:4px;width:17.999cm;height:7.779cm;" class="odt-zoomable" data-zoom-src="images/100000000000063F000002B39BDA5A46.png" /></td></tr></table>
 
-<p><span style="color: #000000">نقوم الآن بتشغيل أداة [SQL Manager Lite for MySQL]، التي سنستخدمها لإدارة نظام إدارة قواعد البيانات [3].</span></p>
+<p><span style="color: #000000">نقوم الآن بتشغيل أداة [<bdi dir="ltr" class="odt-ltr-term">SQL Manager Lite for MySQL</bdi>]، التي سنستخدمها لإدارة نظام إدارة قواعد البيانات [3].</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005F5000001BD94FC8285.png" width="680" height="199" style="display:inline-block; margin:4px;width:17.999cm;height:5.253cm;" class="odt-zoomable" data-zoom-src="images/10000000000005F5000001BD94FC8285.png" /></td></tr></table>
 
 <ul>
@@ -646,46 +648,46 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005A3000001FE9771C23F.png" width="680" height="240" style="display:inline-block; margin:4px;width:17.999cm;height:6.361cm;" class="odt-zoomable" data-zoom-src="images/10000000000005A3000001FE9771C23F.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [5]، نقوم بتسجيل الدخول كـ root / root؛</span></li>
-<li><span style="color: #000000">في [6]، نقوم بالتحقق من صحة عبارة SQL المراد تنفيذها؛</span></li>
+<li><span style="color: #000000">في [5]، نقوم بتسجيل الدخول كـ <bdi dir="ltr" class="odt-ltr-term">root</bdi> / <bdi dir="ltr" class="odt-ltr-term">root</bdi>؛</span></li>
+<li><span style="color: #000000">في [6]، نقوم بالتحقق من صحة عبارة <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> المراد تنفيذها؛</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005FA0000030F51CBDD8F.png" width="680" height="348" style="display:inline-block; margin:4px;width:17.999cm;height:9.211cm;" class="odt-zoomable" data-zoom-src="images/10000000000005FA0000030F51CBDD8F.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [7]، تم إنشاء قاعدة البيانات. يجب الآن تسجيلها في [EMS Manager]. المعلومات صحيحة. انقر على [OK]؛</span></li>
+<li><span style="color: #000000">في [7]، تم إنشاء قاعدة البيانات. يجب الآن تسجيلها في [<bdi dir="ltr" class="odt-ltr-term">EMS Manager</bdi>]. المعلومات صحيحة. انقر على [<bdi dir="ltr" class="odt-ltr-term">OK</bdi>]؛</span></li>
 <li><span style="color: #000000">في [8]، نقوم بالاتصال بها؛</span></li>
-<li><span style="color: #000000">في [9]، يعرض [EMS Manager] قاعدة البيانات، وهي فارغة حاليًا.</span></li>
+<li><span style="color: #000000">في [9]، يعرض [<bdi dir="ltr" class="odt-ltr-term">EMS Manager</bdi>] قاعدة البيانات، وهي فارغة حاليًا.</span></li>
 </ul>
-<p><span style="color: #000000">سنقوم الآن بربط مشروع VS 2012 بهذه قاعدة البيانات.</span></p>
+<p><span style="color: #000000">سنقوم الآن بربط مشروع <bdi dir="ltr" class="odt-ltr-term">VS</bdi> 2012 بهذه قاعدة البيانات.</span></p>
 <p><a id="refheading39801804107930"></a></p>
 <h2 id="42">4.2. <span style="color: #4f81bd">إنشاء قاعدة البيانات من الكيانات</span></h2>
-<p><span style="color: #000000">نقوم بإنشاء مشروع وحدة التحكم VS 2012 [RdvMedecins-MySQL-01] [1] أدناه:</span></p>
+<p><span style="color: #000000">نقوم بإنشاء مشروع وحدة التحكم <bdi dir="ltr" class="odt-ltr-term">VS</bdi> 2012 [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-MySQL-01</bdi>] [1] أدناه:</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000058500000159A144D204.png" width="680" height="166" style="display:inline-block; margin:4px;width:17.999cm;height:4.396cm;" class="odt-zoomable" data-zoom-src="images/100000000000058500000159A144D204.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [2]، أضف مراجع إلى المشروع عبر NuGet؛</span></li>
+<li><span style="color: #000000">في [2]، أضف مراجع إلى المشروع عبر <bdi dir="ltr" class="odt-ltr-term">NuGet</bdi>؛</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000059B00000174A1C8FAB7.png" width="680" height="176" style="display:inline-block; margin:4px;width:17.999cm;height:4.665cm;" class="odt-zoomable" data-zoom-src="images/100000000000059B00000174A1C8FAB7.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [3]، نضيف مرجع EF 5؛</span></li>
+<li><span style="color: #000000">في [3]، نضيف مرجع <bdi dir="ltr" class="odt-ltr-term">EF</bdi> 5؛</span></li>
 <li><span style="color: #000000">في [4]، أصبح الآن ضمن المراجع؛</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000565000001989C0FB306.png" width="680" height="201" style="display:inline-block; margin:4px;width:17.999cm;height:5.318cm;" class="odt-zoomable" data-zoom-src="images/1000000000000565000001989C0FB306.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [5]، نكرر العملية لإضافة [MySQL.Data.Entities]، وهو موصل ADO.NET لـ Entity Framework. للعثور على الحزمة، يمكننا استخدام مربع البحث [6]؛</span></li>
-<li><span style="color: #000000">في [7]، تظهر مرجعان: [MySQL.Data.Entities] و [MySQL.Data]، حيث يُعد الأخير تابعًا للأول.</span></li>
+<li><span style="color: #000000">في [5]، نكرر العملية لإضافة [<bdi dir="ltr" class="odt-ltr-term">MySQL.Data.Entities</bdi>]، وهو موصل <bdi dir="ltr" class="odt-ltr-term">ADO.NET</bdi> لـ <bdi dir="ltr" class="odt-ltr-term">Entity Framework.</bdi> للعثور على الحزمة، يمكننا استخدام مربع البحث [6]؛</span></li>
+<li><span style="color: #000000">في [7]، تظهر مرجعان: [<bdi dir="ltr" class="odt-ltr-term">MySQL.Data.Entities</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">MySQL.Data</bdi>]، حيث يُعد الأخير تابعًا للأول.</span></li>
 </ul>
-<p><span style="color: #000000">الآن، سنقوم بإنشاء مشروع [RdvMedecins-MySQL-01] استنادًا إلى مشروع [RdvMedecins-SqlServer-01].</span></p>
+<p><span style="color: #000000">الآن، سنقوم بإنشاء مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-MySQL-01</bdi>] استنادًا إلى مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-01</bdi>].</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005C500000209F6C5AEB3.png" width="680" height="240" style="display:inline-block; margin:4px;width:17.999cm;height:6.348cm;" class="odt-zoomable" data-zoom-src="images/10000000000005C500000209F6C5AEB3.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">في [1]، انسخ العناصر المحددة؛</span></li>
-<li><span style="color: #000000">في [2]، الصقها في مشروع [RdvMedecins-MySQL-01]؛</span></li>
-<li><span style="color: #000000">في [3]، نظرًا لوجود برامج متعددة تحتوي على طريقة [Main]، نحتاج إلى تحديد مشروع بدء التشغيل.</span></li>
+<li><span style="color: #000000">في [2]، الصقها في مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-MySQL-01</bdi>]؛</span></li>
+<li><span style="color: #000000">في [3]، نظرًا لوجود برامج متعددة تحتوي على طريقة [<bdi dir="ltr" class="odt-ltr-term">Main</bdi>]، نحتاج إلى تحديد مشروع بدء التشغيل.</span></li>
 </ul>
-<p><span style="color: #000000">في هذه المرحلة، يجب أن يتم إنشاء المشروع بنجاح. الآن، سنقوم بتعديل ملف التكوين [App.config]، الذي يقوم بتكوين سلسلة اتصال قاعدة البيانات و </span><em>DbProviderFactory</em><span style="color: #000000">. ويصبح كما يلي:</span></p>
+<p><span style="color: #000000">في هذه المرحلة، يجب أن يتم إنشاء المشروع بنجاح. الآن، سنقوم بتعديل ملف التكوين [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]، الذي يقوم بتكوين سلسلة اتصال قاعدة البيانات و </span><em><bdi dir="ltr" class="odt-ltr-term">DbProviderFactory</bdi></em><span style="color: #000000">. ويصبح كما يلي:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;?</span><span style="color:#a31515">xml</span><span style="color:#0000ff"> </span><span style="color:#ff0000">version</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">1.0</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> </span><span style="color:#ff0000">encoding</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">utf-8</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">?&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#a31515">configuration</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -719,12 +721,12 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">السطر 17: سلسلة الاتصال بقاعدة بيانات MySQL [rdvmedecins-ef] التي أنشأناها؛</span></li>
-<li><span style="color: #000000">السطر 24: يجب أن تتطابق الإصدارة مع تلك الموجودة في مرجع [MySql.Data] في المشروع [1]:</span></li>
+<li><span style="color: #000000">السطر 17: سلسلة الاتصال بقاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> [<bdi dir="ltr" class="odt-ltr-term">rdvmedecins-ef</bdi>] التي أنشأناها؛</span></li>
+<li><span style="color: #000000">السطر 24: يجب أن تتطابق الإصدارة مع تلك الموجودة في مرجع [<bdi dir="ltr" class="odt-ltr-term">MySql.Data</bdi>] في المشروع [1]:</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003D50000028DB1ACEBFD.png" width="491" height="327" style="display:inline-block; margin:4px;width:12.979cm;height:8.64cm;" class="odt-zoomable" data-zoom-src="images/10000000000003D50000028DB1ACEBFD.png" /></td></tr></table>
 
-<p><span style="color: #000000">هناك أيضًا بعض الإعدادات في ملف [Entities.cs] حيث نحدد أسماء الجداول والمخطط الذي تنتمي إليه. قد يختلف هذا اعتمادًا على نظام إدارة قواعد البيانات (DBMS). هذا هو الحال هنا، حيث لن يكون هناك مخطط. يتغير ملف [Entities.cs] على النحو التالي:</span></p>
+<p><span style="color: #000000">هناك أيضًا بعض الإعدادات في ملف [<bdi dir="ltr" class="odt-ltr-term">Entities.cs</bdi>] حيث نحدد أسماء الجداول والمخطط الذي تنتمي إليه. قد يختلف هذا اعتمادًا على نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>). هذا هو الحال هنا، حيث لن يكون هناك مخطط. يتغير ملف [<bdi dir="ltr" class="odt-ltr-term">Entities.cs</bdi>] على النحو التالي:</span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content">  [<span style="color:#2b91af">Table</span>(<span style="color:#a31515">&quot;MEDECINS&quot;</span>)]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">Medecin</span><span style="color:#000000"> : </span><span style="color:#2b91af">Personne</span></span></span>
@@ -743,7 +745,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  {...}</span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">دعونا نقوم بتشغيل البرنامج [CreateDB_01] [2]. نحصل على الاستثناء التالي:</span></p>
+<p><span style="color: #000000">دعونا نقوم بتشغيل البرنامج [<bdi dir="ltr" class="odt-ltr-term">CreateDB</bdi>_01] [2]. نحصل على الاستثناء التالي:</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -764,7 +766,7 @@
 <a id="__codelineno-0-9" name="__codelineno-0-9"></a>   à RdvMedecins_01.CreateDB_01.Main(String[] args) dans d:\data\istia-1213\c#\d
 <a id="__codelineno-0-10" name="__codelineno-0-10"></a>vp\Entity Framework\RdvMedecins\RdvMedecins-MySQL-01\CreateDB_01.cs:ligne 15
 </code></pre></div></td></tr></table></div>
-<p><span style="color: #000000">يظهر نفس الخطأ أربع مرات (الأسطر 2–5). يشير نوع </span><em><span style="color: #000000">rowversion </span></em><span style="color: #000000">إلى الحقل الذي يحمل تعليق [Timestamp] في الكيانات:</span></p>
+<p><span style="color: #000000">يظهر نفس الخطأ أربع مرات (الأسطر 2–5). يشير نوع </span><em><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">rowversion</bdi> </span></em><span style="color: #000000">إلى الحقل الذي يحمل تعليق [<bdi dir="ltr" class="odt-ltr-term">Timestamp</bdi>] في الكيانات:</span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    [</span><span style="color:#2b91af">Column</span><span style="color:#000000">(</span><span style="color:#a31515">&quot;TIMESTAMP&quot;</span><span style="color:#000000">)]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    [</span><span style="color:#2b91af">Timestamp</span><span style="color:#000000">]</span></span></span>
@@ -778,8 +780,8 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">DateTime</span><span style="color:#000000">? Versioning { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">نقوم بتغيير نوع العمود من </span><strong><span style="color: #000000">byte[] </span></strong><span style="color: #000000">إلى </span><strong><span style="color: #000000">DateTime?</span></strong><span style="color: #000000">. نقوم بذلك لأن MySQL يحتوي على نوع [TIMESTAMP] الذي يمثل التاريخ/الوقت، ويتم تحديث العمود من هذا النوع تلقائيًا بواسطة MySQL في كل مرة يتم فيها تحديث الصف. سيسمح لنا ذلك بإدارة الوصول المتزامن.</span></p>
-<p><span style="color: #000000">لا يمكن تطبيق التعليق التوضيحي [Timestamp] إلا على عمود من النوع byte[]. نستبدله بالتعليق التوضيحي [ConcurrencyCheck]. يتعامل كلا التعليقين التوضيحيين مع الوصول المتزامن. نقوم بذلك لجميع الكيانات الأربعة ثم نعيد تشغيل التطبيق. ثم نحصل على الخطأ التالي:</span></p>
+<p><span style="color: #000000">نقوم بتغيير نوع العمود من </span><strong><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">byte</bdi>[] </span></strong><span style="color: #000000">إلى </span><strong><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">DateTime</bdi>?</span></strong><span style="color: #000000">. نقوم بذلك لأن <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> يحتوي على نوع [<bdi dir="ltr" class="odt-ltr-term">TIMESTAMP</bdi>] الذي يمثل التاريخ/الوقت، ويتم تحديث العمود من هذا النوع تلقائيًا بواسطة <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> في كل مرة يتم فيها تحديث الصف. سيسمح لنا ذلك بإدارة الوصول المتزامن.</span></p>
+<p><span style="color: #000000">لا يمكن تطبيق التعليق التوضيحي [<bdi dir="ltr" class="odt-ltr-term">Timestamp</bdi>] إلا على عمود من النوع <bdi dir="ltr" class="odt-ltr-term">byte</bdi>[]. نستبدله بالتعليق التوضيحي [<bdi dir="ltr" class="odt-ltr-term">ConcurrencyCheck</bdi>]. يتعامل كلا التعليقين التوضيحيين مع الوصول المتزامن. نقوم بذلك لجميع الكيانات الأربعة ثم نعيد تشغيل التطبيق. ثم نحصل على الخطأ التالي:</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
@@ -796,19 +798,19 @@
 <a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">   </span><span class="err">à</span><span class="w"> </span><span class="n">RdvMedecins_01</span><span class="p">.</span><span class="n">CreateDB_01</span><span class="p">.</span><span class="n">Main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="n">dans</span><span class="w"> </span><span class="n">d</span><span class="p">:</span><span class="err">\</span><span class="k">data</span><span class="err">\</span><span class="n">istia</span><span class="o">-</span><span class="mi">1213</span><span class="err">\</span><span class="k">c</span><span class="o">#</span><span class="err">\</span><span class="n">d</span>
 <a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="n">vp</span><span class="err">\</span><span class="n">Entity</span><span class="w"> </span><span class="n">Framework</span><span class="err">\</span><span class="n">RdvMedecins</span><span class="err">\</span><span class="n">RdvMedecins</span><span class="o">-</span><span class="n">MySQL</span><span class="o">-</span><span class="mi">01</span><span class="err">\</span><span class="n">CreateDB_01</span><span class="p">.</span><span class="n">cs</span><span class="p">:</span><span class="n">ligne</span><span class="w"> </span><span class="mi">15</span>
 </code></pre></div></td></tr></table></div>
-<p><span style="color: #000000">تشير السطر 1 إلى وجود خطأ في بناء الجملة في SQL الذي تم تنفيذه بواسطة MySQL. وبما أن هذا لم يتم إنشاؤه من قبلنا بل من قبل موفر MySQL ADO.NET، فلا يمكننا تصحيح هذه المشكلة. ومع ذلك، يمكننا أن نرى أن الجداول قد تم إنشاؤها [1] أدناه:</span></p>
+<p><span style="color: #000000">تشير السطر 1 إلى وجود خطأ في بناء الجملة في <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> الذي تم تنفيذه بواسطة <bdi dir="ltr" class="odt-ltr-term">MySQL.</bdi> وبما أن هذا لم يتم إنشاؤه من قبلنا بل من قبل موفر <bdi dir="ltr" class="odt-ltr-term">MySQL ADO.NET</bdi>، فلا يمكننا تصحيح هذه المشكلة. ومع ذلك، يمكننا أن نرى أن الجداول قد تم إنشاؤها [1] أدناه:</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000062A000002907DD59AC2.png" width="680" height="283" style="display:inline-block; margin:4px;width:17.999cm;height:7.482cm;" class="odt-zoomable" data-zoom-src="images/100000000000062A000002907DD59AC2.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [2]، نرى بنية جدول [clients] [3].</span></li>
+<li><span style="color: #000000">في [2]، نرى بنية جدول [<bdi dir="ltr" class="odt-ltr-term">clients</bdi>] [3].</span></li>
 </ul>
 <p><span style="color: #000000">هناك عدة تغييرات يجب إجراؤها على قاعدة البيانات التي تم إنشاؤها:</span></p>
 <ul>
-<li><span style="color: #000000">نوع بيانات عمود [VERSIONING] غير صحيح. يجب تعيينه إلى نوع [TIMESTAMP] في MySQL؛</span></li>
-<li><span style="color: #000000">تذكر أن جدول [rvs] يحتوي على قيد فريد. لم يتم إنشاؤه أثناء هذا الإنشاء؛</span></li>
-<li><span style="color: #000000">قام موصل SQL Server ADO.NET بإنشاء مفاتيح خارجية باستخدام جملة ON DELETE CASCADE. لم يقم موصل MySQL ADO.NET بذلك.</span></li>
+<li><span style="color: #000000">نوع بيانات عمود [<bdi dir="ltr" class="odt-ltr-term">VERSIONING</bdi>] غير صحيح. يجب تعيينه إلى نوع [<bdi dir="ltr" class="odt-ltr-term">TIMESTAMP</bdi>] في <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi>؛</span></li>
+<li><span style="color: #000000">تذكر أن جدول [<bdi dir="ltr" class="odt-ltr-term">rvs</bdi>] يحتوي على قيد فريد. لم يتم إنشاؤه أثناء هذا الإنشاء؛</span></li>
+<li><span style="color: #000000">قام موصل <bdi dir="ltr" class="odt-ltr-term">SQL Server ADO.NET</bdi> بإنشاء مفاتيح خارجية باستخدام جملة <bdi dir="ltr" class="odt-ltr-term">ON DELETE CASCADE.</bdi> لم يقم موصل <bdi dir="ltr" class="odt-ltr-term">MySQL ADO.NET</bdi> بذلك.</span></li>
 </ul>
-<p><span style="color: #000000">وكما فعلنا مع SQL Server، يجب علينا بالتالي تعديل قاعدة البيانات التي تم إنشاؤها. لن نعرض كيفية إجراء التعديلات. سنكتفي بتوفير البرنامج النصي لإنشاء قاعدة البيانات:</span></p>
+<p><span style="color: #000000">وكما فعلنا مع <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi>، يجب علينا بالتالي تعديل قاعدة البيانات التي تم إنشاؤها. لن نعرض كيفية إجراء التعديلات. سنكتفي بتوفير البرنامج النصي لإنشاء قاعدة البيانات:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-sql">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080"># SQL Manager Lite for MySQL 5.3.0.2</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000"># ---------------------------------------</span></span></span>
@@ -901,15 +903,15 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">السطور 22 و38 و54 و74: المفاتيح الأساسية (ID) للجداول من النوع AUTO_INCREMENT وبالتالي يتم إنشاؤها بواسطة MySQL؛</span></li>
-<li><span style="color: #000000">السطور 26 و42 و60 و78: عمود VERSIONING من النوع TIMESTAMP ويتم تحديثه أثناء INSERT أو UPDATE؛</span></li>
-<li><span style="color: #000000">السطر 63: المفتاح الخارجي من جدول [slots] إلى جدول [doctors] مع جملة ON DELETE CASCADE؛</span></li>
-<li><span style="color: #000000">السطر 80: قيد التفرد في جدول [rvs]؛</span></li>
-<li><span style="color: #000000">السطر 83: المفتاح الخارجي من الجدول [rvs] إلى الجدول [slots] مع جملة ON DELETE CASCADE؛</span></li>
-<li><span style="color: #000000">السطر 84: المفتاح الخارجي من الجدول [rvs] إلى الجدول [clients] مع جملة ON DELETE CASCADE؛</span></li>
+<li><span style="color: #000000">السطور 22 و38 و54 و74: المفاتيح الأساسية (<bdi dir="ltr" class="odt-ltr-term">ID</bdi>) للجداول من النوع <bdi dir="ltr" class="odt-ltr-term">AUTO</bdi>_INCREMENT وبالتالي يتم إنشاؤها بواسطة <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi>؛</span></li>
+<li><span style="color: #000000">السطور 26 و42 و60 و78: عمود <bdi dir="ltr" class="odt-ltr-term">VERSIONING</bdi> من النوع <bdi dir="ltr" class="odt-ltr-term">TIMESTAMP</bdi> ويتم تحديثه أثناء <bdi dir="ltr" class="odt-ltr-term">INSERT</bdi> أو <bdi dir="ltr" class="odt-ltr-term">UPDATE</bdi>؛</span></li>
+<li><span style="color: #000000">السطر 63: المفتاح الخارجي من جدول [<bdi dir="ltr" class="odt-ltr-term">slots</bdi>] إلى جدول [<bdi dir="ltr" class="odt-ltr-term">doctors</bdi>] مع جملة <bdi dir="ltr" class="odt-ltr-term">ON DELETE CASCADE</bdi>؛</span></li>
+<li><span style="color: #000000">السطر 80: قيد التفرد في جدول [<bdi dir="ltr" class="odt-ltr-term">rvs</bdi>]؛</span></li>
+<li><span style="color: #000000">السطر 83: المفتاح الخارجي من الجدول [<bdi dir="ltr" class="odt-ltr-term">rvs</bdi>] إلى الجدول [<bdi dir="ltr" class="odt-ltr-term">slots</bdi>] مع جملة <bdi dir="ltr" class="odt-ltr-term">ON DELETE CASCADE</bdi>؛</span></li>
+<li><span style="color: #000000">السطر 84: المفتاح الخارجي من الجدول [<bdi dir="ltr" class="odt-ltr-term">rvs</bdi>] إلى الجدول [<bdi dir="ltr" class="odt-ltr-term">clients</bdi>] مع جملة <bdi dir="ltr" class="odt-ltr-term">ON DELETE CASCADE</bdi>؛</span></li>
 </ul>
-<p><span style="color: #000000">تم وضع البرنامج النصي لإنشاء الجداول في قاعدة بيانات MySQL [rvmedecins-ef] في المجلد [RdvMedecins / databases / mysql]. يمكن للقارئ تحميله وتشغيله لإنشاء الجداول.</span></p>
-<p><span style="color: #000000">بمجرد الانتهاء من ذلك، يمكن تشغيل البرامج المختلفة في المشروع. وهي تعطي نفس النتائج كما هو الحال مع SQL Server، باستثناء برنامج [ModifyDetachedEntities]، الذي يتعطل. لفهم السبب، يمكننا إلقاء نظرة على ناتج برنامج [ModifyAttachedEntities]:</span></p>
+<p><span style="color: #000000">تم وضع البرنامج النصي لإنشاء الجداول في قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> [<bdi dir="ltr" class="odt-ltr-term">rvmedecins-ef</bdi>] في المجلد [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins</bdi> / <bdi dir="ltr" class="odt-ltr-term">databases</bdi> / <bdi dir="ltr" class="odt-ltr-term">mysql</bdi>]. يمكن للقارئ تحميله وتشغيله لإنشاء الجداول.</span></p>
+<p><span style="color: #000000">بمجرد الانتهاء من ذلك، يمكن تشغيل البرامج المختلفة في المشروع. وهي تعطي نفس النتائج كما هو الحال مع <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi>، باستثناء برنامج [<bdi dir="ltr" class="odt-ltr-term">ModifyDetachedEntities</bdi>]، الذي يتعطل. لفهم السبب، يمكننا إلقاء نظرة على ناتج برنامج [<bdi dir="ltr" class="odt-ltr-term">ModifyAttachedEntities</bdi>]:</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
@@ -928,9 +930,9 @@
 </code></pre></div></td></tr></table></div>
 <ul>
 <li><span style="color: #000000">السطران 1-2: عميل قبل حفظ السياق؛</span></li>
-<li><span style="color: #000000">السطران 3-4: العميل بعد الحفظ. يحتوي على مفتاح أساسي ولكن لا توجد قيمة لحقل [Versioning] الخاص به، في حين قام SQL Server بتحديث حقل [Timestamp] الخاص بالكيان.</span></li>
+<li><span style="color: #000000">السطران 3-4: العميل بعد الحفظ. يحتوي على مفتاح أساسي ولكن لا توجد قيمة لحقل [<bdi dir="ltr" class="odt-ltr-term">Versioning</bdi>] الخاص به، في حين قام <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi> بتحديث حقل [<bdi dir="ltr" class="odt-ltr-term">Timestamp</bdi>] الخاص بالكيان.</span></li>
 </ul>
-<p><span style="color: #000000">الآن دعونا نفحص كود برنامج [ModifyDetachedEntities] الذي يتعطل:</span></p>
+<p><span style="color: #000000">الآن دعونا نفحص كود برنامج [<bdi dir="ltr" class="odt-ltr-term">ModifyDetachedEntities</bdi>] الذي يتعطل:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
@@ -986,7 +988,7 @@
 
 <ul>
 <li><span style="color: #000000">السطر 20: تم حفظ عميل. أصبح لديه الآن مفتاحه الأساسي، ولكن بناءً على إصداره؛</span></li>
-<li><span style="color: #000000">السطر 33: تم إجراء تعديل على client1. فشل التعديل لأنه لا يحتوي على الإصدار المخزن في قاعدة البيانات.</span></li>
+<li><span style="color: #000000">السطر 33: تم إجراء تعديل على <bdi dir="ltr" class="odt-ltr-term">client1.</bdi> فشل التعديل لأنه لا يحتوي على الإصدار المخزن في قاعدة البيانات.</span></li>
 </ul>
 <p><span style="color: #000000">نحل المشكلة بإدراج الكود التالي بين السطرين 25 و26:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
@@ -1000,27 +1002,27 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">الآن، أصبح للكيان [</span>client1] <span style="color: #000000">نفس الإصدار الموجود في قاعدة البيانات، وبالتالي يمكن استخدامه لتحديث الصف في قاعدة البيانات.</span></p>
+<p><span style="color: #000000">الآن، أصبح للكيان [</span><bdi dir="ltr" class="odt-ltr-term">client1</bdi>] <span style="color: #000000">نفس الإصدار الموجود في قاعدة البيانات، وبالتالي يمكن استخدامه لتحديث الصف في قاعدة البيانات.</span></p>
 <p><a id="refheading39803804107930"></a></p>
-<h2 id="43-ef-5">4.3. <span style="color: #4f81bd">بنية متعددة الطبقات تستند إلى EF 5</span></h2>
+<h2 id="43-ef-5">4.3. <span style="color: #4f81bd">بنية متعددة الطبقات تستند إلى <bdi dir="ltr" class="odt-ltr-term">EF</bdi> 5</span></h2>
 <p><span style="color: #000000">لنعد إلى دراسة الحالة الموضحة في </span><a href="#etude-de-cas"><u><span style="color: #0563c1">القسم 2</span></u></a><span style="color: #000000">.</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005F50000012077918B5B.png" width="680" height="128" style="display:inline-block; margin:4px;width:17.999cm;height:3.399cm;" class="odt-zoomable" data-zoom-src="images/10000000000005F50000012077918B5B.png" /></td></tr></table>
 
-<p><span style="color: #000000">سنبدأ ببناء طبقة الوصول إلى البيانات [DAO]. للقيام بذلك، نقوم بإنشاء مشروع وحدة التحكم VS 2012 [RdvMedecins-MySQL-02] [1]:</span></p>
+<p><span style="color: #000000">سنبدأ ببناء طبقة الوصول إلى البيانات [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]. للقيام بذلك، نقوم بإنشاء مشروع وحدة التحكم <bdi dir="ltr" class="odt-ltr-term">VS</bdi> 2012 [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-MySQL-02</bdi>] [1]:</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005B90000014B6315343F.png" width="680" height="154" style="display:inline-block; margin:4px;width:17.999cm;height:4.068cm;" class="odt-zoomable" data-zoom-src="images/10000000000005B90000014B6315343F.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [2]، تتم إضافة المراجع [Common.Logging، EntityFramework، MySql.Data، MySql.Data.Entity، Spring.Core] باستخدام NuGet؛</span></li>
-<li><span style="color: #000000">في [3]، يتم نسخ المجلد [Models] من مشروع [RdvMedecins-MySQL-01]؛</span></li>
+<li><span style="color: #000000">في [2]، تتم إضافة المراجع [<bdi dir="ltr" class="odt-ltr-term">Common.Logging</bdi>، <bdi dir="ltr" class="odt-ltr-term">EntityFramework</bdi>، <bdi dir="ltr" class="odt-ltr-term">MySql.Data</bdi>، <bdi dir="ltr" class="odt-ltr-term">MySql.Data.Entity</bdi>، <bdi dir="ltr" class="odt-ltr-term">Spring.Core</bdi>] باستخدام <bdi dir="ltr" class="odt-ltr-term">NuGet</bdi>؛</span></li>
+<li><span style="color: #000000">في [3]، يتم نسخ المجلد [<bdi dir="ltr" class="odt-ltr-term">Models</bdi>] من مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-MySQL-01</bdi>]؛</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005670000014406B4BB75.png" width="680" height="159" style="display:inline-block; margin:4px;width:17.999cm;height:4.217cm;" class="odt-zoomable" data-zoom-src="images/10000000000005670000014406B4BB75.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [4]، يتم نسخ المجلدات [Dao، Exception، Tests] والملف [App.config] من مشروع [RdvMedecins-SqlServer-02]؛</span></li>
-<li><span style="color: #000000">في [5]، تم حذف الملف [Program.cs]؛</span></li>
-<li><span style="color: #000000">في [6]، تم تكوين المشروع لتشغيل برنامج اختبار طبقة [DAO].</span></li>
+<li><span style="color: #000000">في [4]، يتم نسخ المجلدات [<bdi dir="ltr" class="odt-ltr-term">Dao</bdi>، <bdi dir="ltr" class="odt-ltr-term">Exception</bdi>، <bdi dir="ltr" class="odt-ltr-term">Tests</bdi>] والملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] من مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-02</bdi>]؛</span></li>
+<li><span style="color: #000000">في [5]، تم حذف الملف [<bdi dir="ltr" class="odt-ltr-term">Program.cs</bdi>]؛</span></li>
+<li><span style="color: #000000">في [6]، تم تكوين المشروع لتشغيل برنامج اختبار طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>].</span></li>
 </ul>
-<p><span style="color: #000000">في ملف [App.config]، يتم استبدال معلومات قاعدة بيانات SQL Server بمعلومات قاعدة بيانات MySQL. يمكن العثور على هذه المعلومات في ملف [App.config] الخاص بمشروع [RdvMedecins-MySQL-01]:</span></p>
+<p><span style="color: #000000">في ملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]، يتم استبدال معلومات قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi> بمعلومات قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL.</bdi> يمكن العثور على هذه المعلومات في ملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] الخاص بمشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-MySQL-01</bdi>]:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- connecting chain--&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">  &lt;</span><span style="color:#a31515">connectionStrings</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -1038,7 +1040,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">  &lt;/</span><span style="color:#a31515">system.data</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">تتغير أيضًا الكائنات التي يديرها Spring. لدينا حاليًا:</span></p>
+<p><span style="color: #000000">تتغير أيضًا الكائنات التي يديرها <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> لدينا حاليًا:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">&lt;!-- spring configuration --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">  &lt;</span><span style="color:#a31515">spring</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -1051,19 +1053,19 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#a31515">spring</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">يشير السطر 7 إلى التجميع الخاص بمشروع [</span><span style="color: #0000ff">RdvMedecins-SqlServer-02</span><span style="color: #000000">]. أصبح التجميع الآن [</span><span style="color: #0000ff">RdvMedecins-MySQL-02</span><span style="color: #000000">].</span></p>
-<p><span style="color: #000000">وبعد الانتهاء من ذلك، نكون جاهزين لتشغيل اختبار طبقة [DAO]. أولاً، يجب أن نتأكد من أن قاعدة البيانات مملوءة (باستخدام برنامج [Fill] من مشروع [</span><span style="color: #0000ff">RdvMedecins-MySQL-01</span><span style="color: #000000">]). يعمل برنامج الاختبار بنجاح.</span></p>
-<p><span style="color: #000000">نقوم بإنشاء ملف DLL الخاص بالمشروع كما فعلنا مع مشروع [</span><span style="color: #0000ff">RdvMedecins-SqlServer-02</span><span style="color: #000000">]، ونضع جميع ملفات DLL الخاصة بالمشروع في مجلد [lib] تم إنشاؤه داخل [</span><span style="color: #0000ff">RdvMedecins-MySQL-02</span><span style="color: #000000">]. ستكون هذه الملفات بمثابة مراجع لمشروع الويب [</span><span style="color: #0000ff">RdvMedecins-MySQL-03</span><span style="color: #000000">]، الذي سنناقشه لاحقًا.</span></p>
+<p><span style="color: #000000">يشير السطر 7 إلى التجميع الخاص بمشروع [</span><span style="color: #0000ff"><bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-02</bdi></span><span style="color: #000000">]. أصبح التجميع الآن [</span><span style="color: #0000ff"><bdi dir="ltr" class="odt-ltr-term">RdvMedecins-MySQL-02</bdi></span><span style="color: #000000">].</span></p>
+<p><span style="color: #000000">وبعد الانتهاء من ذلك، نكون جاهزين لتشغيل اختبار طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]. أولاً، يجب أن نتأكد من أن قاعدة البيانات مملوءة (باستخدام برنامج [<bdi dir="ltr" class="odt-ltr-term">Fill</bdi>] من مشروع [</span><span style="color: #0000ff"><bdi dir="ltr" class="odt-ltr-term">RdvMedecins-MySQL-01</bdi></span><span style="color: #000000">]). يعمل برنامج الاختبار بنجاح.</span></p>
+<p><span style="color: #000000">نقوم بإنشاء ملف <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الخاص بالمشروع كما فعلنا مع مشروع [</span><span style="color: #0000ff"><bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-02</bdi></span><span style="color: #000000">]، ونضع جميع ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الخاصة بالمشروع في مجلد [<bdi dir="ltr" class="odt-ltr-term">lib</bdi>] تم إنشاؤه داخل [</span><span style="color: #0000ff"><bdi dir="ltr" class="odt-ltr-term">RdvMedecins-MySQL-02</bdi></span><span style="color: #000000">]. ستكون هذه الملفات بمثابة مراجع لمشروع الويب [</span><span style="color: #0000ff"><bdi dir="ltr" class="odt-ltr-term">RdvMedecins-MySQL-03</bdi></span><span style="color: #000000">]، الذي سنناقشه لاحقًا.</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000102000000E037C4810C.png" width="181" height="157" style="display:inline-block; margin:4px;width:4.78cm;height:4.15cm;" class="odt-zoomable" data-zoom-src="images/1000000000000102000000E037C4810C.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p><span style="color: #000000">نحن الآن جاهزون لإنشاء طبقة [ASP.NET] لتطبيقنا:</span></p>
+<p><span style="color: #000000">نحن الآن جاهزون لإنشاء طبقة [<bdi dir="ltr" class="odt-ltr-term">ASP.NET</bdi>] لتطبيقنا:</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005EA000001198FA111DE.png" width="680" height="126" style="display:inline-block; margin:4px;width:17.999cm;height:3.341cm;" class="odt-zoomable" data-zoom-src="images/10000000000005EA000001198FA111DE.png" /></td></tr></table>
 
-<p><span style="color: #000000">سنبدأ بمشروع [RdvMedecins-SqlServer-03]. نقوم بنسخ مجلد هذا المشروع إلى [RdvMedecins-MySQL-03] [1]:</span></p>
+<p><span style="color: #000000">سنبدأ بمشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-03</bdi>]. نقوم بنسخ مجلد هذا المشروع إلى [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-MySQL-03</bdi>] [1]:</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005B400000205E86B00AC.png" width="680" height="241" style="display:inline-block; margin:4px;width:17.999cm;height:6.375cm;" class="odt-zoomable" data-zoom-src="images/10000000000005B400000205E86B00AC.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [2]، باستخدام VS 2012 Express for the Web، نفتح الحل في مجلد [RdvMedecins-MySQL-03]؛</span></li>
+<li><span style="color: #000000">في [2]، باستخدام <bdi dir="ltr" class="odt-ltr-term">VS</bdi> 2012 <bdi dir="ltr" class="odt-ltr-term">Express for the Web</bdi>، نفتح الحل في مجلد [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-MySQL-03</bdi>]؛</span></li>
 <li><span style="color: #000000">في [3]، نقوم بتغيير اسم الحل واسم المشروع؛</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000056E0000018E9D1495BD.png" width="680" height="195" style="display:inline-block; margin:4px;width:17.999cm;height:5.154cm;" class="odt-zoomable" data-zoom-src="images/100000000000056E0000018E9D1495BD.png" /></td></tr></table>
@@ -1071,14 +1073,14 @@
 <ul>
 <li><span style="color: #000000">في [4]، المراجع الحالية للمشروع؛</span></li>
 <li><span style="color: #000000">في [5]، نقوم بحذفها؛</span></li>
-<li><span style="color: #000000">في [6]، لاستبدالها بمراجع إلى ملفات DLL التي قمنا بتخزينها للتو في مجلد [lib] داخل مشروع [RdvMedecins-MySQL-02].</span></li>
+<li><span style="color: #000000">في [6]، لاستبدالها بمراجع إلى ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> التي قمنا بتخزينها للتو في مجلد [<bdi dir="ltr" class="odt-ltr-term">lib</bdi>] داخل مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-MySQL-02</bdi>].</span></li>
 </ul>
-<p><span style="color: #000000">كل ما تبقى هو تعديل ملف [Web.config]. نستبدل محتواه الحالي بمحتوى ملف [App.config] من مشروع [RdvMedecins-MySQL-02]. بمجرد الانتهاء من ذلك، نقوم بتشغيل مشروع الويب. إنه يعمل.</span></p>
+<p><span style="color: #000000">كل ما تبقى هو تعديل ملف [<bdi dir="ltr" class="odt-ltr-term">Web.config</bdi>]. نستبدل محتواه الحالي بمحتوى ملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] من مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-MySQL-02</bdi>]. بمجرد الانتهاء من ذلك، نقوم بتشغيل مشروع الويب. إنه يعمل.</span></p>
 <p><a id="refheading39805804107930"></a></p>
 <h2 id="44">4.4. <span style="color: #4f81bd">الخلاصة</span></h2>
-<p><span style="color: #000000">دعونا نلخص ما تم القيام به للتحول من نظام إدارة قواعد البيانات SQL Server إلى نظام إدارة قواعد البيانات MySQL:</span></p>
+<p><span style="color: #000000">دعونا نلخص ما تم القيام به للتحول من نظام إدارة قواعد البيانات <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi> إلى نظام إدارة قواعد البيانات <bdi dir="ltr" class="odt-ltr-term">MySQL:</bdi></span></p>
 <ul>
-<li><span style="color: #000000">تم تغيير الحقل المستخدم لإدارة الوصول المتزامن إلى الكيانات. كانت نسخته في SQL Server هي:</span></li>
+<li><span style="color: #000000">تم تغيير الحقل المستخدم لإدارة الوصول المتزامن إلى الكيانات. كانت نسخته في <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi> هي:</span></li>
 </ul>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content">    [<span style="color:#2b91af">Column</span>(<span style="color:#a31515">&quot;TIMESTAMP&quot;</span>)]</span></span>
@@ -1093,17 +1095,17 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">DateTime</span><span style="color:#000000">? Versioning { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">مع MySQL؛</span></p>
+<p><span style="color: #000000">مع <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi>؛</span></p>
 <ul>
-<li><span style="color: #000000">تم تغيير تعليقات [Table] التي تربط الكيان بالجدول؛</span></li>
-<li><span style="color: #000000">تم تعديل سلسلة اتصال قاعدة البيانات و[DbProviderFactory] في ملفات التكوين [App.config] و[Web.config]؛</span></li>
-<li><span style="color: #000000">بعد الحفظ في قاعدة البيانات، كان للكيان في SQL Server كل من المفتاح الأساسي </span><em>والطابع الزمني</em><span style="color: #000000">. أما في MySQL، فلم يكن له سوى المفتاح الأساسي. وهذا تطلب تغييرًا في الكود.</span></li>
+<li><span style="color: #000000">تم تغيير تعليقات [<bdi dir="ltr" class="odt-ltr-term">Table</bdi>] التي تربط الكيان بالجدول؛</span></li>
+<li><span style="color: #000000">تم تعديل سلسلة اتصال قاعدة البيانات و[<bdi dir="ltr" class="odt-ltr-term">DbProviderFactory</bdi>] في ملفات التكوين [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">Web.config</bdi>]؛</span></li>
+<li><span style="color: #000000">بعد الحفظ في قاعدة البيانات، كان للكيان في <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi> كل من المفتاح الأساسي </span><em>والطابع الزمني</em><span style="color: #000000">. أما في <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi>، فلم يكن له سوى المفتاح الأساسي. وهذا تطلب تغييرًا في الكود.</span></li>
 </ul>
 <p><span style="color: #000000">في النهاية، كانت التغييرات قليلة نسبيًا، لكننا اضطررنا مع ذلك إلى مراجعة الكود. ونحن نكرر نفس العملية مع ثلاثة أنظمة إدارة قواعد بيانات أخرى:</span></p>
 <ul>
-<li><strong>Oracle Database Express Edition 11g Release 2؛</strong></li>
-<li><strong>نظام إدارة قواعد البيانات PostgreSQL 9.2.1</strong>؛</li>
-<li><strong>نظام إدارة قواعد البيانات Firebird 2.1</strong>.</li>
+<li><strong><bdi dir="ltr" class="odt-ltr-term">Oracle Database Express Edition</bdi> 11g <bdi dir="ltr" class="odt-ltr-term">Release</bdi> 2؛</strong></li>
+<li><strong>نظام إدارة قواعد البيانات <bdi dir="ltr" class="odt-ltr-term">PostgreSQL 9.2.1</bdi></strong>؛</li>
+<li><strong>نظام إدارة قواعد البيانات <bdi dir="ltr" class="odt-ltr-term">Firebird 2.1</bdi></strong>.</li>
 </ul>
 
 

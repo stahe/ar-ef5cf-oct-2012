@@ -55,6 +55,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -542,18 +544,18 @@
 
 <p><a id="refheading39831804107930"></a></p>
 <h1 id="8">8. <span style="color: #365f91">الخلاصة</span></h1>
-<p><span style="color: #000000">في هذا المستند، استكشفنا أولاً Entity Framework 5 Code First (EF 5). ثم قمنا بنقل التطبيق التالي، الذي استخدم NHibernate ORM:</span></p>
+<p><span style="color: #000000">في هذا المستند، استكشفنا أولاً <bdi dir="ltr" class="odt-ltr-term">Entity Framework</bdi> 5 <bdi dir="ltr" class="odt-ltr-term">Code First</bdi> (<bdi dir="ltr" class="odt-ltr-term">EF</bdi> 5). ثم قمنا بنقل التطبيق التالي، الذي استخدم <bdi dir="ltr" class="odt-ltr-term">NHibernate ORM:</bdi></span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005EA00000115D91908D8.png" width="680" height="124" style="display:inline-block; margin:4px;width:17.999cm;height:3.293cm;" class="odt-zoomable" data-zoom-src="images/10000000000005EA00000115D91908D8.png" /></td></tr></table>
 
-<p>إلى البنية التالية، التي تستخدم EF 5 ORM:</p>
+<p>إلى البنية التالية، التي تستخدم <bdi dir="ltr" class="odt-ltr-term">EF</bdi> 5 <bdi dir="ltr" class="odt-ltr-term">ORM:</bdi></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005E50000011F327B2216.png" width="680" height="129" style="display:inline-block; margin:4px;width:17.999cm;height:3.424cm;" class="odt-zoomable" data-zoom-src="images/10000000000005E50000011F327B2216.png" /></td></tr></table>
 
-<p>لقد قمنا ببناء هذه البنية الأخيرة باستخدام خمسة أنظمة إدارة قواعد البيانات (DBMS). ورغم أن قابلية النقل بين أنظمة إدارة قواعد البيانات لم تكن دائمًا بنسبة 100٪، إلا أنها كانت مرضية للغاية. </p>
+<p>لقد قمنا ببناء هذه البنية الأخيرة باستخدام خمسة أنظمة إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>). ورغم أن قابلية النقل بين أنظمة إدارة قواعد البيانات لم تكن دائمًا بنسبة 100٪، إلا أنها كانت مرضية للغاية. </p>
 <p>تعلمنا بعض المبادئ:</p>
 <ul>
 <li>جميع أنظمة إدارة قواعد البيانات التي تمت دراستها لديها حل لإنشاء قيم المفاتيح الأساسية تلقائيًا؛</li>
 <li>لإدارة الوصول المتزامن إلى كيانات قاعدة البيانات، يبدو أن العمود الصحيح الذي يتم زيادته تلقائيًا بواسطة المشغلات هو حل مقبول من الجميع؛</li>
-<li>عند العمل في وضع التحميل المتأخر (Lazy Loading)، من المهم أن تقوم الكيانات بتغليف قيم المفاتيح الخارجية المرتبطة بها. وهذا يسمح بعد ذلك باسترداد تبعيات الكيان من قاعدة البيانات.</li>
+<li>عند العمل في وضع التحميل المتأخر (<bdi dir="ltr" class="odt-ltr-term">Lazy Loading</bdi>)، من المهم أن تقوم الكيانات بتغليف قيم المفاتيح الخارجية المرتبطة بها. وهذا يسمح بعد ذلك باسترداد تبعيات الكيان من قاعدة البيانات.</li>
 </ul>
 
 

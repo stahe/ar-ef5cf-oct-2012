@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -613,23 +615,23 @@
 
 
 <p><a id="refheading39815804107930"></a></p>
-<h1 id="6-postgresql-921">6. <span style="color: #365f91">دراسة حالة مع PostgreSQL 9.2.1</span></h1>
+<h1 id="6-postgresql-921">6. <span style="color: #365f91">دراسة حالة مع <bdi dir="ltr" class="odt-ltr-term">PostgreSQL 9.2.1</bdi></span></h1>
 <p><a id="refheading39817804107930"></a></p>
 <h2 id="61">6.1. <span style="color: #4f81bd">تثبيت الأدوات</span></h2>
 <p><span style="color: #000000">الأدوات التي يجب تثبيتها هي كما يلي:</span></p>
 <ul>
-<li>نظام إدارة قواعد البيانات (DBMS): [http://www.enterprisedb.com/products-services-training/pgdownload#windows]؛</li>
-<li>أداة إدارة: EMS SQL Manager for PostgreSQL Freeware [http://www.sqlmanager.net/fr/products/postgresql/manager/download].</li>
+<li>نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>): [<bdi dir="ltr" class="odt-ltr-term">http://www.enterprisedb.com/products-services-training/pgdownload#windows</bdi>]؛</li>
+<li>أداة إدارة: <bdi dir="ltr" class="odt-ltr-term">EMS SQL Manager for PostgreSQL Freeware</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://www.sqlmanager.net/fr/products/postgresql/manager/download</bdi>].</li>
 </ul>
-<p><span style="color: #000000">في الأمثلة التالية، كلمة مرور المستخدم </span><strong><span style="color: #000000">postgres </span></strong><span style="color: #000000">هي </span><strong><span style="color: #000000">postgres</span></strong><span style="color: #000000">.</span></p>
-<p><span style="color: #000000">لنبدأ تشغيل PostgreSQL ثم أداة [SQL Manager Lite for PostgreSQL]، التي سنستخدمها لإدارة نظام إدارة قواعد البيانات.</span></p>
+<p><span style="color: #000000">في الأمثلة التالية، كلمة مرور المستخدم </span><strong><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">postgres</bdi> </span></strong><span style="color: #000000">هي </span><strong><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">postgres</bdi></span></strong><span style="color: #000000">.</span></p>
+<p><span style="color: #000000">لنبدأ تشغيل <bdi dir="ltr" class="odt-ltr-term">PostgreSQL</bdi> ثم أداة [<bdi dir="ltr" class="odt-ltr-term">SQL Manager Lite for PostgreSQL</bdi>]، التي سنستخدمها لإدارة نظام إدارة قواعد البيانات.</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000543000001760A1DE264.png" width="674" height="187" style="display:inline-block; margin:4px;width:17.821cm;height:4.948cm;" class="odt-zoomable" data-zoom-src="images/1000000000000543000001760A1DE264.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [1]، نقوم بتشغيل نظام إدارة قواعد البيانات PostgreSQL من خدمات Windows؛</span></li>
+<li><span style="color: #000000">في [1]، نقوم بتشغيل نظام إدارة قواعد البيانات <bdi dir="ltr" class="odt-ltr-term">PostgreSQL</bdi> من خدمات <bdi dir="ltr" class="odt-ltr-term">Windows</bdi>؛</span></li>
 <li><span style="color: #000000">في [2]، يتم تشغيل الخدمة؛</span></li>
 </ul>
-<p><span style="color: #000000">نقوم الآن بتشغيل أداة [SQL Manager Lite for MySQL]، التي سنستخدمها لإدارة نظام إدارة قواعد البيانات [3].</span></p>
+<p><span style="color: #000000">نقوم الآن بتشغيل أداة [<bdi dir="ltr" class="odt-ltr-term">SQL Manager Lite for MySQL</bdi>]، التي سنستخدمها لإدارة نظام إدارة قواعد البيانات [3].</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005F9000001C516CF5C64.png" width="680" height="202" style="display:inline-block; margin:4px;width:17.999cm;height:5.332cm;" class="odt-zoomable" data-zoom-src="images/10000000000005F9000001C516CF5C64.png" /></td></tr></table>
 
 <ul>
@@ -639,45 +641,45 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005FC0000026B7FF37AAE.png" width="680" height="275" style="display:inline-block; margin:4px;width:17.999cm;height:7.273cm;" class="odt-zoomable" data-zoom-src="images/10000000000005FC0000026B7FF37AAE.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [5]، نقوم بتسجيل الدخول باسم postgres / postgres؛</span></li>
+<li><span style="color: #000000">في [5]، نقوم بتسجيل الدخول باسم <bdi dir="ltr" class="odt-ltr-term">postgres</bdi> / <bdi dir="ltr" class="odt-ltr-term">postgres</bdi>؛</span></li>
 <li><span style="color: #000000">في [6]، نقدم بعض المعلومات؛</span></li>
-<li><span style="color: #000000">في [7]، نقوم بالتحقق من صحة عبارة SQL المراد تنفيذها؛</span></li>
+<li><span style="color: #000000">في [7]، نقوم بالتحقق من صحة عبارة <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> المراد تنفيذها؛</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000062B000002BE2EE8ECB3.png" width="680" height="302" style="display:inline-block; margin:4px;width:17.999cm;height:8.003cm;" class="odt-zoomable" data-zoom-src="images/100000000000062B000002BE2EE8ECB3.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [8]، تم إنشاء قاعدة البيانات. يجب الآن تسجيلها في [EMS Manager]. المعلومات صحيحة. انقر فوق [موافق]؛</span></li>
+<li><span style="color: #000000">في [8]، تم إنشاء قاعدة البيانات. يجب الآن تسجيلها في [<bdi dir="ltr" class="odt-ltr-term">EMS Manager</bdi>]. المعلومات صحيحة. انقر فوق [موافق]؛</span></li>
 <li><span style="color: #000000">في [9]، قم بالاتصال بها؛</span></li>
-<li><span style="color: #000000">في [10]، يعرض [EMS Manager] قاعدة البيانات، وهي فارغة حاليًا. لاحظ أن الجداول ستنتمي إلى مخطط يسمى </span><strong>public</strong> <span style="color: #000000">[11].</span></li>
+<li><span style="color: #000000">في [10]، يعرض [<bdi dir="ltr" class="odt-ltr-term">EMS Manager</bdi>] قاعدة البيانات، وهي فارغة حاليًا. لاحظ أن الجداول ستنتمي إلى مخطط يسمى </span><strong><bdi dir="ltr" class="odt-ltr-term">public</bdi></strong> <span style="color: #000000">[11].</span></li>
 </ul>
-<p><span style="color: #000000">سنقوم الآن بربط مشروع VS 2012 بهذه القاعدة البيانات.</span></p>
+<p><span style="color: #000000">سنقوم الآن بربط مشروع <bdi dir="ltr" class="odt-ltr-term">VS</bdi> 2012 بهذه القاعدة البيانات.</span></p>
 <p><a id="refheading39819804107930"></a></p>
 <h2 id="62">6.2. <span style="color: #4f81bd">إنشاء قاعدة البيانات من الكيانات</span></h2>
-<p><span style="color: #000000">نبدأ بنسخ مجلد مشروع [RdvMedecins-SqlServer-01] إلى [RdvMedecins-PostgreSQL-01] [1]:</span></p>
+<p><span style="color: #000000">نبدأ بنسخ مجلد مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-01</bdi>] إلى [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-PostgreSQL-01</bdi>] [1]:</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005D50000031AEFE46C95.png" width="680" height="362" style="display:inline-block; margin:4px;width:17.999cm;height:9.573cm;" class="odt-zoomable" data-zoom-src="images/10000000000005D50000031AEFE46C95.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [2]، في VS 2012، نزيل مشروع [RdvMedecins-SqlServer-01] من الحل؛</span></li>
+<li><span style="color: #000000">في [2]، في <bdi dir="ltr" class="odt-ltr-term">VS</bdi> 2012، نزيل مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-01</bdi>] من الحل؛</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006100000027462DF8913.png" width="680" height="275" style="display:inline-block; margin:4px;width:17.999cm;height:7.283cm;" class="odt-zoomable" data-zoom-src="images/10000000000006100000027462DF8913.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">في [3]، تمت إزالة المشروع؛</span></li>
-<li><span style="color: #000000">في [4]، نضيف مشروعًا آخر. هذا المشروع مأخوذ من المجلد [RdvMedecins-PostgreSQL-01] الذي أنشأناه سابقًا؛</span></li>
+<li><span style="color: #000000">في [4]، نضيف مشروعًا آخر. هذا المشروع مأخوذ من المجلد [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-PostgreSQL-01</bdi>] الذي أنشأناه سابقًا؛</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000032300000118117E153F.png" width="402" height="140" style="display:inline-block; margin:4px;width:10.624cm;height:3.704cm;" class="odt-zoomable" data-zoom-src="images/100000000000032300000118117E153F.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [5]، يُسمى المشروع الذي تم تحميله [RdvMedecins-SqlServer-01]؛</span></li>
-<li><span style="color: #000000">في [6]، نعيد تسميته إلى [RdvMedecins-PostgreSQL-01]؛</span></li>
+<li><span style="color: #000000">في [5]، يُسمى المشروع الذي تم تحميله [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-01</bdi>]؛</span></li>
+<li><span style="color: #000000">في [6]، نعيد تسميته إلى [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-PostgreSQL-01</bdi>]؛</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000062700000248DC41548B.png" width="680" height="252" style="display:inline-block; margin:4px;width:17.999cm;height:6.675cm;" class="odt-zoomable" data-zoom-src="images/100000000000062700000248DC41548B.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [7]، نضيف مشروعًا آخر إلى الحل. هذا المشروع مأخوذ من مجلد [RdvMedecins-SqlServer-01] الخاص بالمشروع الذي أزلناه سابقًا من الحل؛</span></li>
-<li><span style="color: #000000">في [8]، تمت إعادة إضافة مشروع [RdvMedecins-SqlServer-01] إلى الحل.</span></li>
+<li><span style="color: #000000">في [7]، نضيف مشروعًا آخر إلى الحل. هذا المشروع مأخوذ من مجلد [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-01</bdi>] الخاص بالمشروع الذي أزلناه سابقًا من الحل؛</span></li>
+<li><span style="color: #000000">في [8]، تمت إعادة إضافة مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-01</bdi>] إلى الحل.</span></li>
 </ul>
-<p><span style="color: #000000">مشروع [RdvMedecins-PostgreSQL-01] مطابق لمشروع [RdvMedecins-SqlServer-01]. نحتاج إلى إجراء بعض التغييرات. في [App.config]، سنقوم بتعديل سلسلة الاتصال و[DbProviderFactory]، والتي يجب تكييفها مع كل نظام إدارة قواعد البيانات (DBMS).</span></p>
+<p><span style="color: #000000">مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-PostgreSQL-01</bdi>] مطابق لمشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-01</bdi>]. نحتاج إلى إجراء بعض التغييرات. في [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]، سنقوم بتعديل سلسلة الاتصال و[<bdi dir="ltr" class="odt-ltr-term">DbProviderFactory</bdi>]، والتي يجب تكييفها مع كل نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>).</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- connection chain on base --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">  &lt;</span><span style="color:#a31515">connectionStrings</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -693,21 +695,21 @@
 
 <ul>
 <li><span style="color: #000000">السطر 3: اسم المستخدم وكلمة المرور؛</span></li>
-<li><span style="color: #000000">الأسطر 7-9: </span><em>DbProviderFactory</em><span style="color: #000000">. يشير السطر 8 إلى مكتبة DLL [</span><span style="color: #0000ff">Npgsql</span><span style="color: #000000">] التي لا نمتلكها. يمكننا الحصول عليها باستخدام NuGet [1]:</span></li>
+<li><span style="color: #000000">الأسطر 7-9: </span><em><bdi dir="ltr" class="odt-ltr-term">DbProviderFactory</bdi></em><span style="color: #000000">. يشير السطر 8 إلى مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> [</span><span style="color: #0000ff"><bdi dir="ltr" class="odt-ltr-term">Npgsql</bdi></span><span style="color: #000000">] التي لا نمتلكها. يمكننا الحصول عليها باستخدام <bdi dir="ltr" class="odt-ltr-term">NuGet</bdi> [1]:</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000062C00000277F7E13816.png" width="680" height="272" style="display:inline-block; margin:4px;width:17.999cm;height:7.188cm;" class="odt-zoomable" data-zoom-src="images/100000000000062C00000277F7E13816.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [2]، اكتب الكلمة الرئيسية </span><em>postgresql</em> <span style="color: #000000">في مربع البحث؛</span></li>
-<li><span style="color: #000000">في [3]، حدد الحزمة [Npgsql]. هذا موصل ADO.NET لـ PostgreSQL؛</span></li>
+<li><span style="color: #000000">في [2]، اكتب الكلمة الرئيسية </span><em><bdi dir="ltr" class="odt-ltr-term">postgresql</bdi></em> <span style="color: #000000">في مربع البحث؛</span></li>
+<li><span style="color: #000000">في [3]، حدد الحزمة [<bdi dir="ltr" class="odt-ltr-term">Npgsql</bdi>]. هذا موصل <bdi dir="ltr" class="odt-ltr-term">ADO.NET</bdi> لـ <bdi dir="ltr" class="odt-ltr-term">PostgreSQL</bdi>؛</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003EA000002974545F6D0.png" width="501" height="332" style="display:inline-block; margin:4px;width:13.256cm;height:8.772cm;" class="odt-zoomable" data-zoom-src="images/10000000000003EA000002974545F6D0.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">في [4]، تمت إضافة مرجعين؛</span></li>
-<li><span style="color: #000000">في [5]، في [App.config]، يجب تحديد الإصدار الصحيح لملف DLL. يمكنك العثور عليه في خصائصه.</span></li>
+<li><span style="color: #000000">في [5]، في [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]، يجب تحديد الإصدار الصحيح لملف <bdi dir="ltr" class="odt-ltr-term">DLL.</bdi> يمكنك العثور عليه في خصائصه.</span></li>
 </ul>
-<p><span style="color: #000000">في ملف [Entities.cs]، تحتاج إلى تكييف مخطط الجداول التي سيتم إنشاؤها:</span></p>
+<p><span style="color: #000000">في ملف [<bdi dir="ltr" class="odt-ltr-term">Entities.cs</bdi>]، تحتاج إلى تكييف مخطط الجداول التي سيتم إنشاؤها:</span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content">  [<span style="color:#2b91af">Table</span>(<span style="color:#a31515">&quot;MEDECINS&quot;</span>, Schema = <span style="color:#a31515">&quot;public&quot;</span>)]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">Medecin</span><span style="color:#000000"> : </span><span style="color:#2b91af">Personne</span></span></span>
@@ -726,7 +728,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  {...}</span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">لقد رأينا سابقًا عند إنشاء قاعدة بيانات PostgreSQL أن الجداول تنتمي إلى مخطط يسمى </span><strong>public</strong><span style="color: #000000">.</span></p>
+<p><span style="color: #000000">لقد رأينا سابقًا عند إنشاء قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">PostgreSQL</bdi> أن الجداول تنتمي إلى مخطط يسمى </span><strong><bdi dir="ltr" class="odt-ltr-term">public</bdi></strong><span style="color: #000000">.</span></p>
 <p><span style="color: #000000">نقوم بتكوين تنفيذ المشروع:</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000034600000124152767A9.png" width="419" height="146" style="display:inline-block; margin:4px;width:11.086cm;height:3.863cm;" class="odt-zoomable" data-zoom-src="images/100000000000034600000124152767A9.png" /></td></tr></table>
 
@@ -735,7 +737,7 @@
 <li><span style="color: #000000">في [2]، نحدد أيضًا مساحة أسماء افتراضية مختلفة؛</span></li>
 <li><span style="color: #000000">في [3]، نحدد البرنامج المراد تنفيذه.</span></li>
 </ul>
-<p><span style="color: #000000">في هذه المرحلة، لا توجد أخطاء في التحويل البرمجي. دعونا نقوم بتشغيل البرنامج [CreateDB_01]. نحصل على الاستثناء التالي:</span></p>
+<p><span style="color: #000000">في هذه المرحلة، لا توجد أخطاء في التحويل البرمجي. دعونا نقوم بتشغيل البرنامج [<bdi dir="ltr" class="odt-ltr-term">CreateDB</bdi>_01]. نحصل على الاستثناء التالي:</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -756,7 +758,7 @@
 <a id="__codelineno-0-9" name="__codelineno-0-9"></a>   à RdvMedecins_01.CreateDB_01.Main(String[] args) dans d:\data\istia-1213\c#\d
 <a id="__codelineno-0-10" name="__codelineno-0-10"></a>vp\Entity Framework\RdvMedecins\RdvMedecins-Oracle-01\CreateDB_01.cs:ligne 15
 </code></pre></div></td></tr></table></div>
-<p><span style="color: #000000">نتذكر أننا واجهنا نفس الخطأ مع MySQL و Oracle. ويرتبط هذا بنوع حقل </span><em><span style="color: #000000">Timestamp </span></em><span style="color: #000000">في الكيانات. نقوم بإجراء نفس التعديل كما في Oracle. في الكيانات، نستبدل الأسطر الثلاثة</span></p>
+<p><span style="color: #000000">نتذكر أننا واجهنا نفس الخطأ مع <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> و <bdi dir="ltr" class="odt-ltr-term">Oracle.</bdi> ويرتبط هذا بنوع حقل </span><em><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">Timestamp</bdi> </span></em><span style="color: #000000">في الكيانات. نقوم بإجراء نفس التعديل كما في <bdi dir="ltr" class="odt-ltr-term">Oracle.</bdi> في الكيانات، نستبدل الأسطر الثلاثة</span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    [</span><span style="color:#2b91af">Column</span><span style="color:#000000">(</span><span style="color:#a31515">&quot;TIMESTAMP&quot;</span><span style="color:#000000">)]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    [</span><span style="color:#2b91af">Timestamp</span><span style="color:#000000">]</span></span></span>
@@ -770,7 +772,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">int</span><span style="color:#000000">? Versioning { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">نقوم بتغيير نوع العمود من </span><strong><span style="color: #000000">byte[] </span></strong><span style="color: #000000">إلى </span><strong><span style="color: #000000">int?</span></strong><span style="color: #000000">. في نظام إدارة قواعد البيانات (DBMS)، سنستخدم الإجراءات المخزنة لزيادة هذا العدد الصحيح بمقدار واحد في كل مرة يتم فيها إدراج صف أو تعديله.</span></p>
+<p><span style="color: #000000">نقوم بتغيير نوع العمود من </span><strong><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">byte</bdi>[] </span></strong><span style="color: #000000">إلى </span><strong><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">int</bdi>?</span></strong><span style="color: #000000">. في نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>)، سنستخدم الإجراءات المخزنة لزيادة هذا العدد الصحيح بمقدار واحد في كل مرة يتم فيها إدراج صف أو تعديله.</span></p>
 <p><span style="color: #000000">نجري التغيير أعلاه على الكيانات الأربعة جميعها ثم نعيد تشغيل التطبيق. ثم نحصل على الخطأ التالي:</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
@@ -784,13 +786,13 @@
 <a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="sb">   à RdvMedecins_01.CreateDB_01.Main(String[] args) dans d:\data\istia-1213\c#\d</span>
 <a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="sb">vp\Entity Framework\RdvMedecins\RdvMedecins-Oracle-01\CreateDB_01.cs:ligne 15</span>
 </code></pre></div></td></tr></table></div>
-<p><span style="color: #000000">تشير السطر 1 إلى أن موصل PostgreSQL ADO.NET غير قادر على حذف قاعدة البيانات الحالية. تمامًا كما هو الحال مع Oracle. لذلك، يتعين علينا إنشاء قاعدة البيانات [RDVMEDECINS-EF] يدويًا باستخدام أداة [EMS Manager for PostgreSQL]. لن نصف كل خطوة، بل سنكتفي بذكر أهمها فقط.</span></p>
-<p><span style="color: #000000">ستكون قاعدة بيانات PostgreSQL على النحو التالي:</span></p>
+<p><span style="color: #000000">تشير السطر 1 إلى أن موصل <bdi dir="ltr" class="odt-ltr-term">PostgreSQL ADO.NET</bdi> غير قادر على حذف قاعدة البيانات الحالية. تمامًا كما هو الحال مع <bdi dir="ltr" class="odt-ltr-term">Oracle.</bdi> لذلك، يتعين علينا إنشاء قاعدة البيانات [<bdi dir="ltr" class="odt-ltr-term">RDVMEDECINS-EF</bdi>] يدويًا باستخدام أداة [<bdi dir="ltr" class="odt-ltr-term">EMS Manager for PostgreSQL</bdi>]. لن نصف كل خطوة، بل سنكتفي بذكر أهمها فقط.</span></p>
+<p><span style="color: #000000">ستكون قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">PostgreSQL</bdi> على النحو التالي:</span></p>
 <p><u><strong><span style="color: #000000">الجداول</span></strong></u></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000055300000194A4F22C8F.png" width="681" height="202" style="display:inline-block; margin:4px;width:18.03cm;height:5.345cm;" class="odt-zoomable" data-zoom-src="images/100000000000055300000194A4F22C8F.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [1]، ID هو مفتاح أساسي من النوع </span><em>التسلسلي</em><span style="color: #000000">. هذا النوع في PostgreSQL هو عدد صحيح يتم إنشاؤه تلقائيًا بواسطة نظام إدارة قواعد البيانات (DBMS).</span></li>
+<li><span style="color: #000000">في [1]، <bdi dir="ltr" class="odt-ltr-term">ID</bdi> هو مفتاح أساسي من النوع </span><em>التسلسلي</em><span style="color: #000000">. هذا النوع في <bdi dir="ltr" class="odt-ltr-term">PostgreSQL</bdi> هو عدد صحيح يتم إنشاؤه تلقائيًا بواسطة نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>).</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051B00000187C8CE44E3.png" width="654" height="196" style="display:inline-block; margin:4px;width:17.291cm;height:5.173cm;" class="odt-zoomable" data-zoom-src="images/100000000000051B00000187C8CE44E3.png" /></td></tr></table>
 
@@ -800,27 +802,27 @@
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B1000001508A641D14.png" width="601" height="168" style="display:inline-block; margin:4px;width:15.889cm;height:4.445cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B1000001508A641D14.png" /></td></tr></table>
 
-<p><span style="color: #000000">تحتوي الجداول المختلفة على المفاتيح الأساسية والمفاتيح الخارجية التي كانت موجودة في هذه الجداول نفسها في الأمثلة السابقة. وتحتوي المفاتيح الخارجية على السمة ON DELETE CASCADE.</span></p>
+<p><span style="color: #000000">تحتوي الجداول المختلفة على المفاتيح الأساسية والمفاتيح الخارجية التي كانت موجودة في هذه الجداول نفسها في الأمثلة السابقة. وتحتوي المفاتيح الخارجية على السمة <bdi dir="ltr" class="odt-ltr-term">ON DELETE CASCADE.</bdi></span></p>
 <p><u><strong><span style="color: #000000">التسلسلات</span></strong></u></p>
-<p><span style="color: #000000">كما هو الحال مع Oracle، قمنا هنا بإنشاء تسلسلات. وهي عبارة عن مولدات للأرقام المتتالية. ويبلغ عددها 5 [1].</span></p>
+<p><span style="color: #000000">كما هو الحال مع <bdi dir="ltr" class="odt-ltr-term">Oracle</bdi>، قمنا هنا بإنشاء تسلسلات. وهي عبارة عن مولدات للأرقام المتتالية. ويبلغ عددها 5 [1].</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005130000015F9201D879.png" width="650" height="176" style="display:inline-block; margin:4px;width:17.186cm;height:4.644cm;" class="odt-zoomable" data-zoom-src="images/10000000000005130000015F9201D879.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [2]، نرى خصائص التسلسل [CLIENTS_ID_SEQ]. وهو يولد أرقامًا متتالية بزيادات قدرها 1، بدءًا من 1 وصولاً إلى قيمة كبيرة جدًا.</span></li>
+<li><span style="color: #000000">في [2]، نرى خصائص التسلسل [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>_ID_SEQ]. وهو يولد أرقامًا متتالية بزيادات قدرها 1، بدءًا من 1 وصولاً إلى قيمة كبيرة جدًا.</span></li>
 </ul>
 <p><span style="color: #000000">جميع التسلسلات مبنية على نفس النموذج. </span></p>
 <ul>
-<li><span style="color: #000000">سيُستخدم [CLIENTS_ID_seq] لتوليد المفتاح الأساسي لجدول [CLIENTS]؛</span></li>
-<li><span style="color: #000000">سيتم استخدام [MEDECINS_ID_seq] لتوليد المفتاح الأساسي لجدول [MEDECINS]؛</span></li>
-<li><span style="color: #000000">سيتم استخدام [SLOTS_ID_seq] لإنشاء المفتاح الأساسي لجدول [SLOTS]؛</span></li>
-<li><span style="color: #000000">سيتم استخدام [RVS_ID_seq] لإنشاء المفتاح الأساسي لجدول [RVS]؛</span></li>
-<li><span style="color: #000000">سيتم استخدام [sequence_versions] لإنشاء القيم لأعمدة [VERSIONING] في جميع الجداول.</span></li>
+<li><span style="color: #000000">سيُستخدم [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>_ID_seq] لتوليد المفتاح الأساسي لجدول [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>]؛</span></li>
+<li><span style="color: #000000">سيتم استخدام [<bdi dir="ltr" class="odt-ltr-term">MEDECINS</bdi>_ID_seq] لتوليد المفتاح الأساسي لجدول [<bdi dir="ltr" class="odt-ltr-term">MEDECINS</bdi>]؛</span></li>
+<li><span style="color: #000000">سيتم استخدام [<bdi dir="ltr" class="odt-ltr-term">SLOTS</bdi>_ID_seq] لإنشاء المفتاح الأساسي لجدول [<bdi dir="ltr" class="odt-ltr-term">SLOTS</bdi>]؛</span></li>
+<li><span style="color: #000000">سيتم استخدام [<bdi dir="ltr" class="odt-ltr-term">RVS</bdi>_ID_seq] لإنشاء المفتاح الأساسي لجدول [<bdi dir="ltr" class="odt-ltr-term">RVS</bdi>]؛</span></li>
+<li><span style="color: #000000">سيتم استخدام [<bdi dir="ltr" class="odt-ltr-term">sequence</bdi>_versions] لإنشاء القيم لأعمدة [<bdi dir="ltr" class="odt-ltr-term">VERSIONING</bdi>] في جميع الجداول.</span></li>
 </ul>
 <p><u><strong><span style="color: #000000">المشغلات</span></strong></u></p>
-<p><span style="color: #000000">المشغل هو إجراء يتم تنفيذه بواسطة نظام إدارة قواعد البيانات (DBMS) قبل أو بعد حدوث حدث (إدراج، تحديث، حذف) في جدول. لدينا 4 منها [1]:</span></p>
+<p><span style="color: #000000">المشغل هو إجراء يتم تنفيذه بواسطة نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>) قبل أو بعد حدوث حدث (إدراج، تحديث، حذف) في جدول. لدينا 4 منها [1]:</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004D1000000BEF0605232.png" width="617" height="95" style="display:inline-block; margin:4px;width:16.312cm;height:2.514cm;" class="odt-zoomable" data-zoom-src="images/10000000000004D1000000BEF0605232.png" /></td></tr></table>
 
-<p><span style="color: #000000">دعونا نلقي نظرة على كود DDL لمشغل [CLIENTS_tr]، الذي يملأ عمود [VERSIONING] في جدول [CLIENTS]:</span></p>
+<p><span style="color: #000000">دعونا نلقي نظرة على كود <bdi dir="ltr" class="odt-ltr-term">DDL</bdi> لمشغل [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>_tr]، الذي يملأ عمود [<bdi dir="ltr" class="odt-ltr-term">VERSIONING</bdi>] في جدول [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>]:</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
@@ -830,10 +832,10 @@
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="k">EXECUTE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="k">public</span><span class="p">.</span><span class="n">trigger_versions</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li><span style="color: #000000">الأسطر 1-3: قبل كل عملية INSERT أو UPDATE على جدول [CLIENTS]؛</span></li>
-<li><span style="color: #000000">السطر 4: يتم تنفيذ الإجراء [public.trigger_versions()].</span></li>
+<li><span style="color: #000000">الأسطر 1-3: قبل كل عملية <bdi dir="ltr" class="odt-ltr-term">INSERT</bdi> أو <bdi dir="ltr" class="odt-ltr-term">UPDATE</bdi> على جدول [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>]؛</span></li>
+<li><span style="color: #000000">السطر 4: يتم تنفيذ الإجراء [<bdi dir="ltr" class="odt-ltr-term">public.trigger</bdi>_versions()].</span></li>
 </ul>
-<p><span style="color: #000000">الإجراء [public.trigger_versions()] هو كما يلي:</span></p>
+<p><span style="color: #000000">الإجراء [<bdi dir="ltr" class="odt-ltr-term">public.trigger</bdi>_versions()] هو كما يلي:</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
@@ -843,12 +845,12 @@
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a>END
 </code></pre></div></td></tr></table></div>
 <ul>
-<li><span style="color: #000000">السطر 2: يمثل NEW الصف الذي سيتم إدراجه أو تعديله. NEW. &quot;VERSIONING&quot; هو عمود [VERSIONING] في ذلك الصف. يتم تعيين القيمة التالية من مولد الأرقام &quot;sequence_versions&quot; له. وبالتالي، يتغير عمود [&quot;VERSIONING&quot;] مع كل عملية INSERT أو UPDATE يتم إجراؤها على جدول [CLIENTS].</span></li>
+<li><span style="color: #000000">السطر 2: يمثل <bdi dir="ltr" class="odt-ltr-term">NEW</bdi> الصف الذي سيتم إدراجه أو تعديله. <bdi dir="ltr" class="odt-ltr-term">NEW.</bdi> &quot;<bdi dir="ltr" class="odt-ltr-term">VERSIONING</bdi>&quot; هو عمود [<bdi dir="ltr" class="odt-ltr-term">VERSIONING</bdi>] في ذلك الصف. يتم تعيين القيمة التالية من مولد الأرقام &quot;<bdi dir="ltr" class="odt-ltr-term">sequence</bdi>_versions&quot; له. وبالتالي، يتغير عمود [&quot;<bdi dir="ltr" class="odt-ltr-term">VERSIONING</bdi>&quot;] مع كل عملية <bdi dir="ltr" class="odt-ltr-term">INSERT</bdi> أو <bdi dir="ltr" class="odt-ltr-term">UPDATE</bdi> يتم إجراؤها على جدول [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>].</span></li>
 </ul>
-<p><span style="color: #000000">تعمل المشغلات [MEDECINS_tr، CRENEAUX_tr، RVS_tr] بنفس الطريقة. تستمد الأعمدة الأربعة [&quot;VERSIONING&quot;] قيمها من نفس التسلسل.</span></p>
-<p><span style="color: #000000">تم وضع البرنامج النصي لإنشاء الجداول في قاعدة بيانات PostgreSQL [RDVMEDECINS-EF] في المجلد [RdvMedecins / databases / postgreSQL]. يمكن للقارئ تحميله وتشغيله لإنشاء الجداول.</span></p>
-<p><span style="color: #000000">بمجرد الانتهاء من ذلك، يمكن تشغيل البرامج المختلفة في المشروع. تنتج هذه البرامج نفس النتائج كما هو الحال مع SQL Server، باستثناء برنامج [ModifyDetachedEntities]، الذي يتعطل لنفس السبب الذي تسبب في تعطله مع Oracle. يتم حل المشكلة بنفس الطريقة. ما عليك سوى نسخ برنامج [ModifyDetachedEntities] من مشروع [RdvMedecins-Oracle-01] إلى مشروع [RdvMedecins-PostgreSQL-01].</span></p>
-<p><span style="color: #000000">يتعطل برنامج [LazyEagerLoading] مع الاستثناء التالي:</span></p>
+<p><span style="color: #000000">تعمل المشغلات [<bdi dir="ltr" class="odt-ltr-term">MEDECINS</bdi>_tr، <bdi dir="ltr" class="odt-ltr-term">CRENEAUX</bdi>_tr، <bdi dir="ltr" class="odt-ltr-term">RVS</bdi>_tr] بنفس الطريقة. تستمد الأعمدة الأربعة [&quot;<bdi dir="ltr" class="odt-ltr-term">VERSIONING</bdi>&quot;] قيمها من نفس التسلسل.</span></p>
+<p><span style="color: #000000">تم وضع البرنامج النصي لإنشاء الجداول في قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">PostgreSQL</bdi> [<bdi dir="ltr" class="odt-ltr-term">RDVMEDECINS-EF</bdi>] في المجلد [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins</bdi> / <bdi dir="ltr" class="odt-ltr-term">databases</bdi> / <bdi dir="ltr" class="odt-ltr-term">postgreSQL</bdi>]. يمكن للقارئ تحميله وتشغيله لإنشاء الجداول.</span></p>
+<p><span style="color: #000000">بمجرد الانتهاء من ذلك، يمكن تشغيل البرامج المختلفة في المشروع. تنتج هذه البرامج نفس النتائج كما هو الحال مع <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi>، باستثناء برنامج [<bdi dir="ltr" class="odt-ltr-term">ModifyDetachedEntities</bdi>]، الذي يتعطل لنفس السبب الذي تسبب في تعطله مع <bdi dir="ltr" class="odt-ltr-term">Oracle.</bdi> يتم حل المشكلة بنفس الطريقة. ما عليك سوى نسخ برنامج [<bdi dir="ltr" class="odt-ltr-term">ModifyDetachedEntities</bdi>] من مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Oracle-01</bdi>] إلى مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-PostgreSQL-01</bdi>].</span></p>
+<p><span style="color: #000000">يتعطل برنامج [<bdi dir="ltr" class="odt-ltr-term">LazyEagerLoading</bdi>] مع الاستثناء التالي:</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
 <span class="normal"><a href="#__codelineno-4-3">3</a></span>
@@ -867,7 +869,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">السطر 1 من الاستثناء: يشير الخطأ المبلغ عنه إلى وجود عملية ربط لأن LEFT هي كلمة رئيسية للربط. نظرًا لأن السطر 4 من الكود أعلاه يطلب التحميل الفوري لتبعية [Doctor] لكيان [Appointment]، فقد أجرى EF عملية ربط بين الجدولين [APPOINTMENTS] و[DOCTORS]. ومع ذلك، يبدو أن موصل ADO.NET قد أنشأ عبارة SQL غير صحيحة. نعيد كتابة الكود على النحو التالي:</span></p>
+<p><span style="color: #000000">السطر 1 من الاستثناء: يشير الخطأ المبلغ عنه إلى وجود عملية ربط لأن <bdi dir="ltr" class="odt-ltr-term">LEFT</bdi> هي كلمة رئيسية للربط. نظرًا لأن السطر 4 من الكود أعلاه يطلب التحميل الفوري لتبعية [<bdi dir="ltr" class="odt-ltr-term">Doctor</bdi>] لكيان [<bdi dir="ltr" class="odt-ltr-term">Appointment</bdi>]، فقد أجرى <bdi dir="ltr" class="odt-ltr-term">EF</bdi> عملية ربط بين الجدولين [<bdi dir="ltr" class="odt-ltr-term">APPOINTMENTS</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">DOCTORS</bdi>]. ومع ذلك، يبدو أن موصل <bdi dir="ltr" class="odt-ltr-term">ADO.NET</bdi> قد أنشأ عبارة <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> غير صحيحة. نعيد كتابة الكود على النحو التالي:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000ff">using</span> (<span style="color:#0000ff">var</span> context = <span style="color:#0000ff">new</span> <span style="color:#2b91af">RdvMedecinsContext</span>())</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      {</span></span>
@@ -884,22 +886,22 @@
 <li><span style="color: #000000">السطر 4: نسترد الفتحة بدون ربط؛</span></li>
 <li><span style="color: #000000">السطر 8: نسترد التبعية المفقودة.</span></li>
 </ul>
-<p><span style="color: #000000">إنه يعمل. مرة أخرى، نرى أن تغيير نظام إدارة قواعد البيانات (DBMS) يؤثر على الكود. في الواقع، ليست مشكلة نظام إدارة قواعد البيانات (DBMS) هي المشكلة هنا، بل موصل ADO.NET الخاص به.</span></p>
+<p><span style="color: #000000">إنه يعمل. مرة أخرى، نرى أن تغيير نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>) يؤثر على الكود. في الواقع، ليست مشكلة نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>) هي المشكلة هنا، بل موصل <bdi dir="ltr" class="odt-ltr-term">ADO.NET</bdi> الخاص به.</span></p>
 <p><a id="refheading39821804107930"></a></p>
-<h2 id="63-ef-5">6.3. <span style="color: #4f81bd">بنية متعددة الطبقات تستند إلى EF 5</span></h2>
+<h2 id="63-ef-5">6.3. <span style="color: #4f81bd">بنية متعددة الطبقات تستند إلى <bdi dir="ltr" class="odt-ltr-term">EF</bdi> 5</span></h2>
 <p><span style="color: #000000">نعود إلى دراسة الحالة الموضحة في </span><a href="#etude-de-cas"><u><span style="color: #0563c1">الفقرة 2</span></u></a><span style="color: #000000">.</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005ED0000012F13EEA291.png" width="680" height="136" style="display:inline-block; margin:4px;width:17.999cm;height:3.595cm;" class="odt-zoomable" data-zoom-src="images/10000000000005ED0000012F13EEA291.png" /></td></tr></table>
 
-<p><span style="color: #000000">سنبدأ ببناء طبقة الوصول إلى البيانات [DAO]. للقيام بذلك، نقوم بنسخ مشروع وحدة التحكم في VS 2012 [RdvMedecins-SqlServer-02] إلى [RdvMedecins-PostgreSQL-02] [1]:</span></p>
+<p><span style="color: #000000">سنبدأ ببناء طبقة الوصول إلى البيانات [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]. للقيام بذلك، نقوم بنسخ مشروع وحدة التحكم في <bdi dir="ltr" class="odt-ltr-term">VS</bdi> 2012 [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-02</bdi>] إلى [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-PostgreSQL-02</bdi>] [1]:</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005C00000030CC9D6021E.png" width="680" height="360" style="display:inline-block; margin:4px;width:17.999cm;height:9.537cm;" class="odt-zoomable" data-zoom-src="images/10000000000005C00000030CC9D6021E.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [2]، احذف المشروع [RdvMedecins-SqlServer-02]؛</span></li>
+<li><span style="color: #000000">في [2]، احذف المشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-02</bdi>]؛</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005DC00000213C38C1F3F.png" width="680" height="241" style="display:inline-block; margin:4px;width:17.999cm;height:6.371cm;" class="odt-zoomable" data-zoom-src="images/10000000000005DC00000213C38C1F3F.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [3]، أضف مشروعًا موجودًا إلى الحل. خذ المشروع من المجلد [RdvMedecins-PostgreSQL-02] الذي تم إنشاؤه للتو؛</span></li>
+<li><span style="color: #000000">في [3]، أضف مشروعًا موجودًا إلى الحل. خذ المشروع من المجلد [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-PostgreSQL-02</bdi>] الذي تم إنشاؤه للتو؛</span></li>
 <li><span style="color: #000000">في [4]، يحمل المشروع الجديد نفس اسم المشروع الذي تم حذفه. سنقوم بتغيير اسمه؛</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005730000015F1925C733.png" width="680" height="171" style="display:inline-block; margin:4px;width:17.999cm;height:4.53cm;" class="odt-zoomable" data-zoom-src="images/10000000000005730000015F1925C733.png" /></td></tr></table>
@@ -907,15 +909,15 @@
 <ul>
 <li><span style="color: #000000">في [5]، قمنا بتغيير اسم المشروع؛</span></li>
 <li><span style="color: #000000">في [6]، نقوم بتعديل بعض خصائصه، مثل اسم التجميع هنا؛</span></li>
-<li><span style="color: #000000">في [7]، تم حذف مجلد [Models] واستبداله بمجلد [Models] من مشروع [RdvMedecins-PostgreSQL-01]. وذلك لأن كلا المشروعين يشتركان في نفس النماذج.</span></li>
+<li><span style="color: #000000">في [7]، تم حذف مجلد [<bdi dir="ltr" class="odt-ltr-term">Models</bdi>] واستبداله بمجلد [<bdi dir="ltr" class="odt-ltr-term">Models</bdi>] من مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-PostgreSQL-01</bdi>]. وذلك لأن كلا المشروعين يشتركان في نفس النماذج.</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000030F000001509FAFD9EE.png" width="392" height="168" style="display:inline-block; margin:4px;width:10.359cm;height:4.445cm;" class="odt-zoomable" data-zoom-src="images/100000000000030F000001509FAFD9EE.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">في [8]، المراجع الحالية للمشروع؛</span></li>
-<li><span style="color: #000000">في [9]، تمت إضافة موصل PostgreSQL ADO.NET باستخدام أداة NuGet.</span></li>
+<li><span style="color: #000000">في [9]، تمت إضافة موصل <bdi dir="ltr" class="odt-ltr-term">PostgreSQL ADO.NET</bdi> باستخدام أداة <bdi dir="ltr" class="odt-ltr-term">NuGet.</bdi></span></li>
 </ul>
-<p><span style="color: #000000">في ملف [App.config]، استبدل معلومات قاعدة بيانات SQL Server بمعلومات قاعدة بيانات PostgreSQL. يمكن العثور على هذه المعلومات في ملف [App.config] الخاص بمشروع [RdvMedecins-PostgreSQL-01]:</span></p>
+<p><span style="color: #000000">في ملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]، استبدل معلومات قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi> بمعلومات قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">PostgreSQL.</bdi> يمكن العثور على هذه المعلومات في ملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] الخاص بمشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-PostgreSQL-01</bdi>]:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">&lt;!-- connection chain on base --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">  &lt;</span><span style="color:#a31515">connectionStrings</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -929,7 +931,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#a31515">system.data</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">تتغير أيضًا الكائنات التي يديرها Spring. لدينا حاليًا:</span></p>
+<p><span style="color: #000000">تتغير أيضًا الكائنات التي يديرها <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> لدينا حاليًا:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">&lt;!-- spring configuration --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">  &lt;</span><span style="color:#a31515">spring</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -942,8 +944,8 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#a31515">spring</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">يشير السطر 7 إلى التجميع الخاص بمشروع [</span><span style="color: #0000ff">RdvMedecins-SqlServer-02</span><span style="color: #000000">]. أصبح التجميع الآن [</span><span style="color: #0000ff">RdvMedecins-PostgreSQL-02</span><span style="color: #000000">].</span></p>
-<p><span style="color: #000000">وبعد الانتهاء من ذلك، نكون جاهزين لتشغيل اختبار طبقة [DAO]. أولاً، يجب أن نتأكد من أن قاعدة البيانات مملوءة (باستخدام برنامج [Fill] من مشروع [</span><span style="color: #0000ff">RdvMedecins-PostgreSQL-01</span><span style="color: #000000">]). يتعطل برنامج الاختبار مع الاستثناء التالي:</span></p>
+<p><span style="color: #000000">يشير السطر 7 إلى التجميع الخاص بمشروع [</span><span style="color: #0000ff"><bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-02</bdi></span><span style="color: #000000">]. أصبح التجميع الآن [</span><span style="color: #0000ff"><bdi dir="ltr" class="odt-ltr-term">RdvMedecins-PostgreSQL-02</bdi></span><span style="color: #000000">].</span></p>
+<p><span style="color: #000000">وبعد الانتهاء من ذلك، نكون جاهزين لتشغيل اختبار طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]. أولاً، يجب أن نتأكد من أن قاعدة البيانات مملوءة (باستخدام برنامج [<bdi dir="ltr" class="odt-ltr-term">Fill</bdi>] من مشروع [</span><span style="color: #0000ff"><bdi dir="ltr" class="odt-ltr-term">RdvMedecins-PostgreSQL-01</bdi></span><span style="color: #000000">]). يتعطل برنامج الاختبار مع الاستثناء التالي:</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
@@ -970,7 +972,7 @@
 <a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="nx">Medecin</span><span class="w"> </span><span class="p">[</span><span class="mf">45</span><span class="p">,</span><span class="nx">Melle</span><span class="p">,</span><span class="nx">Justine</span><span class="p">,</span><span class="nx">Jacquemot</span><span class="p">,</span><span class="mf">511</span><span class="p">]</span>
 <a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="nx">L</span><span class="s1">&#39;erreur suivante s&#39;</span><span class="nx">est</span><span class="w"> </span><span class="nx">produite</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">RdvMedecinsException</span><span class="p">[</span><span class="mf">3</span><span class="p">,</span><span class="nx">GetCreneauxMedecin</span><span class="p">,</span><span class="nx">Une</span><span class="w"> </span><span class="nx">erreur</span><span class="w"> </span><span class="nx">s</span><span class="s1">&#39;est produite lors de l&#39;</span><span class="nx">exécution</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="nx">la</span><span class="w"> </span><span class="nx">définition</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="nx">la</span><span class="w"> </span><span class="nx">commande</span><span class="p">.</span><span class="w"> </span><span class="nx">Pour</span><span class="w"> </span><span class="nx">plus</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="nx">détails</span><span class="p">,</span><span class="w"> </span><span class="nx">consultez</span><span class="w"> </span><span class="nx">l</span><span class="err">&#39;</span><span class="nx">exception</span><span class="w"> </span><span class="nx">interne</span><span class="p">.]</span>
 </code></pre></div></td></tr></table></div>
-<p><span style="color: #000000">السطر 13: تشير الرسالة إلى أن الخطأ حدث في طريقة [GetCreneauxMedecin] في طبقة [DAO]. هذه الطريقة هي كما يلي:</span></p>
+<p><span style="color: #000000">السطر 13: تشير الرسالة إلى أن الخطأ حدث في طريقة [<bdi dir="ltr" class="odt-ltr-term">GetCreneauxMedecin</bdi>] في طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]. هذه الطريقة هي كما يلي:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content">    // list of time slots for a given doctor</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">List</span><span style="color:#000000">&lt;</span><span style="color:#2b91af">Creneau</span><span style="color:#000000">&gt; GetCreneauxMedecin(</span><span style="color:#0000ff">int</span><span style="color:#000000"> idMedecin)</span></span></span>
@@ -994,7 +996,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">السطر 11: نلاحظ كلمة Include، التي كانت تتسبب سابقًا في تعطل البرنامج. يمكن استبدال الكود السابق بما يلي:</span></p>
+<p><span style="color: #000000">السطر 11: نلاحظ كلمة <bdi dir="ltr" class="odt-ltr-term">Include</bdi>، التي كانت تتسبب سابقًا في تعطل البرنامج. يمكن استبدال الكود السابق بما يلي:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content">    // list of time slots for a given doctor</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">List</span><span style="color:#000000">&lt;</span><span style="color:#2b91af">Creneau</span><span style="color:#000000">&gt; GetCreneauxMedecin(</span><span style="color:#0000ff">int</span><span style="color:#000000"> idMedecin)</span></span></span>
@@ -1017,17 +1019,17 @@
 </code></pre></div>
 
 <p><span style="color: #000000">يبدو الكود الجديد أكثر اتساقًا من القديم. على أي حال، نجح برنامج الاختبار هذه المرة.</span></p>
-<p><span style="color: #000000">نقوم بإنشاء ملف DLL الخاص بالمشروع كما فعلنا مع مشروع [</span><span style="color: #0000ff">RdvMedecins-SqlServer-02</span><span style="color: #000000">]، ونجمع جميع ملفات DLL الخاصة بالمشروع في مجلد [lib] تم إنشاؤه داخل [</span><span style="color: #0000ff">RdvMedecins-PostgreSQL-02</span><span style="color: #000000">]. وستكون هذه هي المراجع لمشروع الويب [</span><span style="color: #0000ff">RdvMedecins-PostgreSQL-03</span><span style="color: #000000">] الذي سيأتي بعد ذلك.</span></p>
+<p><span style="color: #000000">نقوم بإنشاء ملف <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الخاص بالمشروع كما فعلنا مع مشروع [</span><span style="color: #0000ff"><bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-02</bdi></span><span style="color: #000000">]، ونجمع جميع ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الخاصة بالمشروع في مجلد [<bdi dir="ltr" class="odt-ltr-term">lib</bdi>] تم إنشاؤه داخل [</span><span style="color: #0000ff"><bdi dir="ltr" class="odt-ltr-term">RdvMedecins-PostgreSQL-02</bdi></span><span style="color: #000000">]. وستكون هذه هي المراجع لمشروع الويب [</span><span style="color: #0000ff"><bdi dir="ltr" class="odt-ltr-term">RdvMedecins-PostgreSQL-03</bdi></span><span style="color: #000000">] الذي سيأتي بعد ذلك.</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E2000000E5594A8288.png" width="158" height="160" style="display:inline-block; margin:4px;width:4.189cm;height:4.246cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E2000000E5594A8288.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p><span style="color: #000000">نحن الآن جاهزون لإنشاء طبقة [ASP.NET] لتطبيقنا:</span></p>
+<p><span style="color: #000000">نحن الآن جاهزون لإنشاء طبقة [<bdi dir="ltr" class="odt-ltr-term">ASP.NET</bdi>] لتطبيقنا:</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005EA0000011617109CB3.png" width="680" height="125" style="display:inline-block; margin:4px;width:17.999cm;height:3.306cm;" class="odt-zoomable" data-zoom-src="images/10000000000005EA0000011617109CB3.png" /></td></tr></table>
 
-<p><span style="color: #000000">سنبدأ بمشروع [RdvMedecins-SqlServer-03]. نقوم بنسخ مجلد هذا المشروع إلى [RdvMedecins-PostgreSQL-03] [1]:</span></p>
+<p><span style="color: #000000">سنبدأ بمشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-03</bdi>]. نقوم بنسخ مجلد هذا المشروع إلى [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-PostgreSQL-03</bdi>] [1]:</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000059C000002683692BC67.png" width="680" height="292" style="display:inline-block; margin:4px;width:17.999cm;height:7.721cm;" class="odt-zoomable" data-zoom-src="images/100000000000059C000002683692BC67.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [2]، باستخدام VS 2012 Express for the Web، نفتح الحل في مجلد [RdvMedecins-PostgreSQL-03]؛</span></li>
+<li><span style="color: #000000">في [2]، باستخدام <bdi dir="ltr" class="odt-ltr-term">VS</bdi> 2012 <bdi dir="ltr" class="odt-ltr-term">Express for the Web</bdi>، نفتح الحل في مجلد [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-PostgreSQL-03</bdi>]؛</span></li>
 <li><span style="color: #000000">في [3]، نقوم بتغيير اسم الحل واسم المشروع؛</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005CE0000017D56435433.png" width="680" height="174" style="display:inline-block; margin:4px;width:17.999cm;height:4.614cm;" class="odt-zoomable" data-zoom-src="images/10000000000005CE0000017D56435433.png" /></td></tr></table>
@@ -1035,9 +1037,9 @@
 <ul>
 <li><span style="color: #000000">في [4]، المراجع الحالية للمشروع؛</span></li>
 <li><span style="color: #000000">في [5]، نقوم بحذفها؛</span></li>
-<li><span style="color: #000000">في [6]، لاستبدالها بمراجع إلى ملفات DLL التي قمنا بتخزينها للتو في مجلد [lib] في مشروع [RdvMedecins-PostgreSQL-02].</span></li>
+<li><span style="color: #000000">في [6]، لاستبدالها بمراجع إلى ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> التي قمنا بتخزينها للتو في مجلد [<bdi dir="ltr" class="odt-ltr-term">lib</bdi>] في مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-PostgreSQL-02</bdi>].</span></li>
 </ul>
-<p><span style="color: #000000">كل ما تبقى هو تعديل ملف [Web.config]. نستبدل محتواه الحالي بمحتوى ملف [App.config] من مشروع [RdvMedecins-PostgreSQL-02]. بمجرد الانتهاء من ذلك، نقوم بتشغيل مشروع الويب. إنه يعمل. يجب ألا ننسى ملء قاعدة البيانات قبل تشغيل تطبيق الويب.</span></p>
+<p><span style="color: #000000">كل ما تبقى هو تعديل ملف [<bdi dir="ltr" class="odt-ltr-term">Web.config</bdi>]. نستبدل محتواه الحالي بمحتوى ملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] من مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-PostgreSQL-02</bdi>]. بمجرد الانتهاء من ذلك، نقوم بتشغيل مشروع الويب. إنه يعمل. يجب ألا ننسى ملء قاعدة البيانات قبل تشغيل تطبيق الويب.</span></p>
 
 
 

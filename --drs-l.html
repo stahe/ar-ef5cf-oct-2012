@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -661,13 +663,13 @@
 
 <p>لمن يرغب في معرفة المزيد عن:</p>
 <ul>
-<li>NHibernate: مقدمة إلى NHibernate ORM [http://tahe.developpez.com/dotnet/nhibernate/]؛</li>
-<li>تطبيق ASP.NET (WebForms) مع NHibernate و Spring: إنشاء تطبيق ويب ثلاثي الطبقات باستخدام ASP.NET و Spring.NET و NHibernate [http://tahe.developpez.com/dotnet/pam-aspnet/].</li>
+<li><bdi dir="ltr" class="odt-ltr-term">NHibernate:</bdi> مقدمة إلى <bdi dir="ltr" class="odt-ltr-term">NHibernate ORM</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://tahe.developpez.com/dotnet/nhibernate/</bdi>]؛</li>
+<li>تطبيق <bdi dir="ltr" class="odt-ltr-term">ASP.NET</bdi> (<bdi dir="ltr" class="odt-ltr-term">WebForms</bdi>) مع <bdi dir="ltr" class="odt-ltr-term">NHibernate</bdi> و <bdi dir="ltr" class="odt-ltr-term">Spring:</bdi> إنشاء تطبيق ويب ثلاثي الطبقات باستخدام <bdi dir="ltr" class="odt-ltr-term">ASP.NET</bdi> و <bdi dir="ltr" class="odt-ltr-term">Spring.NET</bdi> و <bdi dir="ltr" class="odt-ltr-term">NHibernate</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://tahe.developpez.com/dotnet/pam-aspnet/</bdi>].</li>
 </ul>
 <p>نريد تحويل التطبيق السابق إلى هذا التطبيق:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007D8000001752287E088.png" width="680" height="126" style="display:inline-block; margin:4px;width:17.999cm;height:3.343cm;" class="odt-zoomable" data-zoom-src="images/10000000000007D8000001752287E088.png" /></td></tr></table>
 
-<p>حيث حل EF5 محل NHibernate. يُعد هذا التطبيق نقطة انطلاق لاستكشاف EF5. ونظرًا لأن Spring.NET يتيح لنا التبديل بين الطبقات بسهولة دون إحداث أي خلل، فسيستخدم التطبيق 2 نفس الطبقة [ASP.NET] التي يستخدمها التطبيق 1. ولأن هذا المستند يركز على EF5، فلن نشرح كيفية تنفيذ هذه الطبقة. سنقوم بدمجها في التطبيق 2 للتحقق من أنها تعمل. سنشرح ببساطة التغييرات التي يجب إجراؤها في ملف تكوين Spring.NET.</p>
+<p>حيث حل <bdi dir="ltr" class="odt-ltr-term">EF5</bdi> محل <bdi dir="ltr" class="odt-ltr-term">NHibernate.</bdi> يُعد هذا التطبيق نقطة انطلاق لاستكشاف <bdi dir="ltr" class="odt-ltr-term">EF5.</bdi> ونظرًا لأن <bdi dir="ltr" class="odt-ltr-term">Spring.NET</bdi> يتيح لنا التبديل بين الطبقات بسهولة دون إحداث أي خلل، فسيستخدم التطبيق 2 نفس الطبقة [<bdi dir="ltr" class="odt-ltr-term">ASP.NET</bdi>] التي يستخدمها التطبيق 1. ولأن هذا المستند يركز على <bdi dir="ltr" class="odt-ltr-term">EF5</bdi>، فلن نشرح كيفية تنفيذ هذه الطبقة. سنقوم بدمجها في التطبيق 2 للتحقق من أنها تعمل. سنشرح ببساطة التغييرات التي يجب إجراؤها في ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring.NET.</bdi></p>
 <p>دراسة الحالة هي كما يلي. نريد أن نقدم للأطباء خدمة حجز المواعيد التي تعمل وفقًا للمبدأ التالي:</p>
 <ul>
 <li>تتولى خدمة إدارية جدولة المواعيد لعدد كبير من الأطباء. قد تتكون هذه الخدمة من شخص واحد. ويتم تقاسم راتب هذا الشخص بين جميع الأطباء الذين يستخدمون خدمة المواعيد؛</li>
@@ -678,7 +680,7 @@
 <p>وتتمثل بنية خدمة تحديد المواعيد فيما يلي:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000069200000206760DFD28.png" width="589" height="181" style="display:inline-block; margin:4px;width:15.58cm;height:4.798cm;" class="odt-zoomable" data-zoom-src="images/100000000000069200000206760DFD28.png" /></td></tr></table>
 
-<p>يصبح الأطباء أكثر كفاءة إذا لم يعودوا مضطرين إلى إدارة المواعيد. وإذا كان عددهم كافياً، فستكون مساهمتهم في تكاليف تشغيل المكتب الإداري ضئيلة. سنطلق على التطبيق اسم [RdvMedecins]. فيما يلي لقطات شاشة توضح كيفية عمله.</p>
+<p>يصبح الأطباء أكثر كفاءة إذا لم يعودوا مضطرين إلى إدارة المواعيد. وإذا كان عددهم كافياً، فستكون مساهمتهم في تكاليف تشغيل المكتب الإداري ضئيلة. سنطلق على التطبيق اسم [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins</bdi>]. فيما يلي لقطات شاشة توضح كيفية عمله.</p>
 <p>تبدو الصفحة الرئيسية للتطبيق كما يلي:</p>
 <p><img src="images/1000000000000205000001093FDD606D.png" width="358" height="183" style="width:9.46cm;height:4.849cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000205000001093FDD606D.png" /></p>
 <p>من هذه الصفحة الأولى، سيقوم المستخدم (السكرتير، الطبيب) بعدد من الإجراءات. نعرضها أدناه. تظهر الصورة اليسرى الشاشة التي يقوم المستخدم من <strong>خلالها بتقديم</strong> طلب؛ بينما تظهر الصورة اليمنى <strong>الرد</strong> المرسل من الخادم.</p>
@@ -694,67 +696,67 @@
 
 <p><a id="refheading39723804107930"></a></p>
 <h2 id="22">2.2. <span style="color: #4f81bd">قاعدة البيانات</span></h2>
-<p>قاعدة البيانات التي يستخدمها تطبيق NHibernate هي قاعدة بيانات MySQL5 تحتوي على أربعة جداول:</p>
+<p>قاعدة البيانات التي يستخدمها تطبيق <bdi dir="ltr" class="odt-ltr-term">NHibernate</bdi> هي قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL5</bdi> تحتوي على أربعة جداول:</p>
 <p><img src="images/10000000000000CE0000006EB8CE00C1.png" width="165" height="88" style="width:4.36cm;height:2.328cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000CE0000006EB8CE00C1.png" /></p>
 <p>سنستخدم هذا كمرجع لإنشاء جميع قواعد البيانات الخاصة بنا.</p>
 <p><a id="refheading39725804107930"></a></p>
-<h3 id="221-doctors">2.2.1. <span style="color: #4f81bd">جدول [DOCTORS]</span></h3>
-<p>يحتوي على معلومات حول الأطباء الذين يديرهم تطبيق [RdvMedecins].</p>
+<h3 id="221-doctors">2.2.1. <span style="color: #4f81bd">جدول [<bdi dir="ltr" class="odt-ltr-term">DOCTORS</bdi>]</span></h3>
+<p>يحتوي على معلومات حول الأطباء الذين يديرهم تطبيق [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins</bdi>].</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013B0000009140E8B0E1.png" width="220" height="101" style="display:inline-block; margin:4px;width:5.83cm;height:2.685cm;" class="odt-zoomable" data-zoom-src="images/100000000000013B0000009140E8B0E1.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001830000006A63E8B6FD.png" width="271" height="74" style="display:inline-block; margin:4px;width:7.17cm;height:1.963cm;" class="odt-zoomable" data-zoom-src="images/10000000000001830000006A63E8B6FD.png" /></td></tr></table>
 
 <ul>
-<li>ID: رقم تعريف الطبيب — المفتاح الأساسي للجدول</li>
-<li>VERSION: رقم يحدد إصدار الصف في الجدول. يزداد هذا الرقم بمقدار 1 في كل مرة يتم فيها إجراء تغيير على الصف.</li>
-<li>LAST_NAME: لقب الطبيب</li>
-<li>FIRST_NAME: الاسم الأول للطبيب</li>
-<li>TITLE: لقبهم (السيدة، السيدة، السيد)
+<li><bdi dir="ltr" class="odt-ltr-term">ID:</bdi> رقم تعريف الطبيب — المفتاح الأساسي للجدول</li>
+<li><bdi dir="ltr" class="odt-ltr-term">VERSION:</bdi> رقم يحدد إصدار الصف في الجدول. يزداد هذا الرقم بمقدار 1 في كل مرة يتم فيها إجراء تغيير على الصف.</li>
+<li><bdi dir="ltr" class="odt-ltr-term">LAST</bdi>_NAME: لقب الطبيب</li>
+<li><bdi dir="ltr" class="odt-ltr-term">FIRST</bdi>_NAME: الاسم الأول للطبيب</li>
+<li><bdi dir="ltr" class="odt-ltr-term">TITLE:</bdi> لقبهم (السيدة، السيدة، السيد)
 <a id="refheading39727804107930"></a></li>
 </ul>
-<h3 id="222-clients">2.2.2. <span style="color: #4f81bd">جدول [CLIENTS]</span></h3>
-<p>يتم تخزين عملاء الأطباء المختلفين في جدول [CLIENTS]:</p>
+<h3 id="222-clients">2.2.2. <span style="color: #4f81bd">جدول [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>]</span></h3>
+<p>يتم تخزين عملاء الأطباء المختلفين في جدول [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>]:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015C0000009211F9EF53.png" width="244" height="102" style="display:inline-block; margin:4px;width:6.451cm;height:2.706cm;" class="odt-zoomable" data-zoom-src="images/100000000000015C0000009211F9EF53.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001720000006D8D331F7F.png" width="259" height="76" style="display:inline-block; margin:4px;width:6.849cm;height:2.018cm;" class="odt-zoomable" data-zoom-src="images/10000000000001720000006D8D331F7F.png" /></td></tr></table>
 
 <ul>
-<li>ID: رقم تعريف العميل — المفتاح الأساسي للجدول</li>
-<li>VERSION: الرقم الذي يحدد إصدار الصف في الجدول. يزداد هذا الرقم بمقدار 1 في كل مرة يتم فيها إجراء تغيير على الصف.</li>
-<li>LAST_NAME: اسم عائلة العميل</li>
+<li><bdi dir="ltr" class="odt-ltr-term">ID:</bdi> رقم تعريف العميل — المفتاح الأساسي للجدول</li>
+<li><bdi dir="ltr" class="odt-ltr-term">VERSION:</bdi> الرقم الذي يحدد إصدار الصف في الجدول. يزداد هذا الرقم بمقدار 1 في كل مرة يتم فيها إجراء تغيير على الصف.</li>
+<li><bdi dir="ltr" class="odt-ltr-term">LAST</bdi>_NAME: اسم عائلة العميل</li>
 <li>الاسم الأول: الاسم الأول للعميل</li>
 <li>اللقب: لقبهم (السيدة، السيدة، السيد)
 <a id="refheading39729804107930"></a></li>
 </ul>
-<h3 id="223-slots">2.2.3. <span style="color: #4f81bd"><span style="color: #4f81bd">جدول [SLOTS]</span></span></h3>
+<h3 id="223-slots">2.2.3. <span style="color: #4f81bd"><span style="color: #4f81bd">جدول [<bdi dir="ltr" class="odt-ltr-term">SLOTS</bdi>]</span></span></h3>
 <p>يسرد المواعيد المتاحة: </p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000170000000B33347BA3C.png" width="258" height="125" style="display:inline-block; margin:4px;width:6.819cm;height:3.318cm;" class="odt-zoomable" data-zoom-src="images/1000000000000170000000B33347BA3C.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000821000001FF5B466B61.png" width="680" height="167" style="display:inline-block; margin:4px;width:17.999cm;height:4.42cm;" class="odt-zoomable" data-zoom-src="images/1000000000000821000001FF5B466B61.png" /></td></tr></table>
 
 <ul>
-<li>ID: رقم تعريف الفترة الزمنية - المفتاح الأساسي للجدول</li>
-<li>VERSION: الرقم الذي يحدد إصدار الصف في الجدول. يزداد هذا الرقم بمقدار 1 في كل مرة يتم فيها إجراء تغيير على الصف.</li>
-<li>DOCTOR_ID: رقم التعريف الذي يحدد الطبيب الذي تنتمي إليه هذه الفترة الزمنية – مفتاح خارجي في عمود DOCTORS(ID).</li>
-<li>START_TIME: وقت بدء الفترة الزمنية</li>
-<li>MSTART: دقيقة بدء الفترة الزمنية</li>
-<li>HFIN: وقت انتهاء الفترة الزمنية</li>
-<li>MFIN: دقائق نهاية الفترة الزمنية</li>
+<li><bdi dir="ltr" class="odt-ltr-term">ID:</bdi> رقم تعريف الفترة الزمنية - المفتاح الأساسي للجدول</li>
+<li><bdi dir="ltr" class="odt-ltr-term">VERSION:</bdi> الرقم الذي يحدد إصدار الصف في الجدول. يزداد هذا الرقم بمقدار 1 في كل مرة يتم فيها إجراء تغيير على الصف.</li>
+<li><bdi dir="ltr" class="odt-ltr-term">DOCTOR</bdi>_ID: رقم التعريف الذي يحدد الطبيب الذي تنتمي إليه هذه الفترة الزمنية – مفتاح خارجي في عمود <bdi dir="ltr" class="odt-ltr-term">DOCTORS</bdi>(<bdi dir="ltr" class="odt-ltr-term">ID</bdi>).</li>
+<li><bdi dir="ltr" class="odt-ltr-term">START</bdi>_TIME: وقت بدء الفترة الزمنية</li>
+<li><bdi dir="ltr" class="odt-ltr-term">MSTART:</bdi> دقيقة بدء الفترة الزمنية</li>
+<li><bdi dir="ltr" class="odt-ltr-term">HFIN:</bdi> وقت انتهاء الفترة الزمنية</li>
+<li><bdi dir="ltr" class="odt-ltr-term">MFIN:</bdi> دقائق نهاية الفترة الزمنية</li>
 </ul>
-<p>يشير الصف الثاني من جدول [SLOTS] (انظر [1] أعلاه)، على سبيل المثال، إلى أن الفترة رقم 2 تبدأ في الساعة 8:20 صباحًا وتنتهي في الساعة 8:40 صباحًا، وهي مخصصة للطبيبة رقم 1 (السيدة ماري بيليسييه).</p>
+<p>يشير الصف الثاني من جدول [<bdi dir="ltr" class="odt-ltr-term">SLOTS</bdi>] (انظر [1] أعلاه)، على سبيل المثال، إلى أن الفترة رقم 2 تبدأ في الساعة 8:20 صباحًا وتنتهي في الساعة 8:40 صباحًا، وهي مخصصة للطبيبة رقم 1 (السيدة ماري بيليسييه).</p>
 <p><a id="refheading39731804107930"></a></p>
-<h3 id="224-rv">2.2.4. <span style="color: #4f81bd">جدول [RV]</span></h3>
+<h3 id="224-rv">2.2.4. <span style="color: #4f81bd">جدول [<bdi dir="ltr" class="odt-ltr-term">RV</bdi>]</span></h3>
 <p>يُدرج المواعيد المحجوزة لكل طبيب:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007B700000137E74FBC38.png" width="680" height="107" style="display:inline-block; margin:4px;width:17.999cm;height:2.835cm;" class="odt-zoomable" data-zoom-src="images/10000000000007B700000137E74FBC38.png" /></td></tr></table>
 
 <ul>
-<li>ID: معرف فريد للموعد – المفتاح الأساسي</li>
-<li>DAY: يوم الموعد</li>
-<li>SLOT_ID: فترة الموعد – مفتاح خارجي في عمود [ID] بجدول [SLOTS] – يحدد كل من فترة الموعد والطبيب المعني.</li>
-<li>CLIENT_ID: معرف العميل الذي تم الحجز لصالحه – مفتاح خارجي في عمود [ID] بجدول [CLIENTS]</li>
+<li><bdi dir="ltr" class="odt-ltr-term">ID:</bdi> معرف فريد للموعد – المفتاح الأساسي</li>
+<li><bdi dir="ltr" class="odt-ltr-term">DAY:</bdi> يوم الموعد</li>
+<li><bdi dir="ltr" class="odt-ltr-term">SLOT</bdi>_ID: فترة الموعد – مفتاح خارجي في عمود [<bdi dir="ltr" class="odt-ltr-term">ID</bdi>] بجدول [<bdi dir="ltr" class="odt-ltr-term">SLOTS</bdi>] – يحدد كل من فترة الموعد والطبيب المعني.</li>
+<li><bdi dir="ltr" class="odt-ltr-term">CLIENT</bdi>_ID: معرف العميل الذي تم الحجز لصالحه – مفتاح خارجي في عمود [<bdi dir="ltr" class="odt-ltr-term">ID</bdi>] بجدول [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>]</li>
 </ul>
-<p><a id="unicitejourcreneau"></a>يحتوي هذا الجدول على قيد تفرد على قيم الأعمدة المرتبطة (DAY، SLOT_ID):</p>
+<p><a id="unicitejourcreneau"></a>يحتوي هذا الجدول على قيد تفرد على قيم الأعمدة المرتبطة (<bdi dir="ltr" class="odt-ltr-term">DAY</bdi>، <bdi dir="ltr" class="odt-ltr-term">SLOT</bdi>_ID):</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">RV</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">UNQ1_RV</span><span class="w"> </span><span class="k">UNIQUE</span><span class="w"> </span><span class="p">(</span><span class="n">JOUR</span><span class="p">,</span><span class="w"> </span><span class="n">ID_CRENEAU</span><span class="p">);</span>
 </code></pre></div>
-<p>إذا كان أحد الصفوف في الجدول [RV] يحتوي على القيمة (DAY1، SLOT_ID1) للأعمدة (DAY، SLOT_ID)، فلا يمكن أن تظهر هذه القيمة في أي مكان آخر. وإلا، فهذا يعني أنه تم حجز موعدين في نفس الوقت لنفس الطبيب. من منظور برمجة Java، يقوم برنامج تشغيل JDBC الخاص بقاعدة البيانات بإصدار استثناء <em>SQLException</em> عند حدوث ذلك.</p>
-<p>الصف <em>الذي</em> يحمل الرقم التعريفي 7 (انظر [1] أعلاه) يعني أنه تم حجز موعد للفترة رقم 10 والعميل رقم 2 في 09/10/2006. يوضح لنا جدول [SLOTS] أن الفترة رقم 10 تتوافق مع الفترة الزمنية من 11:00 صباحًا إلى 11:20 صباحًا وتخص الطبيبة رقم 1 (السيدة ماري بيليسييه). يخبرنا الجدول [CLIENTS] أن العميل رقم 2 هو السيدة كريستين جيرمان.</p>
-<p>كانت هذه الدراسة الحالة موضوع مقال عن Java [<a href="http://tahe.developpez.com/java/primefaces"><u><span style="color: #0563c1">http://tahe.developpez.com/java/primefaces</span></u></a>] تم فيه استخدام Hibernate ORM لـ Java.</p>
+<p>إذا كان أحد الصفوف في الجدول [<bdi dir="ltr" class="odt-ltr-term">RV</bdi>] يحتوي على القيمة (<bdi dir="ltr" class="odt-ltr-term">DAY1</bdi>، <bdi dir="ltr" class="odt-ltr-term">SLOT</bdi>_ID1) للأعمدة (<bdi dir="ltr" class="odt-ltr-term">DAY</bdi>، <bdi dir="ltr" class="odt-ltr-term">SLOT</bdi>_ID)، فلا يمكن أن تظهر هذه القيمة في أي مكان آخر. وإلا، فهذا يعني أنه تم حجز موعدين في نفس الوقت لنفس الطبيب. من منظور برمجة <bdi dir="ltr" class="odt-ltr-term">Java</bdi>، يقوم برنامج تشغيل <bdi dir="ltr" class="odt-ltr-term">JDBC</bdi> الخاص بقاعدة البيانات بإصدار استثناء <em><bdi dir="ltr" class="odt-ltr-term">SQLException</bdi></em> عند حدوث ذلك.</p>
+<p>الصف <em>الذي</em> يحمل الرقم التعريفي 7 (انظر [1] أعلاه) يعني أنه تم حجز موعد للفترة رقم 10 والعميل رقم 2 في 09/10/2006. يوضح لنا جدول [<bdi dir="ltr" class="odt-ltr-term">SLOTS</bdi>] أن الفترة رقم 10 تتوافق مع الفترة الزمنية من 11:00 صباحًا إلى 11:20 صباحًا وتخص الطبيبة رقم 1 (السيدة ماري بيليسييه). يخبرنا الجدول [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>] أن العميل رقم 2 هو السيدة كريستين جيرمان.</p>
+<p>كانت هذه الدراسة الحالة موضوع مقال عن <bdi dir="ltr" class="odt-ltr-term">Java</bdi> [<a href="http://tahe.developpez.com/java/primefaces"><u><span style="color: #0563c1"><bdi dir="ltr" class="odt-ltr-term">http://tahe.developpez.com/java/primefaces</bdi></span></u></a>] تم فيه استخدام <bdi dir="ltr" class="odt-ltr-term">Hibernate ORM</bdi> لـ <bdi dir="ltr" class="odt-ltr-term">Java.</bdi></p>
 
 
 

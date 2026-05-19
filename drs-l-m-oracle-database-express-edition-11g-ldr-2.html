@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -613,17 +615,17 @@
 
 
 <p><a id="refheading39807804107930"></a></p>
-<h1 id="5-oracle-database-express-edition-11g-2">5. <span style="color: #365f91">دراسة حالة مع Oracle Database Express Edition 11g الإصدار 2</span></h1>
+<h1 id="5-oracle-database-express-edition-11g-2">5. <span style="color: #365f91">دراسة حالة مع <bdi dir="ltr" class="odt-ltr-term">Oracle Database Express Edition</bdi> 11g الإصدار 2</span></h1>
 <p><a id="refheading39809804107930"></a></p>
 <h2 id="51">5.1. <span style="color: #4f81bd">تثبيت الأدوات</span></h2>
 <p><span style="color: #000000">الأدوات التي سيتم تثبيتها هي كما يلي:</span></p>
 <ul>
-<li>نظام إدارة قواعد البيانات (DBMS): [http://www.oracle.com/technetwork/products/express-edition/downloads/index.html]؛</li>
-<li>أداة إدارة: EMS SQL Manager for Oracle Freeware [http://www.sqlmanager.net/fr/products/oracle/manager/download]؛</li>
-<li>عميل Oracle لـ .NET: ODAC 11.2 الإصدار 5 (11.2.0.3.20) مع Oracle Developer Tools لـ Visual Studio: [http://www.oracle.com/technetwork/developer-tools/visual-studio/downloads/index.html].</li>
+<li>نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>): [<bdi dir="ltr" class="odt-ltr-term">http://www.oracle.com/technetwork/products/express-edition/downloads/index.html</bdi>]؛</li>
+<li>أداة إدارة: <bdi dir="ltr" class="odt-ltr-term">EMS SQL Manager for Oracle Freeware</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://www.sqlmanager.net/fr/products/oracle/manager/download</bdi>]؛</li>
+<li>عميل <bdi dir="ltr" class="odt-ltr-term">Oracle</bdi> لـ .<bdi dir="ltr" class="odt-ltr-term">NET: ODAC 11.2</bdi> الإصدار 5 (11.2.0.3.20) مع <bdi dir="ltr" class="odt-ltr-term">Oracle Developer Tools</bdi> لـ <bdi dir="ltr" class="odt-ltr-term">Visual Studio:</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://www.oracle.com/technetwork/developer-tools/visual-studio/downloads/index.html</bdi>].</li>
 </ul>
-<p><span style="color: #000000">في الأمثلة التالية، يكون للمستخدم &quot;</span><strong><span style="color: #000000">system&quot; </span></strong><span style="color: #000000">كلمة مرور &quot;</span><strong><span style="color: #000000">system&quot;</span></strong><span style="color: #000000">.</span></p>
-<p><span style="color: #000000">قم بتشغيل Oracle [1] ثم أداة [SQL Manager Lite for Oracle]، التي سنستخدمها لإدارة نظام إدارة قواعد البيانات [2].</span></p>
+<p><span style="color: #000000">في الأمثلة التالية، يكون للمستخدم &quot;</span><strong><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">system</bdi>&quot; </span></strong><span style="color: #000000">كلمة مرور &quot;</span><strong><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">system</bdi>&quot;</span></strong><span style="color: #000000">.</span></p>
+<p><span style="color: #000000">قم بتشغيل <bdi dir="ltr" class="odt-ltr-term">Oracle</bdi> [1] ثم أداة [<bdi dir="ltr" class="odt-ltr-term">SQL Manager Lite for Oracle</bdi>]، التي سنستخدمها لإدارة نظام إدارة قواعد البيانات [2].</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005C3000001B1A67093DE.png" width="680" height="200" style="display:inline-block; margin:4px;width:17.999cm;height:5.285cm;" class="odt-zoomable" data-zoom-src="images/10000000000005C3000001B1A67093DE.png" /></td></tr></table>
 
 <ul>
@@ -632,9 +634,9 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005D20000018D9A531FD8.png" width="680" height="181" style="display:inline-block; margin:4px;width:17.999cm;height:4.796cm;" class="odt-zoomable" data-zoom-src="images/10000000000005D20000018D9A531FD8.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [4]، نستخدم خدمة Oracle XE للاتصال؛</span></li>
-<li><span style="color: #000000">في [5]، نحدد اسم قاعدة بيانات XE؛</span></li>
-<li><span style="color: #000000">في [6]، نقوم بتسجيل الدخول باسم system/system؛</span></li>
+<li><span style="color: #000000">في [4]، نستخدم خدمة <bdi dir="ltr" class="odt-ltr-term">Oracle XE</bdi> للاتصال؛</span></li>
+<li><span style="color: #000000">في [5]، نحدد اسم قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">XE</bdi>؛</span></li>
+<li><span style="color: #000000">في [6]، نقوم بتسجيل الدخول باسم <bdi dir="ltr" class="odt-ltr-term">system/system</bdi>؛</span></li>
 <li><span style="color: #000000">في [7]، ننهي المعالج؛</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005C60000030432C84331.png" width="680" height="355" style="display:inline-block; margin:4px;width:17.999cm;height:9.402cm;" class="odt-zoomable" data-zoom-src="images/10000000000005C60000030432C84331.png" /></td></tr></table>
@@ -642,36 +644,36 @@
 <ul>
 <li><span style="color: #000000">في [8]، نتصل بقاعدة البيانات؛</span></li>
 <li><span style="color: #000000">في [9]، نكون متصلين؛</span></li>
-<li><span style="color: #000000">نظرًا لأننا سجلنا الدخول كمستخدم system / system، الذي يتمتع بامتيازات موسعة، يمكننا، على سبيل المثال، إدارة المستخدمين [10]؛</span></li>
+<li><span style="color: #000000">نظرًا لأننا سجلنا الدخول كمستخدم <bdi dir="ltr" class="odt-ltr-term">system</bdi> / <bdi dir="ltr" class="odt-ltr-term">system</bdi>، الذي يتمتع بامتيازات موسعة، يمكننا، على سبيل المثال، إدارة المستخدمين [10]؛</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000060D000002626FE0FAAF.png" width="680" height="268" style="display:inline-block; margin:4px;width:17.999cm;height:7.087cm;" class="odt-zoomable" data-zoom-src="images/100000000000060D000002626FE0FAAF.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">في [11]، قم بإنشاء مستخدم جديد؛</span></li>
-<li><span style="color: #000000">في [12]، سيتم تسمية المستخدم [RDVMEDECINS-EF]؛</span></li>
-<li><span style="color: #000000">في [13]، وستكون كلمة المرور </span><em>rdvmedecins</em><span style="color: #000000">؛</span></li>
+<li><span style="color: #000000">في [12]، سيتم تسمية المستخدم [<bdi dir="ltr" class="odt-ltr-term">RDVMEDECINS-EF</bdi>]؛</span></li>
+<li><span style="color: #000000">في [13]، وستكون كلمة المرور </span><em><bdi dir="ltr" class="odt-ltr-term">rdvmedecins</bdi></em><span style="color: #000000">؛</span></li>
 <li><span style="color: #000000">في [14]، يتم تأكيد إنشاء المستخدم؛</span></li>
 <li><span style="color: #000000">في [15]، تم إنشاء المستخدم؛</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003C800000299DB42B8C4.png" width="484" height="333" style="display:inline-block; margin:4px;width:12.806cm;height:8.798cm;" class="odt-zoomable" data-zoom-src="images/10000000000003C800000299DB42B8C4.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [16]، المستخدم [RDVMEDECINS-EF] هو أيضًا مخطط قاعدة بيانات؛</span></li>
-<li><span style="color: #000000">في [17]، لا يمتلك المستخدم الذي تم إنشاؤه أذونات كافية. نمنحها له عبر نص SQL؛</span></li>
+<li><span style="color: #000000">في [16]، المستخدم [<bdi dir="ltr" class="odt-ltr-term">RDVMEDECINS-EF</bdi>] هو أيضًا مخطط قاعدة بيانات؛</span></li>
+<li><span style="color: #000000">في [17]، لا يمتلك المستخدم الذي تم إنشاؤه أذونات كافية. نمنحها له عبر نص <bdi dir="ltr" class="odt-ltr-term">SQL</bdi>؛</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005EE000001435CA7173A.png" width="680" height="145" style="display:inline-block; margin:4px;width:17.999cm;height:3.829cm;" class="odt-zoomable" data-zoom-src="images/10000000000005EE000001435CA7173A.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">في [18]، يتم تنفيذ البرنامج النصي؛</span></li>
-<li><span style="color: #000000">في [19]، سنحاول تسجيل الدخول باسم [RDVMEDECINS-EF] لمعرفة ما يمكنه فعله. للقيام بذلك، نبدأ بتسجيل قاعدة بيانات جديدة في [EMS Manager]؛</span></li>
+<li><span style="color: #000000">في [19]، سنحاول تسجيل الدخول باسم [<bdi dir="ltr" class="odt-ltr-term">RDVMEDECINS-EF</bdi>] لمعرفة ما يمكنه فعله. للقيام بذلك، نبدأ بتسجيل قاعدة بيانات جديدة في [<bdi dir="ltr" class="odt-ltr-term">EMS Manager</bdi>]؛</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000060D000001A26BF7F79B.png" width="680" height="184" style="display:inline-block; margin:4px;width:17.999cm;height:4.858cm;" class="odt-zoomable" data-zoom-src="images/100000000000060D000001A26BF7F79B.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [19]، نقوم بتسجيل الدخول عبر خدمة XE؛</span></li>
-<li><span style="color: #000000">في [20]، نقوم بتسجيل الدخول باسم RDVMEDECINS-EF / rdvmedecins؛</span></li>
+<li><span style="color: #000000">في [19]، نقوم بتسجيل الدخول عبر خدمة <bdi dir="ltr" class="odt-ltr-term">XE</bdi>؛</span></li>
+<li><span style="color: #000000">في [20]، نقوم بتسجيل الدخول باسم <bdi dir="ltr" class="odt-ltr-term">RDVMEDECINS-EF</bdi> / <bdi dir="ltr" class="odt-ltr-term">rdvmedecins</bdi>؛</span></li>
 <li><span style="color: #000000">في [21]، نعيّن اسم مستعار يعكس اسم المستخدم الذي قام بتسجيل الدخول؛</span></li>
-<li><span style="color: #000000">في [22]، نتصل بـ Oracle باستخدام بيانات الاعتماد المقدمة؛</span></li>
+<li><span style="color: #000000">في [22]، نتصل بـ <bdi dir="ltr" class="odt-ltr-term">Oracle</bdi> باستخدام بيانات الاعتماد المقدمة؛</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000646000002E477777C09.png" width="680" height="313" style="display:inline-block; margin:4px;width:17.999cm;height:8.294cm;" class="odt-zoomable" data-zoom-src="images/1000000000000646000002E477777C09.png" /></td></tr></table>
 
@@ -679,7 +681,7 @@
 
 <ul>
 <li><span style="color: #000000">في [22]، نجحنا في تسجيل الدخول؛</span></li>
-<li><span style="color: #000000">في [23]، نحاول إنشاء جدول في مخطط [RDVMEDECINS-EF]؛</span></li>
+<li><span style="color: #000000">في [23]، نحاول إنشاء جدول في مخطط [<bdi dir="ltr" class="odt-ltr-term">RDVMEDECINS-EF</bdi>]؛</span></li>
 <li><span style="color: #000000">في [24]، نحدد جدولاً؛</span></li>
 <li><span style="color: #000000">في [25]، نقوم بالتحقق من صحة تعريفه؛</span></li>
 </ul>
@@ -689,34 +691,34 @@
 <li><span style="color: #000000">في [26]، تم إنشاء الجدول. نقوم بحذفه؛</span></li>
 <li><span style="color: #000000">في [27]، تم حذفه.</span></li>
 </ul>
-<p><span style="color: #000000">الآن بعد أن أصبح لدينا مستخدم يتمتع بأذونات كافية، سنقوم بإنشاء مشروع VS 2012 الذي سيقوم بإنشاء الجداول في مخطط [RDVMEDECINS-EF] بناءً على تعريفات الكيانات.</span></p>
+<p><span style="color: #000000">الآن بعد أن أصبح لدينا مستخدم يتمتع بأذونات كافية، سنقوم بإنشاء مشروع <bdi dir="ltr" class="odt-ltr-term">VS</bdi> 2012 الذي سيقوم بإنشاء الجداول في مخطط [<bdi dir="ltr" class="odt-ltr-term">RDVMEDECINS-EF</bdi>] بناءً على تعريفات الكيانات.</span></p>
 <p><a id="refheading39811804107930"></a></p>
 <h2 id="52">5.2. <span style="color: #4f81bd">إنشاء قاعدة البيانات من الكيانات</span></h2>
-<p><span style="color: #000000">نبدأ بنسخ مجلد مشروع [RdvMedecins-SqlServer-01] إلى [RdvMedecins-Oracle-01] [1]:</span></p>
+<p><span style="color: #000000">نبدأ بنسخ مجلد مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-01</bdi>] إلى [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Oracle-01</bdi>] [1]:</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005A80000030DD6C4353D.png" width="680" height="367" style="display:inline-block; margin:4px;width:17.999cm;height:9.708cm;" class="odt-zoomable" data-zoom-src="images/10000000000005A80000030DD6C4353D.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [2]، في VS 2012، نزيل مشروع [RdvMedecins-SqlServer-01] من الحل؛</span></li>
+<li><span style="color: #000000">في [2]، في <bdi dir="ltr" class="odt-ltr-term">VS</bdi> 2012، نزيل مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-01</bdi>] من الحل؛</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000062200000281943D6B13.png" width="680" height="278" style="display:inline-block; margin:4px;width:17.999cm;height:7.348cm;" class="odt-zoomable" data-zoom-src="images/100000000000062200000281943D6B13.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">في [3]، تمت إزالة المشروع؛</span></li>
-<li><span style="color: #000000">في [4]، نضيف مشروعًا آخر. هذا المشروع مأخوذ من المجلد [RdvMedecins-Oracle-01] الذي أنشأناه سابقًا؛</span></li>
+<li><span style="color: #000000">في [4]، نضيف مشروعًا آخر. هذا المشروع مأخوذ من المجلد [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Oracle-01</bdi>] الذي أنشأناه سابقًا؛</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000320000001166977BE7A.png" width="400" height="139" style="display:inline-block; margin:4px;width:10.583cm;height:3.678cm;" class="odt-zoomable" data-zoom-src="images/1000000000000320000001166977BE7A.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [5]، يُسمى المشروع الذي تم تحميله [RdvMedecins-SqlServer-01]؛</span></li>
-<li><span style="color: #000000">في [6]، نغير اسمه إلى [RdvMedecins-Oracle-01]</span></li>
+<li><span style="color: #000000">في [5]، يُسمى المشروع الذي تم تحميله [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-01</bdi>]؛</span></li>
+<li><span style="color: #000000">في [6]، نغير اسمه إلى [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Oracle-01</bdi>]</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000060A0000023E257F800A.png" width="680" height="253" style="display:inline-block; margin:4px;width:17.999cm;height:6.683cm;" class="odt-zoomable" data-zoom-src="images/100000000000060A0000023E257F800A.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [7]، نضيف مشروعًا آخر إلى الحل. هذا المشروع مأخوذ من مجلد [RdvMedecins-SqlServer-01] الخاص بالمشروع الذي أزلناه سابقًا من الحل؛</span></li>
-<li><span style="color: #000000">في [8]، تمت إعادة إضافة مشروع [RdvMedecins-SqlServer-01] إلى الحل.</span></li>
+<li><span style="color: #000000">في [7]، نضيف مشروعًا آخر إلى الحل. هذا المشروع مأخوذ من مجلد [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-01</bdi>] الخاص بالمشروع الذي أزلناه سابقًا من الحل؛</span></li>
+<li><span style="color: #000000">في [8]، تمت إعادة إضافة مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-01</bdi>] إلى الحل.</span></li>
 </ul>
-<p><span style="color: #000000">مشروع [RdvMedecins-Oracle-01] مطابق لمشروع [RdvMedecins-SqlServer-01]. نحتاج إلى إجراء بعض التغييرات. في [App.config]، سنقوم بتعديل سلسلة الاتصال و[DbProviderFactory]، والتي يجب تكييفها مع كل نظام إدارة قواعد البيانات (DBMS).</span></p>
+<p><span style="color: #000000">مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Oracle-01</bdi>] مطابق لمشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-01</bdi>]. نحتاج إلى إجراء بعض التغييرات. في [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]، سنقوم بتعديل سلسلة الاتصال و[<bdi dir="ltr" class="odt-ltr-term">DbProviderFactory</bdi>]، والتي يجب تكييفها مع كل نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>).</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- connection chain on base --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">  &lt;</span><span style="color:#a31515">connectionStrings</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -733,21 +735,21 @@
 
 <ul>
 <li><span style="color: #000000">السطر 3: اسم المستخدم وكلمة المرور؛</span></li>
-<li><span style="color: #000000">الأسطر 6–11: </span><em>DbProviderFactory</em><span style="color: #000000">. يشير السطر 9 إلى مكتبة DLL [Oracle.DataAccess] التي لا نمتلكها. يمكننا الحصول عليها باستخدام NuGet [1]:</span></li>
+<li><span style="color: #000000">الأسطر 6–11: </span><em><bdi dir="ltr" class="odt-ltr-term">DbProviderFactory</bdi></em><span style="color: #000000">. يشير السطر 9 إلى مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> [<bdi dir="ltr" class="odt-ltr-term">Oracle.DataAccess</bdi>] التي لا نمتلكها. يمكننا الحصول عليها باستخدام <bdi dir="ltr" class="odt-ltr-term">NuGet</bdi> [1]:</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000608000001E366F52AEE.png" width="680" height="213" style="display:inline-block; margin:4px;width:17.999cm;height:5.63cm;" class="odt-zoomable" data-zoom-src="images/1000000000000608000001E366F52AEE.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [2]، اكتب الكلمة الرئيسية &quot;</span><em>oracle&quot;</em> <span style="color: #000000">في مربع البحث؛</span></li>
-<li><span style="color: #000000">في [3]، حدد الحزمة المناسبة [Oracle Data Provider]. هذا هو موصل ADO.NET الخاص بـ Oracle؛</span></li>
+<li><span style="color: #000000">في [2]، اكتب الكلمة الرئيسية &quot;</span><em><bdi dir="ltr" class="odt-ltr-term">oracle</bdi>&quot;</em> <span style="color: #000000">في مربع البحث؛</span></li>
+<li><span style="color: #000000">في [3]، حدد الحزمة المناسبة [<bdi dir="ltr" class="odt-ltr-term">Oracle Data Provider</bdi>]. هذا هو موصل <bdi dir="ltr" class="odt-ltr-term">ADO.NET</bdi> الخاص بـ <bdi dir="ltr" class="odt-ltr-term">Oracle</bdi>؛</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003DB0000025DD7AC34E2.png" width="494" height="303" style="display:inline-block; margin:4px;width:13.058cm;height:8.005cm;" class="odt-zoomable" data-zoom-src="images/10000000000003DB0000025DD7AC34E2.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">في [4]، تتم إضافة المرجع؛</span></li>
-<li><span style="color: #000000">في [5]، في [App.config]، يجب تحديد الإصدار الصحيح من DLL. يمكنك العثور عليه في خصائصه.</span></li>
+<li><span style="color: #000000">في [5]، في [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]، يجب تحديد الإصدار الصحيح من <bdi dir="ltr" class="odt-ltr-term">DLL.</bdi> يمكنك العثور عليه في خصائصه.</span></li>
 </ul>
-<p>في ملف [Entities.cs]، يجب عليك تكييف مخطط الجداول التي سيتم إنشاؤها. <span style="color: #000000">المخطط المستخدم هو اسم المستخدم الذي يمتلك الجداول.</span></p>
+<p>في ملف [<bdi dir="ltr" class="odt-ltr-term">Entities.cs</bdi>]، يجب عليك تكييف مخطط الجداول التي سيتم إنشاؤها. <span style="color: #000000">المخطط المستخدم هو اسم المستخدم الذي يمتلك الجداول.</span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content">  [<span style="color:#2b91af">Table</span>(<span style="color:#a31515">&quot;MEDECINS&quot;</span>, Schema = <span style="color:#a31515">&quot;RDVMEDECINS-EF&quot;</span>)]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">Medecin</span><span style="color:#000000"> : </span><span style="color:#2b91af">Personne</span></span></span>
@@ -774,7 +776,7 @@
 <li><span style="color: #000000">في [2]، نحدد أيضًا مساحة اسم افتراضية مختلفة؛</span></li>
 <li><span style="color: #000000">في [3]، نحدد البرنامج المراد تشغيله.</span></li>
 </ul>
-<p><span style="color: #000000">في هذه المرحلة، لا توجد أخطاء في الترجمة. دعونا نقوم بتشغيل برنامج [CreateDB_01]. نحصل على الاستثناء التالي:</span></p>
+<p><span style="color: #000000">في هذه المرحلة، لا توجد أخطاء في الترجمة. دعونا نقوم بتشغيل برنامج [<bdi dir="ltr" class="odt-ltr-term">CreateDB</bdi>_01]. نحصل على الاستثناء التالي:</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -795,7 +797,7 @@
 <a id="__codelineno-0-9" name="__codelineno-0-9"></a>   à RdvMedecins_01.CreateDB_01.Main(String[] args) dans d:\data\istia-1213\c#\d
 <a id="__codelineno-0-10" name="__codelineno-0-10"></a>vp\Entity Framework\RdvMedecins\RdvMedecins-Oracle-01\CreateDB_01.cs:ligne 15
 </code></pre></div></td></tr></table></div>
-<p><span style="color: #000000">نتذكر أننا واجهنا نفس الخطأ مع MySQL. ويرتبط هذا بنوع حقل </span><em><span style="color: #000000">Timestamp </span></em><span style="color: #000000">في الكيانات. نقوم بإجراء التعديل نفسه. في الكيانات، نستبدل الأسطر الثلاثة</span></p>
+<p><span style="color: #000000">نتذكر أننا واجهنا نفس الخطأ مع <bdi dir="ltr" class="odt-ltr-term">MySQL.</bdi> ويرتبط هذا بنوع حقل </span><em><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">Timestamp</bdi> </span></em><span style="color: #000000">في الكيانات. نقوم بإجراء التعديل نفسه. في الكيانات، نستبدل الأسطر الثلاثة</span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    [</span><span style="color:#2b91af">Column</span><span style="color:#000000">(</span><span style="color:#a31515">&quot;TIMESTAMP&quot;</span><span style="color:#000000">)]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    [</span><span style="color:#2b91af">Timestamp</span><span style="color:#000000">]</span></span></span>
@@ -809,7 +811,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">int</span><span style="color:#000000">? Versioning { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">لذلك، سنقوم بتغيير نوع العمود من </span><strong><span style="color: #000000">byte[] </span></strong><span style="color: #000000">إلى </span><strong><span style="color: #000000">int?</span></strong><span style="color: #000000">. تذكر أنه في كل من SQL Server و MySQL، كان نظام إدارة قواعد البيانات (DBMS) يعيّن قيمة لعمود الجدول المستخدم لإدارة التزامن في الوصول في كل مرة يتم فيها إدراج صف أو تعديله. ومن الآن فصاعدًا، سنستخدم حقل كيان من نوع عدد صحيح. وفي نظام إدارة قواعد البيانات (DBMS)، سنستخدم الإجراءات المخزنة لزيادة هذا العدد الصحيح بمقدار واحد في كل مرة يتم فيها إدراج صف أو تعديله.</span></p>
+<p><span style="color: #000000">لذلك، سنقوم بتغيير نوع العمود من </span><strong><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">byte</bdi>[] </span></strong><span style="color: #000000">إلى </span><strong><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">int</bdi>?</span></strong><span style="color: #000000">. تذكر أنه في كل من <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi> و <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi>، كان نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>) يعيّن قيمة لعمود الجدول المستخدم لإدارة التزامن في الوصول في كل مرة يتم فيها إدراج صف أو تعديله. ومن الآن فصاعدًا، سنستخدم حقل كيان من نوع عدد صحيح. وفي نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>)، سنستخدم الإجراءات المخزنة لزيادة هذا العدد الصحيح بمقدار واحد في كل مرة يتم فيها إدراج صف أو تعديله.</span></p>
 <p><span style="color: #000000">نقوم بإجراء التغيير المذكور أعلاه على جميع الكيانات الأربعة ثم نعيد تشغيل التطبيق. ثم نحصل على الخطأ التالي:</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
@@ -823,7 +825,7 @@
 <a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="sb">   à RdvMedecins_01.CreateDB_01.Main(String[] args) dans d:\data\istia-1213\c#\d</span>
 <a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="sb">vp\Entity Framework\RdvMedecins\RdvMedecins-Oracle-01\CreateDB_01.cs:ligne 15</span>
 </code></pre></div></td></tr></table></div>
-<p><span style="color: #000000">تشير السطر 1 إلى أن موصل Oracle ADO.NET غير قادر على حذف قاعدة البيانات الحالية. دعونا نراجع ما يحدث. الرمز في [CreateDB_01.cs] هو كما يلي:</span></p>
+<p><span style="color: #000000">تشير السطر 1 إلى أن موصل <bdi dir="ltr" class="odt-ltr-term">Oracle ADO.NET</bdi> غير قادر على حذف قاعدة البيانات الحالية. دعونا نراجع ما يحدث. الرمز في [<bdi dir="ltr" class="odt-ltr-term">CreateDB</bdi>_01.<bdi dir="ltr" class="odt-ltr-term">cs</bdi>] هو كما يلي:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> System;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span><span style="color:#000000"> System.Data.Entity;</span></span></span>
@@ -846,17 +848,17 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">السطر 15 يؤدي إلى تشغيل فئة [RdvMedecinsInitializer] (السطر 12). هذه الفئة هي كما يلي:</span></p>
+<p><span style="color: #000000">السطر 15 يؤدي إلى تشغيل فئة [<bdi dir="ltr" class="odt-ltr-term">RdvMedecinsInitializer</bdi>] (السطر 12). هذه الفئة هي كما يلي:</span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">public</span> <span style="color:#0000ff">class</span> <span style="color:#2b91af">RdvMedecinsInitializer</span> : <span style="color:#2b91af">DropCreateDatabaseAlways</span>&lt;<span style="color:#2b91af">RdvMedecinsContext</span>&gt;</span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">وهي مشتقة من فئة [DropCreateDatabaseAlways]، التي تحاول حذف قاعدة البيانات ثم إعادة إنشائها. نغير تعريف الفئة إلى:</span></p>
+<p><span style="color: #000000">وهي مشتقة من فئة [<bdi dir="ltr" class="odt-ltr-term">DropCreateDatabaseAlways</bdi>]، التي تحاول حذف قاعدة البيانات ثم إعادة إنشائها. نغير تعريف الفئة إلى:</span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">public</span> <span style="color:#0000ff">class</span> <span style="color:#2b91af">RdvMedecinsInitializer</span> : <span style="color:#2b91af">CreateDatabaseIfNotExists</span>&lt;<span style="color:#2b91af">RdvMedecinsContext</span>&gt;</span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">يتم إنشاء قاعدة البيانات فقط إذا لم تكن موجودة. نعيد تشغيل [CreateDB_01.cs] ولا تظهر أي أخطاء أخرى. ولكن في [EMS Manager]، نرى أن قاعدة البيانات [RDVMEDECINS-EF] لا تزال فارغة. نظرًا لأن EF 5 عثر على قاعدة بيانات موجودة، فإنه لم يقم بأي إجراء. فهو لا يتخذ أي إجراء إلا إذا كانت قاعدة البيانات غير موجودة. ومن هنا، نجد أنفسنا عالقين في حلقة مفرغة. في الواقع، سلسلة الاتصال بنظام إدارة قواعد البيانات (DBMS) هي كما يلي:</span></p>
+<p><span style="color: #000000">يتم إنشاء قاعدة البيانات فقط إذا لم تكن موجودة. نعيد تشغيل [<bdi dir="ltr" class="odt-ltr-term">CreateDB</bdi>_01.<bdi dir="ltr" class="odt-ltr-term">cs</bdi>] ولا تظهر أي أخطاء أخرى. ولكن في [<bdi dir="ltr" class="odt-ltr-term">EMS Manager</bdi>]، نرى أن قاعدة البيانات [<bdi dir="ltr" class="odt-ltr-term">RDVMEDECINS-EF</bdi>] لا تزال فارغة. نظرًا لأن <bdi dir="ltr" class="odt-ltr-term">EF</bdi> 5 عثر على قاعدة بيانات موجودة، فإنه لم يقم بأي إجراء. فهو لا يتخذ أي إجراء إلا إذا كانت قاعدة البيانات غير موجودة. ومن هنا، نجد أنفسنا عالقين في حلقة مفرغة. في الواقع، سلسلة الاتصال بنظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>) هي كما يلي:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">  &lt;</span><span style="color:#a31515">connectionStrings</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">    &lt;</span><span style="color:#a31515">add</span><span style="color:#0000ff"> </span><span style="color:#ff0000">name</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">monContexte</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> </span><span style="color:#ff0000">connectionString</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=XE)));User Id=RDVMEDECINS-EF;Password=rdvmedecins;</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> </span><span style="color:#ff0000">providerName</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">Oracle.DataAccess.Client</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> /&gt;</span></span></span>
@@ -864,32 +866,32 @@
 </code></pre></div>
 
 <p><span style="color: #000000">السطر 2: تستخدم سلسلة الاتصال اسم مستخدم بدلاً من اسم قاعدة البيانات. يجب أن يكون هذا المستخدم موجودًا.</span></p>
-<p><span style="color: #000000">لذلك، يجب علينا إنشاء قاعدة البيانات [RDVMEDECINS-EF] يدويًا باستخدام أداة [EMS Manager for Oracle]. لن نصف كل خطوة، بل سنكتفي بذكر أهم الخطوات فقط.</span></p>
-<p><span style="color: #000000">ستكون قاعدة بيانات Oracle كما يلي:</span></p>
+<p><span style="color: #000000">لذلك، يجب علينا إنشاء قاعدة البيانات [<bdi dir="ltr" class="odt-ltr-term">RDVMEDECINS-EF</bdi>] يدويًا باستخدام أداة [<bdi dir="ltr" class="odt-ltr-term">EMS Manager for Oracle</bdi>]. لن نصف كل خطوة، بل سنكتفي بذكر أهم الخطوات فقط.</span></p>
+<p><span style="color: #000000">ستكون قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">Oracle</bdi> كما يلي:</span></p>
 <p><u><strong><span style="color: #000000">الجداول</span></strong></u></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005E2000001802EBCF884.png" width="680" height="173" style="display:inline-block; margin:4px;width:17.999cm;height:4.59cm;" class="odt-zoomable" data-zoom-src="images/10000000000005E2000001802EBCF884.png" /></td></tr></table>
 
-<p><span style="color: #000000">تحتوي الجداول المختلفة على المفاتيح الأساسية والمفاتيح الخارجية التي كانت موجودة في هذه الجداول نفسها في المثالين السابقين. وتتميز المفاتيح الخارجية على وجه التحديد بسمات ON DELETE CASCADE.</span></p>
+<p><span style="color: #000000">تحتوي الجداول المختلفة على المفاتيح الأساسية والمفاتيح الخارجية التي كانت موجودة في هذه الجداول نفسها في المثالين السابقين. وتتميز المفاتيح الخارجية على وجه التحديد بسمات <bdi dir="ltr" class="odt-ltr-term">ON DELETE CASCADE.</bdi></span></p>
 <p><u><strong><span style="color: #000000">التسلسلات</span></strong></u></p>
-<p><span style="color: #000000">لقد أنشأنا هنا تسلسلات Oracle. وهي عبارة عن مولدات للأرقام المتتالية. ويوجد منها 5 [1].</span></p>
+<p><span style="color: #000000">لقد أنشأنا هنا تسلسلات <bdi dir="ltr" class="odt-ltr-term">Oracle.</bdi> وهي عبارة عن مولدات للأرقام المتتالية. ويوجد منها 5 [1].</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052D000001B3F53C6CC5.png" width="663" height="218" style="display:inline-block; margin:4px;width:17.53cm;height:5.756cm;" class="odt-zoomable" data-zoom-src="images/100000000000052D000001B3F53C6CC5.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [2]، نرى خصائص التسلسل [SEQUENCE_CLIENTS]. وهو يولد أرقامًا متتالية بزيادات قدرها 1، بدءًا من 1 وحتى قيمة كبيرة جدًا.</span></li>
+<li><span style="color: #000000">في [2]، نرى خصائص التسلسل [<bdi dir="ltr" class="odt-ltr-term">SEQUENCE</bdi>_CLIENTS]. وهو يولد أرقامًا متتالية بزيادات قدرها 1، بدءًا من 1 وحتى قيمة كبيرة جدًا.</span></li>
 </ul>
 <p><span style="color: #000000">جميع المتسلسلات مبنية على نفس النموذج. </span></p>
 <ul>
-<li><span style="color: #000000">سيُستخدم [SEQUENCE_CLIENTS] لتوليد المفتاح الأساسي لجدول [CLIENTS]؛</span></li>
-<li><span style="color: #000000">سيتم استخدام [SEQUENCE_DOCTORS] لتوليد المفتاح الأساسي لجدول [DOCTORS]؛</span></li>
-<li><span style="color: #000000">سيتم استخدام [SEQUENCE_SLOTS] لإنشاء المفتاح الأساسي لجدول [SLOTS]؛</span></li>
-<li><span style="color: #000000">سيتم استخدام [SEQUENCE_RVS] لإنشاء المفتاح الأساسي لجدول [RVS]؛</span></li>
-<li><span style="color: #000000">سيتم استخدام [SEQUENCE_VERSIONS] لإنشاء القيم لأعمدة [VERSIONING] في جميع الجداول.</span></li>
+<li><span style="color: #000000">سيُستخدم [<bdi dir="ltr" class="odt-ltr-term">SEQUENCE</bdi>_CLIENTS] لتوليد المفتاح الأساسي لجدول [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>]؛</span></li>
+<li><span style="color: #000000">سيتم استخدام [<bdi dir="ltr" class="odt-ltr-term">SEQUENCE</bdi>_DOCTORS] لتوليد المفتاح الأساسي لجدول [<bdi dir="ltr" class="odt-ltr-term">DOCTORS</bdi>]؛</span></li>
+<li><span style="color: #000000">سيتم استخدام [<bdi dir="ltr" class="odt-ltr-term">SEQUENCE</bdi>_SLOTS] لإنشاء المفتاح الأساسي لجدول [<bdi dir="ltr" class="odt-ltr-term">SLOTS</bdi>]؛</span></li>
+<li><span style="color: #000000">سيتم استخدام [<bdi dir="ltr" class="odt-ltr-term">SEQUENCE</bdi>_RVS] لإنشاء المفتاح الأساسي لجدول [<bdi dir="ltr" class="odt-ltr-term">RVS</bdi>]؛</span></li>
+<li><span style="color: #000000">سيتم استخدام [<bdi dir="ltr" class="odt-ltr-term">SEQUENCE</bdi>_VERSIONS] لإنشاء القيم لأعمدة [<bdi dir="ltr" class="odt-ltr-term">VERSIONING</bdi>] في جميع الجداول.</span></li>
 </ul>
 <p><u><strong><span style="color: #000000">المشغلات</span></strong></u></p>
-<p><span style="color: #000000">المشغل هو إجراء يتم تنفيذه بواسطة نظام إدارة قواعد البيانات (DBMS) قبل أو بعد حدوث حدث (إدراج، تحديث، حذف) في جدول. لدينا 8 مشغلات [1]:</span></p>
+<p><span style="color: #000000">المشغل هو إجراء يتم تنفيذه بواسطة نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>) قبل أو بعد حدوث حدث (إدراج، تحديث، حذف) في جدول. لدينا 8 مشغلات [1]:</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000198000000B13CFBF36E.png" width="286" height="124" style="display:inline-block; margin:4px;width:7.56cm;height:3.281cm;" class="odt-zoomable" data-zoom-src="images/1000000000000198000000B13CFBF36E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p><span style="color: #000000">لنلقِ نظرة على كود DDL الخاص بالمشغل [TRIGGER_PK_CLIENTS]، الذي يقوم بتعبئة المفتاح الأساسي لجدول [CLIENTS]:</span></p>
+<p><span style="color: #000000">لنلقِ نظرة على كود <bdi dir="ltr" class="odt-ltr-term">DDL</bdi> الخاص بالمشغل [<bdi dir="ltr" class="odt-ltr-term">TRIGGER</bdi>_PK_CLIENTS]، الذي يقوم بتعبئة المفتاح الأساسي لجدول [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>]:</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
@@ -907,11 +909,11 @@
 <a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="o">/</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li><span style="color: #000000">الأسطر 1-5: قبل كل عملية INSERT على الجدول [CLIENTS]؛</span></li>
-<li><span style="color: #000000">السطر 6: سيأخذ العمود [ID] القيمة التالية من التسلسل [SEQUENCE_CLIENTS]. وبالتالي، سيحتوي المفتاح الأساسي على قيم متتالية مقدمة من التسلسل.</span></li>
+<li><span style="color: #000000">الأسطر 1-5: قبل كل عملية <bdi dir="ltr" class="odt-ltr-term">INSERT</bdi> على الجدول [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>]؛</span></li>
+<li><span style="color: #000000">السطر 6: سيأخذ العمود [<bdi dir="ltr" class="odt-ltr-term">ID</bdi>] القيمة التالية من التسلسل [<bdi dir="ltr" class="odt-ltr-term">SEQUENCE</bdi>_CLIENTS]. وبالتالي، سيحتوي المفتاح الأساسي على قيم متتالية مقدمة من التسلسل.</span></li>
 </ul>
-<p><span style="color: #000000">تعمل المشغلات [TRIGGER_PK_MEDECINS، TRIGGER_PK_CRENEAUX، TRIGGER_PK_RVS] بطريقة مماثلة.</span></p>
-<p><span style="color: #000000">لنلقِ نظرة على كود DDL للمشغل [TRIGGER_VERSIONS_CLIENTS]، الذي يملأ عمود [VERSIONING] في جدول [CLIENTS]:</span></p>
+<p><span style="color: #000000">تعمل المشغلات [<bdi dir="ltr" class="odt-ltr-term">TRIGGER</bdi>_PK_MEDECINS، <bdi dir="ltr" class="odt-ltr-term">TRIGGER</bdi>_PK_CRENEAUX، <bdi dir="ltr" class="odt-ltr-term">TRIGGER</bdi>_PK_RVS] بطريقة مماثلة.</span></p>
+<p><span style="color: #000000">لنلقِ نظرة على كود <bdi dir="ltr" class="odt-ltr-term">DDL</bdi> للمشغل [<bdi dir="ltr" class="odt-ltr-term">TRIGGER</bdi>_VERSIONS_CLIENTS]، الذي يملأ عمود [<bdi dir="ltr" class="odt-ltr-term">VERSIONING</bdi>] في جدول [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>]:</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
@@ -933,12 +935,12 @@
 <a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="o">/</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li><span style="color: #000000">السطران 1-2: قبل كل عملية INSERT أو UPDATE على الجدول [CLIENTS]؛</span></li>
-<li><span style="color: #000000">السطر 8: سيأخذ العمود [VERSIONING] القيمة التالية من التسلسل [SEQUENCE_VERSIONS]. وبالتالي، سيحتوي العمود [VERSIONING] على قيم متتالية مقدمة من التسلسل.</span></li>
+<li><span style="color: #000000">السطران 1-2: قبل كل عملية <bdi dir="ltr" class="odt-ltr-term">INSERT</bdi> أو <bdi dir="ltr" class="odt-ltr-term">UPDATE</bdi> على الجدول [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>]؛</span></li>
+<li><span style="color: #000000">السطر 8: سيأخذ العمود [<bdi dir="ltr" class="odt-ltr-term">VERSIONING</bdi>] القيمة التالية من التسلسل [<bdi dir="ltr" class="odt-ltr-term">SEQUENCE</bdi>_VERSIONS]. وبالتالي، سيحتوي العمود [<bdi dir="ltr" class="odt-ltr-term">VERSIONING</bdi>] على قيم متتالية مقدمة من التسلسل.</span></li>
 </ul>
-<p><span style="color: #000000">تعمل المشغلات [TRIGGER_VERSION_MEDECINS، TRIGGER_VERSION_CRENEAUX، TRIGGER_VERSION_RVS] بطريقة مماثلة. وتستمد الأعمدة الأربعة [VERSIONING] قيمها من نفس التسلسل.</span></p>
-<p><span style="color: #000000">تم وضع البرنامج النصي لإنشاء جداول قاعدة بيانات Oracle [RDVMEDECINS-EF] في المجلد [RdvMedecins / databases / oracle]. يمكن للقارئ تحميله وتشغيله لإنشاء الجداول.</span></p>
-<p><span style="color: #000000">بمجرد الانتهاء من ذلك، يمكن تشغيل البرامج المختلفة في المشروع. وهي تنتج نفس النتائج كما هو الحال مع SQL Server، باستثناء برنامج [ModifyDetachedEntities]، الذي يتعطل لنفس السبب الذي تسبب في تعطله مع MySQL. يتم حل المشكلة بنفس الطريقة. ما عليك سوى نسخ برنامج [ModifyDetachedEntities] من مشروع [RdvMedecins-MySQL-01] إلى مشروع [RdvMedecins-Oracle-01]. وهذا يطرح مشكلة جديدة:</span></p>
+<p><span style="color: #000000">تعمل المشغلات [<bdi dir="ltr" class="odt-ltr-term">TRIGGER</bdi>_VERSION_MEDECINS، <bdi dir="ltr" class="odt-ltr-term">TRIGGER</bdi>_VERSION_CRENEAUX، <bdi dir="ltr" class="odt-ltr-term">TRIGGER</bdi>_VERSION_RVS] بطريقة مماثلة. وتستمد الأعمدة الأربعة [<bdi dir="ltr" class="odt-ltr-term">VERSIONING</bdi>] قيمها من نفس التسلسل.</span></p>
+<p><span style="color: #000000">تم وضع البرنامج النصي لإنشاء جداول قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">Oracle</bdi> [<bdi dir="ltr" class="odt-ltr-term">RDVMEDECINS-EF</bdi>] في المجلد [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins</bdi> / <bdi dir="ltr" class="odt-ltr-term">databases</bdi> / <bdi dir="ltr" class="odt-ltr-term">oracle</bdi>]. يمكن للقارئ تحميله وتشغيله لإنشاء الجداول.</span></p>
+<p><span style="color: #000000">بمجرد الانتهاء من ذلك، يمكن تشغيل البرامج المختلفة في المشروع. وهي تنتج نفس النتائج كما هو الحال مع <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi>، باستثناء برنامج [<bdi dir="ltr" class="odt-ltr-term">ModifyDetachedEntities</bdi>]، الذي يتعطل لنفس السبب الذي تسبب في تعطله مع <bdi dir="ltr" class="odt-ltr-term">MySQL.</bdi> يتم حل المشكلة بنفس الطريقة. ما عليك سوى نسخ برنامج [<bdi dir="ltr" class="odt-ltr-term">ModifyDetachedEntities</bdi>] من مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-MySQL-01</bdi>] إلى مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Oracle-01</bdi>]. وهذا يطرح مشكلة جديدة:</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
 <span class="normal"><a href="#__codelineno-4-3">3</a></span>
@@ -973,7 +975,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">رفض EF 5 حذف </span><em>client1</em> <span style="color: #000000">من قاعدة البيانات لأن </span><em>client1</em> <span style="color: #000000">(السطر 6) لم يكن لديه نفس الإصدار. لم نواجه هذه المشكلة مع MySQL. بدأنا ندرك تدريجياً أن موصلات ADO.NET لأنظمة إدارة قواعد البيانات المختلفة (DBMS) تتضمن اختلافات طفيفة. نقوم بتصحيح ذلك على النحو التالي:</span></p>
+<p><span style="color: #000000">رفض <bdi dir="ltr" class="odt-ltr-term">EF</bdi> 5 حذف </span><em><bdi dir="ltr" class="odt-ltr-term">client1</bdi></em> <span style="color: #000000">من قاعدة البيانات لأن </span><em><bdi dir="ltr" class="odt-ltr-term">client1</bdi></em> <span style="color: #000000">(السطر 6) لم يكن لديه نفس الإصدار. لم نواجه هذه المشكلة مع <bdi dir="ltr" class="odt-ltr-term">MySQL.</bdi> بدأنا ندرك تدريجياً أن موصلات <bdi dir="ltr" class="odt-ltr-term">ADO.NET</bdi> لأنظمة إدارة قواعد البيانات المختلفة (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>) تتضمن اختلافات طفيفة. نقوم بتصحيح ذلك على النحو التالي:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">using</span> (<span style="color:#0000ff">var</span> context = <span style="color:#0000ff">new</span> <span style="color:#2b91af">RdvMedecinsContext</span>())</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      {</span></span>
@@ -987,20 +989,20 @@
 
 <p><span style="color: #000000">وهي تعمل. </span></p>
 <p><a id="refheading39813804107930"></a></p>
-<h2 id="53-ef-5">5.3. <span style="color: #4f81bd">بنية متعددة الطبقات تستند إلى EF 5</span></h2>
+<h2 id="53-ef-5">5.3. <span style="color: #4f81bd">بنية متعددة الطبقات تستند إلى <bdi dir="ltr" class="odt-ltr-term">EF</bdi> 5</span></h2>
 <p><span style="color: #000000">لنعد إلى دراسة الحالة الموضحة في </span><a href="#etude-de-cas"><u><span style="color: #0563c1">الفقرة 2</span></u></a><span style="color: #000000"> في </span><a href="#etude-de-cas"><u><span style="color: #0563c1">الصفحة 7</span></u></a><span style="color: #000000">.</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005E20000012737D4B496.png" width="680" height="133" style="display:inline-block; margin:4px;width:17.999cm;height:3.526cm;" class="odt-zoomable" data-zoom-src="images/10000000000005E20000012737D4B496.png" /></td></tr></table>
 
-<p><span style="color: #000000">سنبدأ ببناء طبقة الوصول إلى البيانات [DAO]. للقيام بذلك، نقوم بنسخ مشروع وحدة التحكم في VS 2012 [RdvMedecins-SqlServer-02] إلى [RdvMedecins-Oracle-02] [1]:</span></p>
+<p><span style="color: #000000">سنبدأ ببناء طبقة الوصول إلى البيانات [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]. للقيام بذلك، نقوم بنسخ مشروع وحدة التحكم في <bdi dir="ltr" class="odt-ltr-term">VS</bdi> 2012 [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-02</bdi>] إلى [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Oracle-02</bdi>] [1]:</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005B500000313FD73794A.png" width="680" height="366" style="display:inline-block; margin:4px;width:17.999cm;height:9.696cm;" class="odt-zoomable" data-zoom-src="images/10000000000005B500000313FD73794A.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [2]، نحذف مشروع [RdvMedecins-SqlServer-02]؛</span></li>
+<li><span style="color: #000000">في [2]، نحذف مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-02</bdi>]؛</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005E000000217D6286DD1.png" width="680" height="242" style="display:inline-block; margin:4px;width:17.999cm;height:6.403cm;" class="odt-zoomable" data-zoom-src="images/10000000000005E000000217D6286DD1.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [3]، نضيف مشروعًا موجودًا إلى الحل. نأخذه من المجلد [RdvMedecins-Oracle-02] الذي تم إنشاؤه للتو؛</span></li>
+<li><span style="color: #000000">في [3]، نضيف مشروعًا موجودًا إلى الحل. نأخذه من المجلد [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Oracle-02</bdi>] الذي تم إنشاؤه للتو؛</span></li>
 <li><span style="color: #000000">في [4]، يحمل المشروع الجديد نفس اسم المشروع الذي تم حذفه. سنقوم بتغيير اسمه؛</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000054C00000129D8C214FE.png" width="678" height="148" style="display:inline-block; margin:4px;width:17.939cm;height:3.928cm;" class="odt-zoomable" data-zoom-src="images/100000000000054C00000129D8C214FE.png" /></td></tr></table>
@@ -1008,15 +1010,15 @@
 <ul>
 <li><span style="color: #000000">في [5]، قمنا بتغيير اسم المشروع؛</span></li>
 <li><span style="color: #000000">في [6]، نقوم بتعديل بعض خصائصه، مثل اسم التجميع هنا؛</span></li>
-<li><span style="color: #000000">في [7]، يتم حذف المجلد [Models] واستبداله بمجلد [Models] من مشروع [RdvMedecins-Oracle-01]. وذلك لأن المشروعين يشتركان في نفس النماذج.</span></li>
+<li><span style="color: #000000">في [7]، يتم حذف المجلد [<bdi dir="ltr" class="odt-ltr-term">Models</bdi>] واستبداله بمجلد [<bdi dir="ltr" class="odt-ltr-term">Models</bdi>] من مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Oracle-01</bdi>]. وذلك لأن المشروعين يشتركان في نفس النماذج.</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003070000014159B01D36.png" width="388" height="161" style="display:inline-block; margin:4px;width:10.253cm;height:4.247cm;" class="odt-zoomable" data-zoom-src="images/10000000000003070000014159B01D36.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">في [8]، المراجع الحالية للمشروع؛</span></li>
-<li><span style="color: #000000">في [9]، تمت إضافة موصل Oracle ADO.NET باستخدام أداة NuGet.</span></li>
+<li><span style="color: #000000">في [9]، تمت إضافة موصل <bdi dir="ltr" class="odt-ltr-term">Oracle ADO.NET</bdi> باستخدام أداة <bdi dir="ltr" class="odt-ltr-term">NuGet.</bdi></span></li>
 </ul>
-<p><span style="color: #000000">في ملف [App.config]، استبدل معلومات قاعدة بيانات SQL Server بمعلومات قاعدة بيانات Oracle. يمكن العثور على هذه المعلومات في ملف [App.config] الخاص بمشروع [RdvMedecins-Oracle-01]:</span></p>
+<p><span style="color: #000000">في ملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]، استبدل معلومات قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi> بمعلومات قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">Oracle.</bdi> يمكن العثور على هذه المعلومات في ملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] الخاص بمشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Oracle-01</bdi>]:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- connection chain on base --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">  &lt;</span><span style="color:#a31515">connectionStrings</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -1031,7 +1033,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">  &lt;/</span><span style="color:#a31515">system.data</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">تتغير أيضًا الكائنات التي تديرها Spring. لدينا حاليًا:</span></p>
+<p><span style="color: #000000">تتغير أيضًا الكائنات التي تديرها <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> لدينا حاليًا:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">&lt;!-- spring configuration --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">  &lt;</span><span style="color:#a31515">spring</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -1044,19 +1046,19 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#a31515">spring</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">يشير السطر 7 إلى التجميع الخاص بمشروع [</span><span style="color: #0000ff">RdvMedecins-SqlServer-02</span><span style="color: #000000">]. أصبح التجميع الآن [</span><span style="color: #0000ff">RdvMedecins-Oracle-02</span><span style="color: #000000">].</span></p>
-<p><span style="color: #000000">وبعد الانتهاء من ذلك، نكون جاهزين لتشغيل اختبار طبقة [DAO]. أولاً، يجب أن نتأكد من أن قاعدة البيانات مملوءة (باستخدام برنامج [Fill] من مشروع [</span><span style="color: #0000ff">RdvMedecins-Oracle-01</span><span style="color: #000000">]). يعمل برنامج الاختبار بنجاح.</span></p>
-<p><span style="color: #000000">نقوم بإنشاء ملف DLL الخاص بالمشروع كما فعلنا مع مشروع [</span><span style="color: #0000ff">RdvMedecins-SqlServer-02</span><span style="color: #000000">] ونجمع جميع ملفات DLL الخاصة بالمشروع في مجلد [lib] تم إنشاؤه داخل [</span><span style="color: #0000ff">RdvMedecins-Oracle-02</span><span style="color: #000000">]. ستكون هذه هي المراجع لمشروع الويب [</span><span style="color: #0000ff">RdvMedecins-Oracle-03</span><span style="color: #000000">] التالي.</span></p>
+<p><span style="color: #000000">يشير السطر 7 إلى التجميع الخاص بمشروع [</span><span style="color: #0000ff"><bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-02</bdi></span><span style="color: #000000">]. أصبح التجميع الآن [</span><span style="color: #0000ff"><bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Oracle-02</bdi></span><span style="color: #000000">].</span></p>
+<p><span style="color: #000000">وبعد الانتهاء من ذلك، نكون جاهزين لتشغيل اختبار طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]. أولاً، يجب أن نتأكد من أن قاعدة البيانات مملوءة (باستخدام برنامج [<bdi dir="ltr" class="odt-ltr-term">Fill</bdi>] من مشروع [</span><span style="color: #0000ff"><bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Oracle-01</bdi></span><span style="color: #000000">]). يعمل برنامج الاختبار بنجاح.</span></p>
+<p><span style="color: #000000">نقوم بإنشاء ملف <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الخاص بالمشروع كما فعلنا مع مشروع [</span><span style="color: #0000ff"><bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-02</bdi></span><span style="color: #000000">] ونجمع جميع ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الخاصة بالمشروع في مجلد [<bdi dir="ltr" class="odt-ltr-term">lib</bdi>] تم إنشاؤه داخل [</span><span style="color: #0000ff"><bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Oracle-02</bdi></span><span style="color: #000000">]. ستكون هذه هي المراجع لمشروع الويب [</span><span style="color: #0000ff"><bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Oracle-03</bdi></span><span style="color: #000000">] التالي.</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000109000000D81CC53409.png" width="186" height="151" style="display:inline-block; margin:4px;width:4.911cm;height:4.002cm;" class="odt-zoomable" data-zoom-src="images/1000000000000109000000D81CC53409.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p><span style="color: #000000">نحن الآن جاهزون لإنشاء طبقة [ASP.NET] لتطبيقنا:</span></p>
+<p><span style="color: #000000">نحن الآن جاهزون لإنشاء طبقة [<bdi dir="ltr" class="odt-ltr-term">ASP.NET</bdi>] لتطبيقنا:</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005EF00000123C078CDE9.png" width="680" height="130" style="display:inline-block; margin:4px;width:17.999cm;height:3.448cm;" class="odt-zoomable" data-zoom-src="images/10000000000005EF00000123C078CDE9.png" /></td></tr></table>
 
-<p><span style="color: #000000">سنبدأ بمشروع [RdvMedecins-SqlServer-03]. نقوم بنسخ مجلد هذا المشروع إلى [RdvMedecins-Oracle-03] [1]:</span></p>
+<p><span style="color: #000000">سنبدأ بمشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-03</bdi>]. نقوم بنسخ مجلد هذا المشروع إلى [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Oracle-03</bdi>] [1]:</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005B500000193A8B44184.png" width="680" height="188" style="display:inline-block; margin:4px;width:17.999cm;height:4.965cm;" class="odt-zoomable" data-zoom-src="images/10000000000005B500000193A8B44184.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [2]، باستخدام VS 2012 Express for the Web، نفتح الحل في مجلد [RdvMedecins-Oracle-03]؛</span></li>
+<li><span style="color: #000000">في [2]، باستخدام <bdi dir="ltr" class="odt-ltr-term">VS</bdi> 2012 <bdi dir="ltr" class="odt-ltr-term">Express for the Web</bdi>، نفتح الحل في مجلد [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Oracle-03</bdi>]؛</span></li>
 <li><span style="color: #000000">في [3]، نقوم بتغيير اسم الحل واسم المشروع؛</span></li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005A700000179789555CC.png" width="680" height="177" style="display:inline-block; margin:4px;width:17.999cm;height:4.688cm;" class="odt-zoomable" data-zoom-src="images/10000000000005A700000179789555CC.png" /></td></tr></table>
@@ -1064,9 +1066,9 @@
 <ul>
 <li><span style="color: #000000">في [4]، المراجع الحالية للمشروع؛</span></li>
 <li><span style="color: #000000">في [5]، نقوم بحذفها؛</span></li>
-<li><span style="color: #000000">في [6]، لاستبدالها بمراجع إلى ملفات DLL التي قمنا بتخزينها للتو في مجلد [lib] داخل مشروع [RdvMedecins-Oracle-02].</span></li>
+<li><span style="color: #000000">في [6]، لاستبدالها بمراجع إلى ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> التي قمنا بتخزينها للتو في مجلد [<bdi dir="ltr" class="odt-ltr-term">lib</bdi>] داخل مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Oracle-02</bdi>].</span></li>
 </ul>
-<p><span style="color: #000000">كل ما تبقى هو تعديل ملف [Web.config]. نستبدل محتواه الحالي بمحتوى ملف [App.config] من مشروع [RdvMedecins-Oracle-02]. بمجرد الانتهاء من ذلك، نقوم بتشغيل مشروع الويب. إنه يعمل. يجب ألا ننسى ملء قاعدة البيانات قبل تشغيل تطبيق الويب.</span></p>
+<p><span style="color: #000000">كل ما تبقى هو تعديل ملف [<bdi dir="ltr" class="odt-ltr-term">Web.config</bdi>]. نستبدل محتواه الحالي بمحتوى ملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] من مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Oracle-02</bdi>]. بمجرد الانتهاء من ذلك، نقوم بتشغيل مشروع الويب. إنه يعمل. يجب ألا ننسى ملء قاعدة البيانات قبل تشغيل تطبيق الويب.</span></p>
 
 
 
