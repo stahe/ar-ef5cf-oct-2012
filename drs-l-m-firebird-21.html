@@ -12,10 +12,10 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/ar-ef5cf-oct-2012/drs-l-bstkhdm-firebird-21.html">
+        <link rel="canonical" href="https://stahe.github.io/ar-ef5cf-oct-2012/drs-l-m-firebird-21.html">
       
       
-        <link rel="prev" href="drs-l-m-postgresql-921.html">
+        <link rel="prev" href="drs-l-m--postgresql-921.html">
       
       
         <link rel="next" href="lkhl.html">
@@ -29,7 +29,7 @@
     
     
       
-        <title>7. دراسة حالة باستخدام Firebird 2.1 - مقدمة إلى Entity Framework 5 Code First من خلال أمثلة</title>
+        <title>7. دراسة حالة مع Firebird 2.1 - مقدمة إلى Entity Framework 5 Code First من خلال أمثلة</title>
       
     
     
@@ -130,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              7. دراسة حالة باستخدام Firebird 2.1
+              7. دراسة حالة مع Firebird 2.1
             
           </span>
         </div>
@@ -359,14 +359,14 @@
   
   
     <li class="md-nav__item">
-      <a href="drs-l-bstkhdm-sql-server-express-2012.html" class="md-nav__link">
+      <a href="drs-l-m-sql-server-express-2012.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. دراسة حالة باستخدام SQL Server Express 2012
+    3. دراسة حالة مع SQL Server Express 2012
   
 
     
@@ -413,14 +413,14 @@
   
   
     <li class="md-nav__item">
-      <a href="drs-l-m-oracle-database-express-edition-11g-ldr-2.html" class="md-nav__link">
+      <a href="drs-l-m--oracle-database-express-edition-11g-ldr-2.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    5. دراسة حالة مع Oracle Database Express Edition 11g الإصدار 2
+    5. دراسة حالة مع  Oracle Database Express Edition 11g الإصدار 2
   
 
     
@@ -440,14 +440,14 @@
   
   
     <li class="md-nav__item">
-      <a href="drs-l-m-postgresql-921.html" class="md-nav__link">
+      <a href="drs-l-m--postgresql-921.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. دراسة حالة مع PostgreSQL 9.2.1
+    6. دراسة حالة مع  PostgreSQL 9.2.1
   
 
     
@@ -483,7 +483,7 @@
   <span class="md-ellipsis">
     
   
-    7. دراسة حالة باستخدام Firebird 2.1
+    7. دراسة حالة مع Firebird 2.1
   
 
     
@@ -494,14 +494,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="drs-l-bstkhdm-firebird-21.html" class="md-nav__link md-nav__link--active">
+      <a href="drs-l-m-firebird-21.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. دراسة حالة باستخدام Firebird 2.1
+    7. دراسة حالة مع Firebird 2.1
   
 
     
@@ -552,7 +552,7 @@
   <a href="#73-ef-5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.3. بنية متعددة الطبقات تستند إلى EF 5
+        7.3. بنية متعددة الطبقات تعتمد على EF 5
       
     </span>
   </a>
@@ -614,64 +614,58 @@
   
 
 
-<p><a id="refheading39705804107930-copie-1"></a>
-<a id="refheading39719804107930-copie-1"></a>
-<a id="refheading39733804107930-copie-1"></a>
-<a id="refheading39797804107930-copie-1"></a>
-<a id="refheading39807804107930-copie-1"></a>
-<a id="refheading39815804107930-copie-1"></a>
-<a id="refheading39823804107930"></a></p>
-<h1 id="7-firebird-21">7. <span style="color: #365f91">دراسة حالة باستخدام <bdi dir="ltr" class="odt-ltr-term">Firebird 2.1</bdi></span></h1>
-<p><a id="refheading39825804107930"></a></p>
+<p><span id="refheading39823804107930" name="refheading39823804107930" class="odt-bookmark-anchor"></span></p>
+<h1 id="7-firebird-21">7. <span style="color: #365f91">دراسة حالة مع <bdi dir="ltr" class="odt-ltr-term">Firebird 2.1</bdi></span></h1>
+<p><span id="refheading39825804107930" name="refheading39825804107930" class="odt-bookmark-anchor"></span></p>
 <h2 id="71">7.1. <span style="color: #4f81bd">تثبيت الأدوات</span></h2>
-<p><span style="color: #000000">الأدوات المطلوب تثبيتها هي كما يلي:</span></p>
+<p><span style="color: #000000">الأدوات المطلوب تثبيتها هي التالية:</span></p>
 <ul>
-<li>نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>): [<bdi dir="ltr" class="odt-ltr-term">http://www.firebirdsql.org/en/firebird-2-1-5/</bdi>]؛</li>
+<li><bdi dir="ltr" class="odt-ltr-term">SGBD:</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://www.firebirdsql.org/en/firebird-2-1-5/</bdi>]؛</li>
 <li>أداة إدارة: <bdi dir="ltr" class="odt-ltr-term">EMS SQL Manager for InterBase/Firebird Freeware</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://www.sqlmanager.net/fr/products/ibfb/manager/download</bdi>].</li>
 </ul>
 <p><span style="color: #000000">في الأمثلة التالية، المستخدم هو </span><strong><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">sysdba</bdi> </span></strong><span style="color: #000000">وكلمة المرور هي </span><strong><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">masterkey</bdi></span></strong><span style="color: #000000">.</span></p>
-<p><span style="color: #000000">دعونا نطلق <bdi dir="ltr" class="odt-ltr-term">Firebird</bdi> ثم أداة [<bdi dir="ltr" class="odt-ltr-term">SQL Manager Lite for Firebird</bdi>]، التي سنستخدمها لإدارة نظام إدارة قواعد البيانات.</span></p>
+<p><span style="color: #000000">لنقم بتشغيل <bdi dir="ltr" class="odt-ltr-term">Firebird</bdi> ثم أداة [<bdi dir="ltr" class="odt-ltr-term">SQL Manager Lite for Firebird</bdi>] التي سنستخدمها لإدارة <bdi dir="ltr" class="odt-ltr-term">SGBD.</bdi></span></p>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000489000001BC320028A9.png" width="581" height="222" style="display:inline-block; margin:4px;width:15.36cm;height:5.874cm;" class="odt-zoomable" data-zoom-src="images/1000000000000489000001BC320028A9.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [1]، نقوم بتشغيل نظام إدارة قواعد البيانات <bdi dir="ltr" class="odt-ltr-term">Firebird</bdi> من قائمة &quot;ابدأ&quot;. هنا، لم يتم تثبيت نظام إدارة قواعد البيانات كخدمة <bdi dir="ltr" class="odt-ltr-term">Windows</bdi>؛</span></li>
-<li><span style="color: #000000">في [2]، يتم تشغيل الخدمة. يظهر رمز في الزاوية اليمنى السفلية من الشاشة. النقر بزر الماوس الأيمن عليه يسمح لك بإيقاف نظام إدارة قواعد البيانات.</span></li>
+<li><span style="color: #000000">في [1]، نقوم بتشغيل <bdi dir="ltr" class="odt-ltr-term">Firebird SGBD</bdi> من قائمة &quot;ابدأ&quot;. هنا، لم يتم تثبيت <bdi dir="ltr" class="odt-ltr-term">SGBD</bdi> كخدمة <bdi dir="ltr" class="odt-ltr-term">Windows</bdi>؛</span></li>
+<li><span style="color: #000000">في [2]، يتم تشغيل الخدمة. تم تثبيت أيقونة في أسفل يمين الشاشة. بالنقر بزر الماوس الأيمن عليها، يمكن إيقاف <bdi dir="ltr" class="odt-ltr-term">SGBD.</bdi></span></li>
 </ul>
-<p><span style="color: #000000">نقوم الآن بتشغيل أداة [<bdi dir="ltr" class="odt-ltr-term">SQL Manager Lite for Firebird</bdi>]، التي سنستخدمها لإدارة نظام إدارة قواعد البيانات [3].</span></p>
+<p><span style="color: #000000">نقوم الآن بتشغيل الأداة [<bdi dir="ltr" class="odt-ltr-term">SQL Manager Lite for Firebird</bdi>] التي سنستخدمها لإدارة <bdi dir="ltr" class="odt-ltr-term">SGBD</bdi> [3].</span></p>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006280000022311E20850.png" width="680" height="236" style="display:inline-block; margin:4px;width:17.999cm;height:6.248cm;" class="odt-zoomable" data-zoom-src="images/10000000000006280000022311E20850.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [4]، نقوم بإنشاء قاعدة بيانات جديدة؛</span></li>
-<li><span style="color: #000000">في [5]، نؤكد؛</span></li>
+<li><span style="color: #000000">في [4]، نقوم بإنشاء قاعدة جديدة؛</span></li>
+<li><span style="color: #000000">في [5]، نقبل؛</span></li>
 </ul>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005FF0000025D783ECCE2.png" width="680" height="268" style="display:inline-block; margin:4px;width:17.999cm;height:7.094cm;" class="odt-zoomable" data-zoom-src="images/10000000000005FF0000025D783ECCE2.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">في [5]، نقوم بتسجيل الدخول باسم <bdi dir="ltr" class="odt-ltr-term">SYSDBA / masterkey</bdi>؛</span></li>
-<li><span style="color: #000000">في [6]، حدد موقع الملف المراد إنشاؤه. سيتم إنشاء قاعدة البيانات كملف واحد؛</span></li>
-<li><span style="color: #000000">في [7]، نقوم بالتحقق من صحة عبارة <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> المراد تنفيذها؛</span></li>
+<li><span style="color: #000000">في [6]، نحدد موقع الملف الذي سيتم إنشاؤه. في الواقع، سيتم إنشاء قاعدة البيانات في ملف واحد؛</span></li>
+<li><span style="color: #000000">في [7]، يتم تأكيد الأمر <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> الذي سيتم تنفيذه؛</span></li>
 </ul>
-<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006360000023C89BCF940.png" width="680" height="245" style="display:inline-block; margin:4px;width:17.999cm;height:6.475cm;" class="odt-zoomable" data-zoom-src="images/10000000000006360000023C89BCF940.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006360000023C89BCF940.png" width="680" height="245" style="display:inline-block; margin:4px;width:17.999cm;height:6.473cm;" class="odt-zoomable" data-zoom-src="images/10000000000006360000023C89BCF940.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [8]، تم إنشاء قاعدة البيانات. يجب الآن تسجيلها في [<bdi dir="ltr" class="odt-ltr-term">EMS Manager</bdi>]. المعلومات صحيحة. انقر فوق [موافق]؛</span></li>
-<li><span style="color: #000000">في [9]، قم بتسجيل الدخول إليها؛</span></li>
-<li><span style="color: #000000">في [10]، يعرض [<bdi dir="ltr" class="odt-ltr-term">EMS Manager</bdi>] قاعدة البيانات، وهي فارغة حاليًا.</span></li>
+<li><span style="color: #000000">في [8]، تم إنشاء قاعدة البيانات. يجب الآن تسجيلها في [<bdi dir="ltr" class="odt-ltr-term">EMS Manager</bdi>]. المعلومات صحيحة. نقوم بتنفيذ [<bdi dir="ltr" class="odt-ltr-term">OK</bdi>]؛</span></li>
+<li><span style="color: #000000">في [9]، نقوم بالاتصال بها؛</span></li>
+<li><span style="color: #000000">في [10]، يعرض [<bdi dir="ltr" class="odt-ltr-term">EMS Manager</bdi>] قاعدة البيانات، وهي فارغة في الوقت الحالي.</span></li>
 </ul>
-<p><span style="color: #000000">سنقوم الآن بربط مشروع <bdi dir="ltr" class="odt-ltr-term">VS</bdi> 2012 بهذه قاعدة البيانات.</span></p>
-<p><a id="refheading39827804107930"></a></p>
+<p><span style="color: #000000">سنقوم الآن بربط مشروع <bdi dir="ltr" class="odt-ltr-term">VS</bdi> 2012 بهذه القاعدة.</span></p>
+<p><span id="refheading39827804107930" name="refheading39827804107930" class="odt-bookmark-anchor"></span></p>
 <h2 id="72">7.2. <span style="color: #4f81bd">إنشاء قاعدة البيانات من الكيانات</span></h2>
-<p><span style="color: #000000">نبدأ بنسخ مجلد مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-01</bdi>] إلى [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-01</bdi>] [1]:</span></p>
-<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000059E00000313F7EE85CB.png" width="680" height="372" style="display:inline-block; margin:4px;width:17.999cm;height:9.851cm;" class="odt-zoomable" data-zoom-src="images/100000000000059E00000313F7EE85CB.png" /></td></tr></table>
+<p><span style="color: #000000">نبدأ بنسخ مجلد مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-01</bdi>] في [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-01</bdi>] [1]:</span></p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000059E00000313F7EE85CB.png" width="680" height="372" style="display:inline-block; margin:4px;width:17.999cm;height:9.85cm;" class="odt-zoomable" data-zoom-src="images/100000000000059E00000313F7EE85CB.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [2]، في <bdi dir="ltr" class="odt-ltr-term">VS</bdi> 2012، نزيل مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-01</bdi>] من الحل؛</span></li>
+<li><span style="color: #000000">إلى [2]، وفي <bdi dir="ltr" class="odt-ltr-term">VS</bdi> 2012، نحذف المشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-01</bdi>] من الحل؛</span></li>
 </ul>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000061E0000028F52A98BEE.png" width="680" height="285" style="display:inline-block; margin:4px;width:17.999cm;height:7.528cm;" class="odt-zoomable" data-zoom-src="images/100000000000061E0000028F52A98BEE.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [3]، تمت إزالة المشروع؛</span></li>
-<li><span style="color: #000000">في [4]، نضيف مشروعًا آخر. هذا المشروع مأخوذ من المجلد [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-01</bdi>] الذي أنشأناه سابقًا؛</span></li>
+<li><span style="color: #000000">في [3]، تم حذف المشروع؛</span></li>
+<li><span style="color: #000000">في [4]، نضيف مشروعًا آخر. يتم أخذ هذا المشروع من المجلد [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-01</bdi>] الذي أنشأناه سابقًا؛</span></li>
 </ul>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000032A0000014F0BB08346.png" width="405" height="168" style="display:inline-block; margin:4px;width:10.716cm;height:4.433cm;" class="odt-zoomable" data-zoom-src="images/100000000000032A0000014F0BB08346.png" /></td></tr></table>
 
@@ -682,17 +676,17 @@
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005F00000023FF2CB05B4.png" width="680" height="257" style="display:inline-block; margin:4px;width:17.999cm;height:6.809cm;" class="odt-zoomable" data-zoom-src="images/10000000000005F00000023FF2CB05B4.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [7]، نضيف مشروعًا آخر إلى الحل. هذا المشروع مأخوذ من مجلد [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-01</bdi>] الخاص بالمشروع الذي أزلناه سابقًا من الحل؛</span></li>
-<li><span style="color: #000000">في [8]، تمت إعادة إضافة مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-01</bdi>] إلى الحل.</span></li>
+<li><span style="color: #000000">في [7]، نضيف مشروعًا آخر إلى الحل. يتم أخذ هذا المشروع من المجلد [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-01</bdi>] الخاص بالمشروع الذي قمنا بحذفه من الحل سابقًا؛</span></li>
+<li><span style="color: #000000">في [8]، أعيد إدراج المشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-01</bdi>] في الحل.</span></li>
 </ul>
-<p><span style="color: #000000">مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-01</bdi>] مطابق لمشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-01</bdi>]. نحتاج إلى إجراء بعض التغييرات. في [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]، سنقوم بتعديل سلسلة الاتصال و[<bdi dir="ltr" class="odt-ltr-term">DbProviderFactory</bdi>]، والتي يجب تكييفها مع كل نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>).</span></p>
+<p><span style="color: #000000">المشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-01</bdi>] مطابق للمشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-01</bdi>]. علينا إجراء بعض التعديلات. في [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]، سنقوم بتعديل سلسلة الاتصال و [<bdi dir="ltr" class="odt-ltr-term">DbProviderFactory</bdi>] الذي يجب تكييفه مع كل <bdi dir="ltr" class="odt-ltr-term">SGBD.</bdi></span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
-<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- connection chain on base --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- سلسلة الاتصال بالقاعدة --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">  &lt;</span><span style="color:#a31515">connectionStrings</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">    &lt;</span><span style="color:#a31515">add</span><span style="color:#0000ff"> </span><span style="color:#ff0000">name</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">monContexte</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> </span><span style="color:#ff0000">connectionString</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">User=SYSDBA;Password=masterkey;Database=D:\data\istia-1213\c#\dvp\Entity Framework\databases\firebird\RDVMEDECINS-EF.GDB;DataSource=localhost;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Port=3050;Dialect=3;Charset=NONE;Role=;Connection lifetime=15;Pooling=true;MinPoolSize=0;MaxPoolSize=50;Packet Size=8192;ServerType=0;</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> </span><span style="color:#ff0000">providerName</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">FirebirdSql.Data.FirebirdClient</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> /&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">  &lt;/</span><span style="color:#a31515">connectionStrings</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">&lt;!-- the factory provider --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">&lt;!-- مزود المصنع --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">  &lt;</span><span style="color:#a31515">system.data</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">    &lt;</span><span style="color:#a31515">DbProviderFactories</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">      &lt;</span><span style="color:#a31515">add</span><span style="color:#0000ff"> </span><span style="color:#ff0000">name</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">Firebird Client Data Provider</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> </span><span style="color:#ff0000">invariant</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">FirebirdSql.Data.FirebirdClient</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> </span><span style="color:#ff0000">description</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">.Net Framework Data Provider for Firebird</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> </span><span style="color:#ff0000">type</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">FirebirdSql.Data.FirebirdClient.FirebirdClientFactory, FirebirdSql.Data.FirebirdClient, Version=2.7.7.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> /&gt;</span></span></span>
@@ -702,34 +696,34 @@
 
 <ul>
 <li><span style="color: #000000">السطر 3: اسم المستخدم وكلمة المرور، بالإضافة إلى المسار الكامل لقاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">Firebird</bdi>؛</span></li>
-<li><span style="color: #000000">الأسطر 8–10: </span><em><bdi dir="ltr" class="odt-ltr-term">DbProviderFactory</bdi></em><span style="color: #000000">. يشير السطر 9 إلى مكتبة <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> [</span><span style="color: #0000ff"><bdi dir="ltr" class="odt-ltr-term">FirebirdSql.Data.FirebirdClient</bdi></span><span style="color: #000000">] التي لا نمتلكها. يمكننا الحصول عليها باستخدام <bdi dir="ltr" class="odt-ltr-term">NuGet</bdi> [1]:</span></li>
+<li><span style="color: #000000">الأسطر 8-10: </span><em><bdi dir="ltr" class="odt-ltr-term">DbProviderFactory</bdi></em><span style="color: #000000">. تشير السطر 9 إلى <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> [<bdi dir="ltr" class="odt-ltr-term">FirebirdSql.Data.FirebirdClient</bdi>] الذي لا نملكه. يمكن الحصول عليها باستخدام <bdi dir="ltr" class="odt-ltr-term">NuGet</bdi> [1]:</span></li>
 </ul>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006150000011CB024F99D.png" width="680" height="124" style="display:inline-block; margin:4px;width:17.999cm;height:3.283cm;" class="odt-zoomable" data-zoom-src="images/10000000000006150000011CB024F99D.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [2]، اكتب الكلمة الرئيسية &quot;</span><em><bdi dir="ltr" class="odt-ltr-term">firebird</bdi>&quot;</em> <span style="color: #000000">في مربع البحث؛</span></li>
-<li><span style="color: #000000">في [3]، حدد الحزمة [<bdi dir="ltr" class="odt-ltr-term">Firebird ADO.NET Data Provider</bdi>]. هذا موصل <bdi dir="ltr" class="odt-ltr-term">ADO.NET</bdi> لـ <bdi dir="ltr" class="odt-ltr-term">Firebird</bdi>؛</span></li>
+<li><span style="color: #000000">في [2]، في منطقة البحث نكتب الكلمة الرئيسية </span><em><bdi dir="ltr" class="odt-ltr-term">firebird</bdi></em><span style="color: #000000">؛</span></li>
+<li><span style="color: #000000">في [3]، اختر الحزمة [<bdi dir="ltr" class="odt-ltr-term">Firebird ADO.NET Data Provider</bdi>]. إنه موصل <bdi dir="ltr" class="odt-ltr-term">ADO.NET</bdi> لـ <bdi dir="ltr" class="odt-ltr-term">Firebird</bdi>؛</span></li>
 </ul>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000041C000002721D31ED68.png" width="526" height="313" style="display:inline-block; margin:4px;width:13.917cm;height:8.281cm;" class="odt-zoomable" data-zoom-src="images/100000000000041C000002721D31ED68.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">في [4]، المرجع الجديد؛</span></li>
-<li><span style="color: #000000">في [5]، في [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]، يجب تحديد الإصدار الصحيح لملف <bdi dir="ltr" class="odt-ltr-term">DLL.</bdi> يمكنك العثور عليه في خصائصه.</span></li>
+<li><span style="color: #000000">في [5]، في [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]، يجب وضع الإصدار الصحيح من <bdi dir="ltr" class="odt-ltr-term">DLL.</bdi> يمكن العثور عليه في خصائصه.</span></li>
 </ul>
-<p><span style="color: #000000">في ملف [<bdi dir="ltr" class="odt-ltr-term">Entities.cs</bdi>]، تحتاج إلى تكييف مخطط الجداول التي سيتم إنشاؤها:</span></p>
+<p><span style="color: #000000">في الملف [<bdi dir="ltr" class="odt-ltr-term">Entites.cs</bdi>]، يجب تعديل مخطط الجداول التي سيتم إنشاؤها:</span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content">  [<span style="color:#2b91af">Table</span>(<span style="color:#a31515">&quot;MEDECINS&quot;</span>)]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">Medecin</span><span style="color:#000000"> : </span><span style="color:#2b91af">Personne</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  {...}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  [<span style="color:#2b91af">Table</span>(<span style="color:#a31515">&quot;CLIENTS&quot;</span>)]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">Client</span><span style="color:#000000"> : </span><span style="color:#2b91af">Personne</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  {...}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  [<span style="color:#2b91af">Table</span>(<span style="color:#a31515">&quot;CRENEAUX&quot;</span>)]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">Creneau</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  {...}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  [<span style="color:#2b91af">Table</span>(<span style="color:#a31515">&quot;RVS&quot;</span>)]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">class</span><span style="color:#000000"> </span><span style="color:#2b91af">Rv</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  {...}</span></span>
@@ -740,11 +734,11 @@
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000034B0000012B5D7C3ED0.png" width="422" height="150" style="display:inline-block; margin:4px;width:11.153cm;height:3.956cm;" class="odt-zoomable" data-zoom-src="images/100000000000034B0000012B5D7C3ED0.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [1]، نمنح اسمًا مختلفًا للتجميع الذي سيتم إنشاؤه؛</span></li>
-<li><span style="color: #000000">في [2]، نحدد أيضًا مساحة اسم افتراضية مختلفة؛</span></li>
+<li><span style="color: #000000">في [1]، نمنح اسمًا آخر للتجميع الذي سيتم إنشاؤه؛</span></li>
+<li><span style="color: #000000">في [2]، نحدد مساحة أسماء افتراضية أخرى؛</span></li>
 <li><span style="color: #000000">في [3]، نحدد البرنامج المراد تنفيذه.</span></li>
 </ul>
-<p><span style="color: #000000">في هذه المرحلة، لا توجد أخطاء في الترجمة. دعونا نقوم بتشغيل برنامج [<bdi dir="ltr" class="odt-ltr-term">CreateDB</bdi>_01]. نحصل على الاستثناء التالي:</span></p>
+<p><span style="color: #000000">في هذه المرحلة، لا توجد أخطاء في الترجمة. لنقم بتشغيل البرنامج [<bdi dir="ltr" class="odt-ltr-term">CreateDB</bdi>_01]. نحصل على الاستثناء التالي:</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -765,64 +759,64 @@
 <a id="__codelineno-0-9" name="__codelineno-0-9"></a>   à RdvMedecins_01.CreateDB_01.Main(String[] args) dans d:\data\istia-1213\c#\d
 <a id="__codelineno-0-10" name="__codelineno-0-10"></a>vp\Entity Framework\RdvMedecins\RdvMedecins-Oracle-01\CreateDB_01.cs:ligne 15
 </code></pre></div></td></tr></table></div>
-<p><span style="color: #000000">نتذكر أننا واجهنا نفس الخطأ مع <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> و <bdi dir="ltr" class="odt-ltr-term">Oracle</bdi> و <bdi dir="ltr" class="odt-ltr-term">PostgreSQL.</bdi> ويرتبط هذا بنوع حقل </span><em><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">Timestamp</bdi> </span></em><span style="color: #000000">في الكيانات. نقوم بإجراء نفس التعديل كما فعلنا مع نظامي إدارة قواعد البيانات السابقين. في الكيانات، نستبدل الأسطر الثلاثة</span></p>
+<p><span style="color: #000000">نتذكر أننا واجهنا نفس الخطأ مع <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> و <bdi dir="ltr" class="odt-ltr-term">Oracle</bdi> و <bdi dir="ltr" class="odt-ltr-term">PostgreSQL.</bdi> ويرتبط هذا بنوع حقل </span><em><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">Timestamp</bdi> </span></em><span style="color: #000000">في الكيانات. نقوم بإجراء نفس التعديل الذي أجريناه مع <bdi dir="ltr" class="odt-ltr-term">SGBD</bdi> السابقين. في الكيانات، نستبدل الأسطر الثلاثة</span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    [</span><span style="color:#2b91af">Column</span><span style="color:#000000">(</span><span style="color:#a31515">&quot;TIMESTAMP&quot;</span><span style="color:#000000">)]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    [</span><span style="color:#2b91af">Timestamp</span><span style="color:#000000">]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#0000ff">byte</span><span style="color:#000000">[] Timestamp { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000"> مع ما يلي:</span></p>
+<p><span style="color: #000000"> بالأسطر التالية:</span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-csharp">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    [</span><span style="color:#2b91af">ConcurrencyCheck</span><span style="color:#000000">]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    [</span><span style="color:#2b91af">Column</span><span style="color:#000000">(</span><span style="color:#a31515">&quot;VERSIONING&quot;</span><span style="color:#000000">)]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">public</span><span style="color:#000000"> </span><span style="color:#2b91af">int</span><span style="color:#000000">? Versioning { </span><span style="color:#0000ff">get</span><span style="color:#000000">; </span><span style="color:#0000ff">set</span><span style="color:#000000">; }</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">لذلك، نقوم بتغيير نوع العمود من </span><strong><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">byte</bdi>[] </span></strong><span style="color: #000000">إلى </span><strong><span style="color: #000000">int?</span></strong><span style="color: #000000">. في نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>)، سنستخدم الإجراءات المخزنة لزيادة هذا العدد الصحيح بمقدار واحد في كل مرة يتم فيها إدراج صف أو تعديله.</span></p>
-<p><span style="color: #000000">نجري التغيير المذكور أعلاه على الكيانات الأربعة جميعها ثم نعيد تشغيل التطبيق. ثم نحصل على الخطأ التالي:</span></p>
+<p><span style="color: #000000">لذلك نقوم بتغيير نوع العمود من </span><strong><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">byte</bdi>[] </span></strong><span style="color: #000000">إلى </span><strong><span style="color: #000000">int?</span></strong><span style="color: #000000">. في <bdi dir="ltr" class="odt-ltr-term">SGBD</bdi>، سنستخدم إجراءات مخزنة لزيادة هذا العدد الصحيح بمقدار وحدة واحدة في كل مرة يتم فيها إدراج أو تعديل سطر.</span></p>
+<p><span style="color: #000000">نقوم بإجراء التعديل السابق على الكيانات الأربعة ثم نعيد تشغيل التطبيق. عندها نحصل على الخطأ التالي:</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
 <span class="normal"><a href="#__codelineno-1-4">4</a></span>
-<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>Exception non gérée : FirebirdSql.Data.FirebirdClient.FbException: lock time-out on wait transaction object D:\DATA\ISTIA-1213\C#\DVP\ENTITY FRAMEWORK\DATABASES\FIREBIRD\RDVMEDECINS-EF.GDB is in use ---&gt; FirebirdSql.Data.Common.IscException: lock time-out on wait transaction
+<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>Exception non gérée : FirebirdSql.Data.FirebirdClient.FbException: lock time-out on wait transaction object D:\DATA\ISTIA-1213\C#\DVP\ENTITY FRAMEWORK\DATABASES\FIREBIRD\RDVMEDECINS-EF.GDB قيد الاستخدام ---&gt; FirebirdSql.Data.Common.IscException: انتهت مهلة القفل في معاملة الانتظار
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a>object D:\DATA\ISTIA-1213\C#\DVP\ENTITY FRAMEWORK\DATABASES\FIREBIRD\RDVMEDECINS
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a>-EF.GDB is in use
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a>...
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>   à RdvMedecins_01.CreateDB_01.Main(String[] args) dans d:\data\istia-1213\c#\dvp\Entity Framework\RdvMedecins\RdvMedecins-Firebird-01\CreateDB_01.cs:ligne 15
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>   à RdvMedecins_01.CreateDB_01.Main(String[] args) dans d:\data\istia-1213\c#\dvp\Entity Framework\RdvMedecins\RdvMedecins-Firebird-01\CreateDB_01.cs:السطر 15
 </code></pre></div></td></tr></table></div>
-<p><span style="color: #000000">تشير السطر 1 إلى أن قاعدة البيانات قيد الاستخدام. لا أعتقد أن هذا كان هو الحال، ولم أتمكن من حل هذه المشكلة.</span></p>
-<p><span style="color: #000000">لا بأس. سنقوم بإنشاء قاعدة البيانات [<bdi dir="ltr" class="odt-ltr-term">RDVMEDECINS-EF</bdi>] يدويًا باستخدام أداة [<bdi dir="ltr" class="odt-ltr-term">EMS Manager for Firebird</bdi>]. لن نصف كل خطوة، بل سنكتفي بذكر أهم الخطوات فقط.</span></p>
-<p><span style="color: #000000">ستكون قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">Firebird</bdi> على النحو التالي:</span></p>
+<p><span style="color: #000000">تشير السطر 1 إلى أن قاعدة البيانات مستخدمة. لم يكن هذا هو الحال على ما أعتقد ولم أتمكن من حل هذه المشكلة.</span></p>
+<p><span style="color: #000000">لا يهم. سنقوم بإنشاء قاعدة البيانات [<bdi dir="ltr" class="odt-ltr-term">RDVMEDECINS-EF</bdi>] يدويًا باستخدام الأداة [<bdi dir="ltr" class="odt-ltr-term">EMS Manager for Firebird</bdi>]. لن نصف جميع الخطوات، بل سنكتفي بذكر أهمها فقط.</span></p>
+<p><span style="color: #000000">ستكون قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">Firebird</bdi> كما يلي:</span></p>
 <p><u><strong><span style="color: #000000">الجداول</span></strong></u></p>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000046E000001663A187D89.png" width="567" height="179" style="display:inline-block; margin:4px;width:15.002cm;height:4.736cm;" class="odt-zoomable" data-zoom-src="images/100000000000046E000001663A187D89.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [1]، <code>ID</code> هو مفتاح أساسي له السمة <code>&lt;/span&gt;*Autoincrement</code>*<span style="color: #000000">. سيتم إنشاؤه تلقائيًا بواسطة نظام إدارة قواعد البيانات؛</span></li>
+<li><span style="color: #000000">في [1]، <bdi dir="ltr" class="odt-ltr-term">ID</bdi> هو مفتاح أساسي مع السمة </span><em><bdi dir="ltr" class="odt-ltr-term">Autoincrement</bdi></em><span style="color: #000000">. سيتم إنشاؤه تلقائيًا بواسطة <bdi dir="ltr" class="odt-ltr-term">SGBD</bdi>؛</span></li>
 </ul>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004770000016D067DD8E6.png" width="572" height="183" style="display:inline-block; margin:4px;width:15.122cm;height:4.83cm;" class="odt-zoomable" data-zoom-src="images/10000000000004770000016D067DD8E6.png" /></td></tr></table>
 
-<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000478000001E960B3B616.png" width="572" height="244" style="display:inline-block; margin:4px;width:15.134cm;height:6.468cm;" class="odt-zoomable" data-zoom-src="images/1000000000000478000001E960B3B616.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000478000001E960B3B616.png" width="572" height="245" style="display:inline-block; margin:4px;width:15.134cm;height:6.47cm;" class="odt-zoomable" data-zoom-src="images/1000000000000478000001E960B3B616.png" /></td></tr></table>
 
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000047A0000018BB7EFF31B.png" width="573" height="198" style="display:inline-block; margin:4px;width:15.161cm;height:5.226cm;" class="odt-zoomable" data-zoom-src="images/100000000000047A0000018BB7EFF31B.png" /></td></tr></table>
 
-<p><span style="color: #000000">تحتوي الجداول المختلفة على نفس المفاتيح الأساسية والخارجية الموجودة في الأمثلة السابقة. وتتمتع المفاتيح الخارجية بالسمة <bdi dir="ltr" class="odt-ltr-term">ON DELETE CASCADE.</bdi></span></p>
+<p><span style="color: #000000">تحتوي الجداول المختلفة على المفاتيح الأساسية والأجنبية التي كانت موجودة في هذه الجداول نفسها في الأمثلة السابقة. تحتوي المفاتيح الأجنبية على السمة <bdi dir="ltr" class="odt-ltr-term">ON DELETE CASCADE.</bdi></span></p>
 <p><u><strong><span style="color: #000000">المولدات</span></strong></u></p>
-<p><span style="color: #000000">كما هو الحال مع <bdi dir="ltr" class="odt-ltr-term">Oracle</bdi> و <bdi dir="ltr" class="odt-ltr-term">PostgreSQL</bdi>، قمنا بإنشاء مولدات أرقام متسلسلة. يوجد 5 منها [1].</span></p>
-<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000171000000DBF7C3425B.png" width="185" height="109" style="display:inline-block; margin:4px;width:4.882cm;height:2.896cm;" class="odt-zoomable" data-zoom-src="images/1000000000000171000000DBF7C3425B.png" /></td></tr></table>
+<p><span style="color: #000000">كما هو الحال مع <bdi dir="ltr" class="odt-ltr-term">Oracle</bdi> و <bdi dir="ltr" class="odt-ltr-term">PostgreSQL</bdi>، قمنا بإنشاء مولدات للأرقام المتتالية. يوجد 5 منها [1].</span></p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000171000000DBF7C3425B.png" width="185" height="110" style="display:inline-block; margin:4px;width:4.882cm;height:2.898cm;" class="odt-zoomable" data-zoom-src="images/1000000000000171000000DBF7C3425B.png" /><div style="margin:0 0 0.5em 0">سيتم استخدام </div></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">سيُستخدم [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>_ID_GEN] لتوليد المفتاح الأساسي لجدول [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>]؛</span></li>
-<li><span style="color: #000000">سيتم استخدام [<bdi dir="ltr" class="odt-ltr-term">MEDECINS</bdi>_ID_GEN] لتوليد المفتاح الأساسي لجدول [<bdi dir="ltr" class="odt-ltr-term">MEDECINS</bdi>]؛</span></li>
-<li><span style="color: #000000">سيتم استخدام [<bdi dir="ltr" class="odt-ltr-term">CRENEAUX</bdi>_ID_GEN] لإنشاء المفتاح الأساسي لجدول [<bdi dir="ltr" class="odt-ltr-term">CRENEAUX</bdi>]؛</span></li>
-<li><span style="color: #000000">سيتم استخدام [<bdi dir="ltr" class="odt-ltr-term">RVS</bdi>_ID_GEN] لإنشاء المفتاح الأساسي لجدول [<bdi dir="ltr" class="odt-ltr-term">RVS</bdi>]؛</span></li>
-<li><span style="color: #000000">سيتم استخدام [<bdi dir="ltr" class="odt-ltr-term">VERSIONS</bdi>_GEN] لإنشاء القيم لأعمدة [<bdi dir="ltr" class="odt-ltr-term">VERSIONING</bdi>] في جميع الجداول.</span></li>
+<li><span style="color: #000000">سيتم استخدام [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>_ID_GEN] لتوليد المفتاح الأساسي للجدول [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>]؛</span></li>
+<li><span style="color: #000000">سيتم استخدام [<bdi dir="ltr" class="odt-ltr-term">MEDECINS</bdi>_ID_GEN] لتوليد المفتاح الأساسي للجدول [<bdi dir="ltr" class="odt-ltr-term">MEDECINS</bdi>]؛</span></li>
+<li><span style="color: #000000">سيتم استخدام [<bdi dir="ltr" class="odt-ltr-term">CRENEAUX</bdi>_ID_GEN] لتوليد المفتاح الأساسي للجدول [<bdi dir="ltr" class="odt-ltr-term">CRENEAUX</bdi>]؛</span></li>
+<li><span style="color: #000000">سيتم استخدام [<bdi dir="ltr" class="odt-ltr-term">RVS</bdi>_ID_GEN] لتوليد المفتاح الأساسي للجدول [<bdi dir="ltr" class="odt-ltr-term">RVS</bdi>]؛</span></li>
+<li><span style="color: #000000">سيتم استخدام [<bdi dir="ltr" class="odt-ltr-term">VERSIONS</bdi>_GEN] لتوليد قيم أعمدة [<bdi dir="ltr" class="odt-ltr-term">VERSIONING</bdi>] لجميع الجداول.</span></li>
 </ul>
 <p><u><strong><span style="color: #000000">المشغلات</span></strong></u></p>
-<p><span style="color: #000000">المشغل هو إجراء يتم تنفيذه بواسطة نظام إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>) قبل أو بعد حدوث حدث (إدراج، تحديث، حذف) في جدول. لدينا 8 مشغلات [1]:</span></p>
+<p><span style="color: #000000">المشغل هو إجراء يتم تنفيذه بواسطة <bdi dir="ltr" class="odt-ltr-term">SGBD</bdi> قبل أو بعد حدث (إدراج، تعديل، حذف) في جدول. لدينا 8 مشغلات [1]:</span></p>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002260000013EAF13000E.png" width="275" height="159" style="display:inline-block; margin:4px;width:7.276cm;height:4.207cm;" class="odt-zoomable" data-zoom-src="images/10000000000002260000013EAF13000E.png" /></td></tr></table>
 
-<p><span style="color: #000000">دعونا نلقي نظرة على كود <bdi dir="ltr" class="odt-ltr-term">DDL</bdi> لمشغل [<bdi dir="ltr" class="odt-ltr-term">BI</bdi>_CLIENTS_ID]، الذي يملأ عمود [<bdi dir="ltr" class="odt-ltr-term">ID</bdi>] في جدول [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>]:</span></p>
+<p><span style="color: #000000">لنلقِ نظرة على كود <bdi dir="ltr" class="odt-ltr-term">DDL</bdi> للمشغل [<bdi dir="ltr" class="odt-ltr-term">BI</bdi>_CLIENTS_ID] الذي يغذي العمود [<bdi dir="ltr" class="odt-ltr-term">ID</bdi>] في الجدول [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>]:</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
@@ -840,11 +834,11 @@
 <a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="k">END</span><span class="o">^</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li><span style="color: #000000">السطر 2: قبل كل إدراج في جدول [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>]؛</span></li>
-<li><span style="color: #000000">السطران 6-7: إذا كان عمود <bdi dir="ltr" class="odt-ltr-term">ID NULL</bdi>، فقم بتعيين القيمة التالية من مولد الأرقام [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>_ID_GEN] له.</span></li>
+<li><span style="color: #000000">السطر 2: قبل كل إدراج في الجدول [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>]؛</span></li>
+<li><span style="color: #000000">السطران 6-7: إذا كان العمود <bdi dir="ltr" class="odt-ltr-term">ID</bdi> هو <bdi dir="ltr" class="odt-ltr-term">NULL</bdi>، فسيتم تعيين القيمة التالية من مولد الأرقام [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>_ID_GEN] له.</span></li>
 </ul>
-<p><span style="color: #000000">تم إنشاء المشغلات [<bdi dir="ltr" class="odt-ltr-term">BI</bdi>_CLIENTS_ID، <bdi dir="ltr" class="odt-ltr-term">BI</bdi>_MEDECINS_ID، <bdi dir="ltr" class="odt-ltr-term">BI</bdi>_CRENEAUX_ID، <bdi dir="ltr" class="odt-ltr-term">BI</bdi>_RVS_ID] جميعها بنفس الطريقة.</span></p>
-<p><span style="color: #000000">لنلقِ نظرة الآن على كود <bdi dir="ltr" class="odt-ltr-term">DDL</bdi> لمُشغِّل [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>_VERSION_TRIGGER]، الذي يملأ عمود [<bdi dir="ltr" class="odt-ltr-term">VERSIONING</bdi>] في جدول [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>]:</span></p>
+<p><span style="color: #000000">يتم إنشاء جميع المشغلات [ <bdi dir="ltr" class="odt-ltr-term">BI</bdi>_CLIENTS_ID, <bdi dir="ltr" class="odt-ltr-term">BI</bdi>_MEDECINS_ID, <bdi dir="ltr" class="odt-ltr-term">BI</bdi>_CRENEAUX_ID, <bdi dir="ltr" class="odt-ltr-term">BI</bdi>_RVS_ID] بنفس الطريقة.</span></p>
+<p><span style="color: #000000">لنلقِ نظرة الآن على الرمز <bdi dir="ltr" class="odt-ltr-term">DDL</bdi> للمشغل [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>_VERSION_TRIGGER] الذي يغذي العمود [<bdi dir="ltr" class="odt-ltr-term">VERSIONING</bdi>] في الجدول [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>]:</span></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
@@ -860,50 +854,50 @@
 <a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="k">END</span><span class="o">^</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li><span style="color: #000000">الأسطر 1–3: قبل كل عملية <bdi dir="ltr" class="odt-ltr-term">INSERT</bdi> أو <bdi dir="ltr" class="odt-ltr-term">UPDATE</bdi> على الجدول [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>]؛</span></li>
-<li><span style="color: #000000">السطر 6: يتلقى العمود [&quot;<bdi dir="ltr" class="odt-ltr-term">VERSIONING</bdi>&quot;] القيمة التالية من مولد الأرقام [<bdi dir="ltr" class="odt-ltr-term">VERSIONS</bdi>_GEN]. يقوم هذا المولد بتعبئة أعمدة [&quot;<bdi dir="ltr" class="odt-ltr-term">VERSIONING</bdi>&quot;] في الجداول الأربعة.</span></li>
+<li><span style="color: #000000">الأسطر 1-3: قبل كل عملية <bdi dir="ltr" class="odt-ltr-term">INSERT</bdi> أو <bdi dir="ltr" class="odt-ltr-term">UPDATE</bdi> على الجدول [<bdi dir="ltr" class="odt-ltr-term">CLIENTS</bdi>]؛</span></li>
+<li><span style="color: #000000">السطر 6: يتلقى العمود [&quot;<bdi dir="ltr" class="odt-ltr-term">VERSIONING</bdi>&quot;] القيمة التالية من مولد الأرقام [<bdi dir="ltr" class="odt-ltr-term">VERSIONS</bdi>_GEN]. يغذي هذا المولد الأعمدة [&quot;<bdi dir="ltr" class="odt-ltr-term">VERSIONING</bdi>&quot;] في الجداول الأربعة.</span></li>
 </ul>
-<p><span style="color: #000000">المشغلات [<bdi dir="ltr" class="odt-ltr-term">MEDECINS</bdi>_VERSION_TRIGGER، <bdi dir="ltr" class="odt-ltr-term">CRENEAUX</bdi>_VERSION_TRIGGER، <bdi dir="ltr" class="odt-ltr-term">RVS</bdi>_VERSION_TRIGGER] متشابهة.</span></p>
-<p><span style="color: #000000">تم وضع البرنامج النصي لإنشاء الجداول في قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">Firebird</bdi> [<bdi dir="ltr" class="odt-ltr-term">RDVMEDECINS-EF</bdi>] في المجلد [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins / databases / Firebird</bdi>]. يمكن للقارئ تحميله وتشغيله لإنشاء الجداول.</span></p>
-<p><span style="color: #000000">بمجرد الانتهاء من ذلك، يمكن تشغيل البرامج المختلفة في المشروع. وهي تعطي نفس النتائج كما هو الحال مع <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi>، باستثناء برنامج [<bdi dir="ltr" class="odt-ltr-term">ModifyDetachedEntities</bdi>]، الذي يتعطل لنفس السبب الذي تسبب في تعطله مع <bdi dir="ltr" class="odt-ltr-term">Oracle</bdi> و <bdi dir="ltr" class="odt-ltr-term">MySQL.</bdi> يتم حل المشكلة بنفس الطريقة. ما عليك سوى نسخ برنامج [<bdi dir="ltr" class="odt-ltr-term">ModifyDetachedEntities</bdi>] من مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Oracle-01</bdi>] إلى مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-01</bdi>].</span></p>
-<p><a id="refheading39829804107930"></a></p>
-<h2 id="73-ef-5">7.3. <span style="color: #4f81bd">بنية متعددة الطبقات تستند إلى <bdi dir="ltr" class="odt-ltr-term">EF</bdi> 5</span></h2>
-<p><span style="color: #000000">نعود إلى دراسة الحالة الموضحة في </span><a href="#etude-de-cas"><u><span style="color: #0563c1">الفقرة 2</span></u></a><span style="color: #000000">.</span></p>
+<p><span style="color: #000000">المشغلات [<bdi dir="ltr" class="odt-ltr-term">MEDECINS</bdi>_VERSION_TRIGGER, <bdi dir="ltr" class="odt-ltr-term">CRENEAUX</bdi>_VERSION_TRIGGER, <bdi dir="ltr" class="odt-ltr-term">RVS</bdi>_VERSION_TRIGGER] مماثلة.</span></p>
+<p><span style="color: #000000">تم وضع البرنامج النصي لإنشاء جداول قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">Firebird</bdi> [<bdi dir="ltr" class="odt-ltr-term">RDVMEDECINS-EF</bdi>] في المجلد [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins / databases / Firebird</bdi>]. يمكن للقارئ تحميله وتشغيله لإنشاء جداوله.</span></p>
+<p><span style="color: #000000">وبعد ذلك، يمكن تشغيل البرامج المختلفة للمشروع. وهي تعطي نفس النتائج التي تعطيها مع خادم <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> باستثناء البرنامج [<bdi dir="ltr" class="odt-ltr-term">ModifyDetachedEntities</bdi>] الذي يتعطل لنفس السبب الذي تسبب في تعطله مع <bdi dir="ltr" class="odt-ltr-term">Oracle</bdi> و <bdi dir="ltr" class="odt-ltr-term">MySQL.</bdi> يتم حل المشكلة بنفس الطريقة. يكفي نسخ البرنامج [<bdi dir="ltr" class="odt-ltr-term">ModifyDetachedEntities</bdi>] من المشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Oracle-01</bdi>] إلى المشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-01</bdi>].</span></p>
+<p><span id="refheading39829804107930" name="refheading39829804107930" class="odt-bookmark-anchor"></span></p>
+<h2 id="73-ef-5">7.3. <span style="color: #4f81bd">بنية متعددة الطبقات تعتمد على <bdi dir="ltr" class="odt-ltr-term">EF</bdi> 5</span></h2>
+<p><span style="color: #000000">نعود إلى دراسة الحالة الموضحة في الفقرة</span><a href="--drs-l.html#etude-de-cas"><u><span style="color: #0563c1"> 2</span></u></a><span style="color: #000000">.</span></p>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005E80000012562EE9C27.png" width="680" height="132" style="display:inline-block; margin:4px;width:17.999cm;height:3.487cm;" class="odt-zoomable" data-zoom-src="images/10000000000005E80000012562EE9C27.png" /></td></tr></table>
 
-<p><span style="color: #000000">سنبدأ ببناء طبقة الوصول إلى البيانات [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]. للقيام بذلك، نقوم بنسخ مشروع وحدة التحكم <bdi dir="ltr" class="odt-ltr-term">VS</bdi> 2012 [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-02</bdi>] إلى [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-02</bdi>] [1]:</span></p>
-<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005B9000003027D45252E.png" width="680" height="358" style="display:inline-block; margin:4px;width:17.999cm;height:9.46cm;" class="odt-zoomable" data-zoom-src="images/10000000000005B9000003027D45252E.png" /></td></tr></table>
+<p><span style="color: #000000">سنبدأ ببناء طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] للوصول إلى البيانات. للقيام بذلك، نقوم بنسخ مشروع وحدة التحكم <bdi dir="ltr" class="odt-ltr-term">VS</bdi> 2012 [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-02</bdi>] في [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-02</bdi>] [1]:</span></p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005B9000003027D45252E.png" width="680" height="357" style="display:inline-block; margin:4px;width:17.999cm;height:9.458cm;" class="odt-zoomable" data-zoom-src="images/10000000000005B9000003027D45252E.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [2]، نحذف مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-02</bdi>]؛</span></li>
+<li><span style="color: #000000">إلى [2]، ونحذف المشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-02</bdi>]؛</span></li>
 </ul>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005EA00000220B54D5B33.png" width="680" height="244" style="display:inline-block; margin:4px;width:17.999cm;height:6.466cm;" class="odt-zoomable" data-zoom-src="images/10000000000005EA00000220B54D5B33.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">في [3]، نضيف مشروعًا موجودًا إلى الحل. نأخذه من المجلد [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-02</bdi>] الذي تم إنشاؤه للتو؛</span></li>
-<li><span style="color: #000000">في [4]، يحمل المشروع الجديد نفس اسم المشروع الذي تم حذفه. سنقوم بتغيير اسمه؛</span></li>
+<li><span style="color: #000000">في [4]، يحمل المشروع الجديد اسم المشروع الذي تم حذفه. سنقوم بتغيير اسمه؛</span></li>
 </ul>
-<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006300000014C028DE9A6.png" width="680" height="143" style="display:inline-block; margin:4px;width:17.999cm;height:3.773cm;" class="odt-zoomable" data-zoom-src="images/10000000000006300000014C028DE9A6.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000006300000014C028DE9A6.png" width="680" height="143" style="display:inline-block; margin:4px;width:17.999cm;height:3.771cm;" class="odt-zoomable" data-zoom-src="images/10000000000006300000014C028DE9A6.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">في [5]، قمنا بتغيير اسم المشروع؛</span></li>
 <li><span style="color: #000000">في [6]، نقوم بتعديل بعض خصائصه، مثل اسم التجميع هنا؛</span></li>
-<li><span style="color: #000000">في [7]، تم حذف مجلد [<bdi dir="ltr" class="odt-ltr-term">Models</bdi>] واستبداله بمجلد [<bdi dir="ltr" class="odt-ltr-term">Models</bdi>] من مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-01</bdi>]. وذلك لأن كلا المشروعين يشتركان في نفس النماذج.</span></li>
+<li><span style="color: #000000">إلى [7]، تم حذف المجلد [<bdi dir="ltr" class="odt-ltr-term">Models</bdi>] ليتم استبداله بالمجلد [<bdi dir="ltr" class="odt-ltr-term">Models</bdi>] من المشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-01</bdi>]. في الواقع، يشترك المشروعان في نفس القوالب.</span></li>
 </ul>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000032400000144B71DEA87.png" width="402" height="162" style="display:inline-block; margin:4px;width:10.636cm;height:4.286cm;" class="odt-zoomable" data-zoom-src="images/100000000000032400000144B71DEA87.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">في [8]، المراجع الحالية للمشروع؛</span></li>
-<li><span style="color: #000000">في [9]، تمت إضافة موصل <bdi dir="ltr" class="odt-ltr-term">Firebird ADO.NET</bdi> باستخدام أداة <bdi dir="ltr" class="odt-ltr-term">NuGet.</bdi></span></li>
+<li><span style="color: #000000">في [9]، تمت إضافة موصل <bdi dir="ltr" class="odt-ltr-term">Firebird ADO.NET</bdi> باستخدام الأداة <bdi dir="ltr" class="odt-ltr-term">NuGet.</bdi></span></li>
 </ul>
-<p><span style="color: #000000">في ملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]، استبدل معلومات قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi> بمعلومات قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">Firebird.</bdi> يمكن العثور على هذه المعلومات في ملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] الخاص بمشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-01</bdi>]:</span></p>
+<p><span style="color: #000000">في الملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>]، يتم استبدال معلومات قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">SQL Server</bdi> بمعلومات قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">Firebird.</bdi> يمكن العثور عليها في الملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] الخاص بالمشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-01</bdi>]:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
-<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- connection chain on base --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- سلسلة الاتصال بقاعدة البيانات --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">  &lt;</span><span style="color:#a31515">connectionStrings</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">    &lt;</span><span style="color:#a31515">add</span><span style="color:#0000ff"> </span><span style="color:#ff0000">name</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">monContexte</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> </span><span style="color:#ff0000">connectionString</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">User=SYSDBA;Password=masterkey;Database=D:\data\istia-1213\c#\dvp\Entity Framework\databases\firebird\RDVMEDECINS-EF.GDB;DataSource=localhost;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Port=3050;Dialect=3;Charset=NONE;Role=;Connection lifetime=15;Pooling=true;MinPoolSize=0;MaxPoolSize=50;Packet Size=8192;ServerType=0;</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> </span><span style="color:#ff0000">providerName</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">FirebirdSql.Data.FirebirdClient</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> /&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">  &lt;/</span><span style="color:#a31515">connectionStrings</span><span style="color:#0000ff">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">&lt;!-- the factory provider --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">&lt;!-- مزود المصنع --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">  &lt;</span><span style="color:#a31515">system.data</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">    &lt;</span><span style="color:#a31515">DbProviderFactories</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">      &lt;</span><span style="color:#a31515">add</span><span style="color:#0000ff"> </span><span style="color:#ff0000">name</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">Firebird Client Data Provider</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> </span><span style="color:#ff0000">invariant</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">FirebirdSql.Data.FirebirdClient</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> </span><span style="color:#ff0000">description</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">.Net Framework Data Provider for Firebird</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> </span><span style="color:#ff0000">type</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">FirebirdSql.Data.FirebirdClient.FirebirdClientFactory, FirebirdSql.Data.FirebirdClient, Version=2.7.7.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> /&gt;</span></span></span>
@@ -911,9 +905,9 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">  &lt;/</span><span style="color:#a31515">system.data</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">تتغير أيضًا الكائنات التي يديرها <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> لدينا حاليًا:</span></p>
+<p><span style="color: #000000">تتغير أيضًا الكائنات التي يديرها <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> حاليًا لدينا:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">&lt;!-- spring configuration --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000ff">&lt;!-- تكوين Spring --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">  &lt;</span><span style="color:#a31515">spring</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">    &lt;</span><span style="color:#a31515">context</span><span style="color:#0000ff">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">      &lt;</span><span style="color:#a31515">resource</span><span style="color:#0000ff"> </span><span style="color:#ff0000">uri</span><span style="color:#0000ff">=</span><span style="color:#000000">&quot;</span><span style="color:#0000ff">config://spring/objects</span><span style="color:#000000">&quot;</span><span style="color:#0000ff"> /&gt;</span></span></span>
@@ -924,19 +918,19 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#a31515">spring</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p><span style="color: #000000">يشير السطر 7 إلى التجميع الخاص بمشروع [</span><span style="color: #0000ff"><bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-02</bdi></span><span style="color: #000000">]. أصبح التجميع الآن [</span><span style="color: #0000ff"><bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-02</bdi></span><span style="color: #000000">].</span></p>
-<p><span style="color: #000000">وبعد الانتهاء من ذلك، نكون جاهزين لتشغيل اختبار طبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]. أولاً، يجب أن نتأكد من أن قاعدة البيانات مملوءة (باستخدام برنامج [<bdi dir="ltr" class="odt-ltr-term">Fill</bdi>] من مشروع [</span><span style="color: #0000ff"><bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-01</bdi></span><span style="color: #000000">]). ينجح برنامج الاختبار.</span></p>
-<p><span style="color: #000000">نقوم بإنشاء ملف <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الخاص بالمشروع كما فعلنا مع مشروع [</span><span style="color: #0000ff"><bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-02</bdi></span><span style="color: #000000">] ونجمع جميع ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الخاصة بالمشروع في مجلد [lib] تم إنشاؤه في [</span><span style="color: #0000ff"><bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-02</bdi></span><span style="color: #000000">]. ستكون هذه هي المراجع لمشروع الويب [</span><span style="color: #0000ff"><bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-03</bdi></span><span style="color: #000000">] التالي.</span></p>
-<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000DA000000D5F852DD2B.png" width="153" height="149" style="display:inline-block; margin:4px;width:4.039cm;height:3.946cm;" class="odt-zoomable" data-zoom-src="images/10000000000000DA000000D5F852DD2B.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
+<p><span style="color: #000000">تشير السطر 7 إلى تجميع المشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-02</bdi>]. أصبح التجميع الآن [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-02</bdi>].</span></p>
+<p><span style="color: #000000">وبعد ذلك، نكون جاهزين لتنفيذ اختبار الطبقة [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>]. يجب أولاً الحرص على ملء قاعدة البيانات (البرنامج [<bdi dir="ltr" class="odt-ltr-term">Fill</bdi>] للمشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-01</bdi>]). ينجح برنامج الاختبار.</span></p>
+<p><span style="color: #000000">نقوم بإنشاء <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> للمشروع كما تم بالنسبة لمشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-02</bdi>] ونجمعجميع ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> الخاصة بالمشروع في مجلد [lib] تم إنشاؤه في [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-02</bdi>]. وستكون هذه هي مراجع مشروع الويب [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-03</bdi>] الذي سيلي.</span></p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000000DA000000D5F852DD2B.png" width="153" height="149" style="display:inline-block; margin:4px;width:4.039cm;height:3.941cm;" class="odt-zoomable" data-zoom-src="images/10000000000000DA000000D5F852DD2B.png" /></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
 
-<p><span style="color: #000000">نحن الآن جاهزون لإنشاء طبقة [<bdi dir="ltr" class="odt-ltr-term">ASP.NET</bdi>] لتطبيقنا:</span></p>
+<p><span style="color: #000000">نحن الآن جاهزون لبناء الطبقة [<bdi dir="ltr" class="odt-ltr-term">ASP.NET</bdi>] لتطبيقنا:</span></p>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005DB000001252F581312.png" width="680" height="133" style="display:inline-block; margin:4px;width:17.999cm;height:3.517cm;" class="odt-zoomable" data-zoom-src="images/10000000000005DB000001252F581312.png" /></td></tr></table>
 
-<p><span style="color: #000000">سنبدأ بمشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-03</bdi>]. سنقوم بنسخ مجلد هذا المشروع إلى [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-03</bdi>] [1]:</span></p>
-<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005BD000002CF57C5F3F6.png" width="680" height="333" style="display:inline-block; margin:4px;width:17.999cm;height:8.811cm;" class="odt-zoomable" data-zoom-src="images/10000000000005BD000002CF57C5F3F6.png" /></td></tr></table>
+<p><span style="color: #000000">سنبدأ من المشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-SqlServer-03</bdi>]. نقوم بنسخ مجلد هذا المشروع في [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-03</bdi>] [1]:</span></p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005BD000002CF57C5F3F6.png" width="680" height="333" style="display:inline-block; margin:4px;width:17.999cm;height:8.809cm;" class="odt-zoomable" data-zoom-src="images/10000000000005BD000002CF57C5F3F6.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">في [2]، باستخدام <bdi dir="ltr" class="odt-ltr-term">VS</bdi> 2012 <bdi dir="ltr" class="odt-ltr-term">Express for the Web</bdi>، نفتح الحل في مجلد [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-03</bdi>]؛</span></li>
+<li><span style="color: #000000">في [2]، باستخدام <bdi dir="ltr" class="odt-ltr-term">VS</bdi> 2012 <bdi dir="ltr" class="odt-ltr-term">Express</bdi> للويب، نفتح حل المجلد [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-03</bdi>]؛</span></li>
 <li><span style="color: #000000">في [3]، نقوم بتغيير اسم الحل واسم المشروع؛</span></li>
 </ul>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000061C00000187D37548BA.png" width="680" height="170" style="display:inline-block; margin:4px;width:17.999cm;height:4.5cm;" class="odt-zoomable" data-zoom-src="images/100000000000061C00000187D37548BA.png" /></td></tr></table>
@@ -944,9 +938,9 @@
 <ul>
 <li><span style="color: #000000">في [4]، المراجع الحالية للمشروع؛</span></li>
 <li><span style="color: #000000">في [5]، نقوم بحذفها؛</span></li>
-<li><span style="color: #000000">في [6]، لاستبدالها بمراجع إلى ملفات <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> التي قمنا بتخزينها للتو في مجلد [lib] داخل مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-02</bdi>].</span></li>
+<li><span style="color: #000000">إلى [6]، لاستبدالها بمراجع إلى <bdi dir="ltr" class="odt-ltr-term">DLL</bdi> التي قمنا بتخزينها للتو في مجلد [lib] التابع للمشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-02</bdi>].</span></li>
 </ul>
-<p><span style="color: #000000">كل ما تبقى هو تعديل ملف [<bdi dir="ltr" class="odt-ltr-term">Web.config</bdi>]. نستبدل محتواه الحالي بمحتوى ملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] من مشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-02</bdi>]. بمجرد الانتهاء من ذلك، نقوم بتشغيل مشروع الويب. إنه يعمل. لا تنسَ ملء قاعدة البيانات قبل تشغيل تطبيق الويب.</span></p>
+<p><span style="color: #000000">لم يتبق لنا سوى تعديل الملف [<bdi dir="ltr" class="odt-ltr-term">Web.config</bdi>]. نستبدل محتواه الحالي بمحتوى الملف [<bdi dir="ltr" class="odt-ltr-term">App.config</bdi>] من المشروع [<bdi dir="ltr" class="odt-ltr-term">RdvMedecins-Firebird-02</bdi>]. بعد ذلك، نقوم بتشغيل المشروع على الويب. إنه يعمل. ولا ننسى ملء قاعدة البيانات قبل تشغيل تطبيق الويب.</span></p>
 
 
 
